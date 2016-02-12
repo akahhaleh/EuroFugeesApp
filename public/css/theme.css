@@ -1,0 +1,18 @@
+/*
+color1: #A9C4BD
+color2: #E4DDCB
+color3: #EC7B59
+// primary: color4: #CE4648
+color5: #524556
+ */
+
+/* whole elements */
+
+body {
+	background: url('../img/patterns/lodyas.png');
+	background-repeat: repeat;
+}
+
+a {
+	color: #524556;
+}
