@@ -9,6 +9,9 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var landing = require('./routes/landing');
+
+// Example route
+var allListings = require('./routes/all-listings');
 var search = require('./routes/search');
 var apply = require('./routes/apply');
 var signUp = require('./routes/sign-up');
@@ -40,8 +43,8 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', landing.view);
-app.get('/search', search.view);
 app.get('/all-listings', allListings.view);
+app.get('/search', search.view);
 app.get('/listing', listing.view);
 app.get('/apply', apply.view);
 app.get('/sign-up', signUp.view);

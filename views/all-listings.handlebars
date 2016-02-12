@@ -51,8 +51,21 @@
     </nav>
 	<div class="container">
 		<h1>Search</h1>
-    <img src="/img/logo/logo-white.png">
+		<img src="/img/logo/logo-white.png">
 	</div>
+	<div class="all-listings">
+		{{#each housing}}
+		<div class="house">
+			<h3>{{title}}</h3>
+			<a class="house-card" href="/src/how-it-works.html">
+				<img class = "img-responsive" src = "{{image1}}">
+			</a>
+			<p>cost: {{cost}}</p>
+		</div>
+		{{/each}}	
+	</div>
+  </div>
+
 
   <!-- bottom scripts -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

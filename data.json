@@ -1,34 +1,100 @@
 {
-	"friends": [
+	"housing": [
 		{
-			"name": "Doug Engelbart",
-			"description": "Has awesome pet mice",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+			"id": "1",
+			"title": "Nice view in safe area",
+			"type": "Shared",
+			"bed": "1",
+			"bath": "1",
+			"cost": "€ 500",
+			"city": "Berlin",
+			"availability": "5/2/2016",
+			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
+			"image1": "/img/pictures/img1.PNG",
+			"image2": "/img/pictures/img2.PNG",
+			"image3": "/img/pictures/img3.PNG",
+			"phone": "(999) - 999-9999",
+			"email": "email@example.com"	
 		},
 		{
-			"name": "Ivan Sutherland",
-			"description": "Great at sketching",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
+			"id": "2",
+			"title": "Spacious private room",
+			"type": "Private",
+			"bed": "2",
+			"bath": "2",
+			"cost": "€ 700",
+			"city": "Munich",
+			"availability": "2/27/2016",
+			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
+			"image1": "/img/pictures/img4.PNG",
+			"image2": "/img/pictures/img5.PNG",
+			"image3": "/img/pictures/img6.PNG",
+			"phone": "(999) - 999-9999",
+			"email": "email@example.com"			
 		},
 		{
-			"name": "Lucy Suchman",
-			"description": "Loves Trukese navigators",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
+			"id": "3",
+			"title": "Home with nice large backyard",
+			"type": "Entire",
+			"bed": "3",
+			"bath": "2",
+			"cost": "€ 800",
+			"city": "Hamburg",
+			"availability": "5/12/2016",
+			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
+			"image1": "/img/pictures/img7.PNG",
+			"image2": "/img/pictures/img8.PNG",
+			"image3": "/img/pictures/img9.PNG",
+			"phone": "(999) - 999-9999",
+			"email": "email@example.com"	
 		},
 		{
-			"name": "Vannevar Bush",
-			"description": "Has stellar associative memory",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"			
+			"id": "4",
+			"title": "Large shared room",
+			"type": "Shared",
+			"bed": "2",
+			"bath": "2",
+			"cost": "€ 550",
+			"city": "Berlin",
+			"availability": "6/12/2016",
+			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
+			"image1": "/img/pictures/img1.PNG",
+			"image2": "/img/pictures/img2.PNG",
+			"image3": "/img/pictures/img3.PNG",
+			"phone": "(999) - 999-9999",
+			"email": "email@example.com"			
 		},
 		{
-			"name": "Grace Hopper",
-			"description": "Only friend with a Navy ship named after them",
-			"imageURL": "http://www.personal.psu.edu/djd5202/gHop.jpg"
+			"id": "5",
+			"title": "Cozy private apartment",
+			"type": "Private",
+			"bed": "1",
+			"bath": "1",
+			"cost": "€ 650",
+			"city": "Berlin",
+			"availability": "3/24/2016",
+			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
+			"image1": "/img/pictures/img4.PNG",
+			"image2": "/img/pictures/img5.PNG",
+			"image3": "/img/pictures/img6.PNG",
+			"phone": "(999) - 999-9999",
+			"email": "email@example.com"		
 		},
 		{
-			"name": "Allen Newell",
-			"description": "Really into psychology",
-			"imageURL": "http://www.nap.edu/html/biomems/photo/anewell.JPG"
+			"id": "6",
+			"title": "Modern apartment in Berlin",
+			"type": "Apartment",
+			"bed": "1",
+			"bath": "1",
+			"cost": "€ 450",
+			"city": "Munich",
+			"availability": "4/15/2016",
+			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
+			"image1": "/img/pictures/img7.PNG",
+			"image2": "/img/pictures/img8.PNG",
+			"image3": "/img/pictures/img9.PNG",
+			"phone": "(999) - 999-9999",
+			"email": "email@example.com"			
 		}
 	]
 }
