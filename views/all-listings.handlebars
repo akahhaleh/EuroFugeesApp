@@ -56,19 +56,20 @@
           </div>
       </div>
     </nav>
-	<div class="all-listings">
-		{{#each housing}}
-		<div class="house">
-			<h3>{{title}}</h3>
-			<a class="house-card" href="/src/how-it-works.html">
-				<img class = "img-responsive" src = "{{image1}}">
-			</a>
-			<p>cost: {{cost}}</p>
-		</div>
-		{{/each}}	
-	</div>
+	<div class="wrap">
+    <a href="search" class="btn btn-default">Edit Search</a>
+    <div class="all-listings">
+  		{{#each housing}}
+  		<div class="house">
+  			<h3>{{title}}</h3>
+  			<a class="house-card" href="listing{{id}}.html">
+  				<img class = "img-responsive" src = "{{image1}}">
+  			</a>
+  			<p>cost: {{cost}}</p>
+  		</div>
+  		{{/each}}	
+  	</div>
   </div>
-
 
   <!-- bottom scripts -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
