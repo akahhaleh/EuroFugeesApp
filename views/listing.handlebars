@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Search Listings</title>	
+	<title>Listing descriptions</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -58,7 +58,39 @@
     </nav>
 
     <div clas="container">
-      
+    
+      <div class="listings-description">
+        {{#each housing}}
+        <div class="house">
+          <h3>{{title}}</h3>
+          <img class = "img-responsive" src = "{{image1}}">
+          <img class = "img-responsive" src = "{{image2}}">
+          <img class = "img-responsive" src = "{{image3}}">
+          
+          <div class="top-info">
+	          <p class="cost2">Cost: {{cost}}</p>
+			  <p class="city">Location: {{city}}</p>
+			  <p class="availability">Available on: {{availability}}</p>
+          </div>
+          <div class="basic-info">
+	        <h4>Basic Information</h4>
+		    <p class="bed">type: {{type}}</p>
+			<p class="bath">Bed: {{bed}}</p>
+			<p class="bath">Bath: {{bath}}</p>
+          </div>
+          <div class="Description">
+	        <h4>Description</h4>
+		    <p>{{description}}</p>
+          </div>
+          <div class="contact">
+	        <h4>Host Contact info</h4>
+		    <p class="phone">Phone number: {{phone}}</p>
+			<p class="email">email address: {{email}}</p>
+          </div>
+        </div>
+        {{/each}} 
+        <a href="/apply" class="btn btn-default">Contact Host</a>
+      </div>
     </div>
     
   <!-- bottom scripts -->

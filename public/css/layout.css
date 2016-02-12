@@ -103,14 +103,15 @@
 	text-align: center;
 }
 
-.cost, .bed-bath {
+.cost, .bed-bath , .top-info, .basic-info, .Description, .contact{
 	background: #fff;
 	padding: 5px;
-	color: #333;
+	color: #4b8bf1;
 	margin: 5px 0;
+	
 }
 
-.bed-bath > * {
+.bed-bath > p, .cost > p, .bed-bath > p, .top-info > p, .basic-info > p, .Description > p, .contact > p{
 	color: #333;
 	margin: 0;
 }
