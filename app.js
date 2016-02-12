@@ -16,7 +16,7 @@ var allListings = require('./routes/all-listings');
 var search = require('./routes/search');
 var apply = require('./routes/apply');
 var signUp = require('./routes/sign-up');
-var ListYourSpace = require('./routes/list-your-space');
+var listYourSpace = require('./routes/list-your-space');
 var allListings = require('./routes/all-listings');
 var listing = require('./routes/listing');
 
