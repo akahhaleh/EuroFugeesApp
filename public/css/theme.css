@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Play);
+
 /*
 color1: #A9C4BD
 color2: #E4DDCB
@@ -10,6 +12,9 @@ color5: #524556
 
 * {
 	color: #fff;
+	font-family: "Play", "Arial", sans-serif;
+	font-weight: normal;
+	border: none;
 }
 
 body {
@@ -20,3 +25,31 @@ body {
 a {
 	color: #524556;
 }
+
+/* form edits */
+label {
+	font-weight: normal;
+}
+
+/* buttons */
+.btn, .btn-default {
+	border-radius: 0;
+	font-size: 1.3em;
+}
+
+.landing-selection {
+	background: #CE4648;
+}
+
+.landing-selection .btn-default {
+	width: 100%;
+}
+
+/* headlines */
+h3 {
+	font-family: "Play", "Arial", sans-serif;
+	text-transform: uppercase;
+	font-size: 1.3em;
+}
+
+/* form headlines */

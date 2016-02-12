@@ -15,13 +15,19 @@
 .landing-feature {
 	background: url('../img/pro/landing.jpg');
 	background-size: cover;
-	height: 300px;
+	background-position: center;
+	height: 80%;
+	margin: 0;
+	padding: 0;
 }
 
 .landing-feature h2 {
 	background: rgba(0,0,0,.75);
-	padding: 10px 0;
-	margin-top: 20%;
+	width: 80%;
+	padding: 15px 0;
+	margin: 20% auto 0;
+	font-family: "Play", "Arial", sans-serif;
+	font-size: 1.25em;
 }
 
 .landing-selection {
@@ -31,4 +37,80 @@
 /* listings */
 .house {
 	margin-bottom: 30px;
+}
+
+
+/* navbar */
+.navbar {
+	background: #CE4648;
+}
+
+.navbar .button {
+	background: none;
+}
+
+.navbar .icon-bar {
+	background: #fff;	
+}
+
+.navbar-nav li {
+	padding: 0 40px;
+}
+
+.navbar-nav a {
+	color: #fff;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 1.25em;
+}
+
+.navbar-nav li:last-of-type a {
+	border-bottom: none;
+}
+
+.navbar-toggle {
+	border: none;
+}
+
+/* landing-page stuff */
+.landing-selection {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 25px;
+}
+
+.landing-selection > div {
+	margin: 5px 0;
+}
+
+/* form edits */
+
+
+/* listings edits */
+.all-listings {
+	margin: 20px 0;
+}
+
+.house {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	padding: 1px 10px 10px;
+}
+
+.house h3 {
+	text-align: center;
+}
+
+.cost, .bed-bath {
+	background: #fff;
+	padding: 5px;
+	color: #333;
+	margin: 5px 0;
+}
+
+.bed-bath > * {
+	color: #333;
+	margin: 0;
 }
