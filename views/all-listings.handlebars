@@ -31,7 +31,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	<nav class="navbar navbar-static-top" role="navigation">
       <div class="container">
           <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -58,7 +58,20 @@
     </nav>
 	<div class="wrap">
     <a href="search" class="btn btn-default">Edit Search</a>
-    <div class="all-listings">	
+    <div class="all-listings">
+  		{{#each housing}}
+  		<div class="house">
+  			<h3>{{title}}</h3>
+  			<a class="house-card" href="listing{{id}}.html">
+  				<img class = "img-responsive" src = "{{image1}}">
+  			</a>
+        <p class="cost">Cost: {{cost}}</p>
+        <div class="bed-bath">
+          <p class="bed">Bed: {{bed}}</p>
+    			<p class="bath">Bath: {{bath}}</p>
+        </div>
+  		</div>
+  		{{/each}}	
   	</div>
   </div>
   <div class="trial">this is a trial</div>

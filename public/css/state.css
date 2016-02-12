@@ -1,0 +1,10 @@
+/* navbar */
+
+.navbar-toggle:hover {
+	border: none;
+}
+
+.navbar-nav li:active, .navbar-nav li:hover a {
+	background: rgba(0,0,0,0.1);
+}
+
