@@ -14,6 +14,11 @@ var landing = require('./routes/landing');
 var add = require('./routes/add');
 var allListings = require('./routes/all-listings');
 var search = require('./routes/search');
+var apply = require('./routes/apply');
+var signUp = require('./routes/sign-up');
+var ListYourSpace = require('./routes/list-your-space');
+var allListings = require('./routes/all-listings');
+var listing = require('./routes/listing');
 
 var app = express();
 
@@ -44,8 +49,8 @@ app.get('/all-listings', allListings.view);
 app.get('/search', search.view);
 app.get('/listing', listing.view);
 app.get('/apply', apply.view);
-app.get('/sign-up', sign-up.view);
-app.get('/list-your-space', list-your-space.view);
+app.get('/sign-up', signUp.view);
+app.get('/list-your-space', listYourSpace.view);
 // Example route
 // app.get('/users', user.list);
 
