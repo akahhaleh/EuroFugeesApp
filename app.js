@@ -9,9 +9,11 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var landing = require('./routes/landing');
+
 // Example route
 var add = require('./routes/add');
 var allListings = require('./routes/all-listings');
+var search = require('./routes/search');
 
 var app = express();
 
@@ -39,7 +41,11 @@ if ('development' == app.get('env')) {
 app.get('/', landing.view);
 app.get('/add', add.addFriend)
 app.get('/all-listings', allListings.view);
-
+app.get('/search', search.view);
+app.get('/listing', listing.view);
+app.get('/apply', apply.view);
+app.get('/sign-up', sign-up.view);
+app.get('/list-your-space', list-your-space.view);
 // Example route
 // app.get('/users', user.list);
 

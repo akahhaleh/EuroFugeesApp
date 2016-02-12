@@ -6,15 +6,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+  <!-- primary css blocks -->
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/layout.css">
+  <link rel="stylesheet" type="text/css" href="/css/theme.css">
+  
+  <!-- special css sets -->
+  <link rel="stylesheet" type="text/css" href="/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="/css/theme.css">
+	
+  <!-- javascript imports -->
+  <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
-	<script type="text/javascript" src="/js/landing.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
-	<link rel="stylesheet" type="text/css" href="/css/landing.css">
-
-
+  
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,6 +31,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container">
           <div class="navbar-header">
@@ -54,9 +62,46 @@
     <img src="/img/logo/logo-white.png">
 	</div>
 
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <img src="/img/logo/logo-white.png" class="logo" alt="Logo">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/src/how-it-works.html">How it works</a></li>
+                <li><a href="/src/sign-up.html">Login</a></li>
+                <li><a href="/src/sign-up.html">Sign up</a></li>
+                <li><a href="/src/search.html">Search</a></li>
+                <li><a href="/src/list-your-space.html">List your space</a></li>
+                <li><a href="/src/help.html">Help</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="navbar-adjust"></div>
+  <section class="row landing-feature">
+		<h2 class="text-center">An app for refugees</h2>
+	</section>
+  <section class="fixed-bottom text-center landing-selection">
+    <div class="btn btn-default">
+      <a href="locale-landing.html">I'm a Local</a>
+    </div>
+    <div class="btn btn-default">
+      <a href="search">I'm a Refugee</a>
+    </div>
+  </section>
+
   <!-- bottom scripts -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 </html>

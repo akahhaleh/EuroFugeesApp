@@ -1,0 +1,29 @@
+/* small adjustments */
+.navbar-adjust {
+	width: 100%;
+	height: 50px;
+}
+
+/* navbar and logo */
+.navbar .logo {
+	float: left;
+	height: 40px;
+	margin: 5px 0;
+}
+
+/* landing page */
+.landing-feature {
+	background: url('../img/pro/landing.jpg');
+	background-size: cover;
+	height: 300px;
+}
+
+.landing-feature h2 {
+	background: rgba(0,0,0,.75);
+	padding: 10px 0;
+	margin-top: 20%;
+}
+
+.landing-selection {
+	padding: 30px;
+}
