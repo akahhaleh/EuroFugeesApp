@@ -11,7 +11,6 @@ var handlebars = require('express3-handlebars')
 var landing = require('./routes/landing');
 
 // Example route
-var add = require('./routes/add');
 var allListings = require('./routes/all-listings');
 var search = require('./routes/search');
 var apply = require('./routes/apply');
@@ -44,7 +43,6 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', landing.view);
-app.get('/add', add.addFriend)
 app.get('/all-listings', allListings.view);
 app.get('/search', search.view);
 app.get('/listing', listing.view);
