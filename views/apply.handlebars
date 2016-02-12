@@ -63,11 +63,13 @@
     var ln =  document.getElementById("last-name").value;
     var phone =  document.getElementById("phone").value;
     var nocu =  document.getElementById("number-count").value;
+    var age= document.getElementById("age").value;
 
     document.getElementById('fn').innerHTML= "Vorname: "+fn;
     document.getElementById('ln').innerHTML= "Nachname: "+ln;
     document.getElementById('applicantPhone').innerHTML= "Telefon: "+phone;
     document.getElementById('numOfOccupants').innerHTML= "Anzahl der Insassen: "+nocu;
+    document.getElementById('ageOfApplicant').innerHTML= "Alter: "+age;
     
     document.getElementById("message").style.display = 'block';
     document.getElementById("application").style.display = 'none';
@@ -121,8 +123,10 @@
 	      <p>Sie haben gerade einen neuen Auftrag für Ihren Eintrag. Hier ist der Klägerin Informationen:</p>
 		  <p id="fn"></p>
 		  <p id="ln"></p>
+		  <p id="ageOfApplicant"></p>
 		  <p id="numOfOccupants"></p>
-		  <p id="applicantPhone"></p>  
+		  <p id="applicantPhone"></p> 
+		  <p>Danke :)</p> 
       </div>
     </div>
 
