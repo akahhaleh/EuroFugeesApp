@@ -1,38 +1,34 @@
-<!doctype html><html>
-<head>{{> globalHead}}</head>
-
+<!doctype html><html><head>{{> globalHead}}</head>
 <body>
   {{> globalNavigation}}
-	  <div class="navbar-adjust"></div>
   <div class="wrap">
-  <h3 class="text-center">Search for Places to Live</h3>
-  <form id="search-form" role="form" method="get" action="/all-listings">
-    <div class="form-group">
-      <label>Where are you going?</label>
-      <input type="text" class="form-control" name="city" placeholder="City">
-    </div>
-    <div class="form-group">
-      <label>When do you need a place?</label>
-      <input type="date" class="form-control" name="date">
-    </div>
-    <div class="form-group">
-    <label>How many people are with you?</label></br>
-      <input type="number" class="form-control" min="1" max="5">
-    </div>
-    <div class="form-group">
-      <label>What type of place do you need?</label><br>
-      <div class="radio">
-        <label>Large Residence</label>
-        <input type="radio" id="optionsRadios1" name="option" value="option1" checked>
+    <h3 class="text-center">Search for Places to Live</h3>
+    <form id="search-form" role="form" method="get" action="/all-listings">
+      <div class="form-group">
+        <label>Where are you going?</label>
+        <input type="text" class="form-control" name="city" placeholder="City">
       </div>
-      <div class="radio">
-        <label>Private Room</label>
-        <input type="radio" id="optionsRadios2" name="option" value="option2">
+      <div class="form-group">
+        <label>When do you need a place?</label>
+        <input type="date" class="form-control" name="date">
       </div>
-    </div>
-    <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
-  </form>
+      <div class="form-group">
+        <label>How many people are with you?</label></br>
+        <input type="number" class="form-control" min="1" max="5">
+      </div>
+      <div class="form-group">
+        <label>What type of place do you need?</label><br>
+        <div class="radio">
+          <label>Large Residence</label>
+          <input type="radio" id="optionsRadios1" name="option" value="option1" checked>
+        </div>
+        <div class="radio">
+          <label>Private Room</label>
+          <input type="radio" id="optionsRadios2" name="option" value="option2">
+        </div>
+      </div>
+      <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
+    </form>
   </div>
-  
   {{> globalBottomScripts}}
 </body></html>
