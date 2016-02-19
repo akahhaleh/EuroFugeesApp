@@ -1,36 +1,19 @@
 {
   "questions": [
     {
-      "topic": "Help 1",
-      "answer": "1This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
+      "id": "1",
+      "topic": "Is this website legitimate?",
+      "answer": "EuroFugees tries its best to screen housing listings to prevent potential scams. If you see or hear something suspicious about a listing on here, contact us immediately."
     },
     {
-      "topic": "Help 2",
-      "answer": "2This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
+      "id": "2",
+      "topic": "How can I make sure that a listing is not a scam?",
+      "answer": "We try our best to make sure all listings on the app are legitimate, but things to look out for just in case are: (a) Landlord refuses to meet in person to discuss things; (b)Landlord does not answers your questions properly or avoids them; (c) Landlord is asking for a sum of money without a tenancy agreement. (d) Landlord refuses to have the tenancy agreement checked by the social services department."
     },
     {
-      "topic": "Lorum Ipsum",
-      "answer": "3This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
-    },
-    {
-      "topic": "Lorum Ipsum",
-      "answer": "4This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
-    },
-    {
-      "topic": "Lorum Ipsum",
-      "answer": "5This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
-    },
-    {
-      "topic": "Lorum Ipsum",
-      "answer": "6This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
-    },
-    {
-      "topic": "Lorum Ipsum",
-      "answer": "7This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
-    },
-    {
-      "topic": "Lorum Ipsum",
-      "answer": "This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic."
+      "id": "3",
+      "topic": "My question isn't on here, how can I contact you all?",
+      "answer": "If you have a special concern, email us at info@eurofugees.com"
     }
   ]
 }

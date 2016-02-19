@@ -101,11 +101,26 @@ form {
 	background: #fff;
 	padding: 5px;
 	color: #4b8bf1;
-	margin: 5px 0;
-	
+	margin: 5px 0;	
 }
 
 .bed-bath > p, .cost > p, .bed-bath > p, .top-info > p, .basic-info > p, .Description > p, .contact > p{
 	color: #333;
 	margin: 0;
+}
+
+/* help and how it works layout */
+.help-topic, .tutorial-topic {
+	background: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.help-topic:last-of-type, .tutorial-topic:last-of-type {
+	margin-bottom: 0;
+}
+
+.help-topic > p, .tutorial-topic > p {
+	color: #000;
 }

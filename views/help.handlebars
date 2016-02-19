@@ -2,10 +2,12 @@
 <body>
   {{> globalNavigation}}
   <div class="container">
-    <h2>Help</h2><hr>
+    <h2 class="text-center">Help</h2>
     {{#each questions}}
-    <div class="help-topic">
-      <h3>{{topic}}</h3>
+    <div class="help-topic" id="{{id}}">
+      <a href="#">
+        <h3>{{topic}}</h3>
+      </a>
       <p>{{answer}}</p>
     </div>
     {{/each}}
