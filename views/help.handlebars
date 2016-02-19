@@ -1,32 +1,14 @@
 <!doctype html><html><head>{{> globalHead}}</head>
 <body>
   {{> globalNavigation}}
-	<div class="container">
-		<h2>Help</h2><hr>
+  <div class="container">
+    <h2>Help</h2><hr>
+    {{#each questions}}
     <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic.</p>
+      <h3>{{topic}}</h3>
+      <p>{{answer}}</p>
     </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic.</p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic.</p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic.</p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic.</p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic. This is a help topic.</p>
-    </div>
-	</div>
+    {{/each}}
+  </div>
   {{> globalBottomScripts}}
 </body></html>

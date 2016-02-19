@@ -1,33 +1,14 @@
 <!doctype html><html><head>{{> globalHead}}</head>
 <body>
-	{{> globalNavigation}}
-  <!-- how it works module -->
+  {{> globalNavigation}}
   <div class="container">
-    <h2>How It Works</h2><hr>
+    <h2>Help</h2><hr>
+    {{#each tutorials}}
     <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. </p>
+      <h3>{{topic}}</h3>
+      <p>{{answer}}</p>
     </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. </p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. </p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. </p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. </p>
-    </div>
-    <div class="help-topic">
-      <h3>Lorum Ipsum</h3>
-      <p>FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. FAQ or explanation of something. </p>
-    </div>
+    {{/each}}
   </div>
   {{> globalBottomScripts}}
 </body></html>
