@@ -18,6 +18,7 @@ var signUp = require('./routes/sign-up');
 var listYourSpace = require('./routes/list-your-space');
 var allListings = require('./routes/all-listings');
 var listing = require('./routes/listing');
+var entireHome = require('./routes/entire-home');
 
 var app = express();
 
@@ -49,6 +50,7 @@ app.get('/listing', listing.view);
 app.get('/apply', apply.view);
 app.get('/sign-up', signUp.view);
 app.get('/list-your-space', listYourSpace.view);
+app.get('/entire-home', entireHome.view);
 // Example route
 // app.get('/users', user.list);
 

@@ -86,6 +86,10 @@
 }
 
 /* form edits */
+form{
+	text-align: center;
+	margin: 1%;
+}
 
 
 /* listings edits */

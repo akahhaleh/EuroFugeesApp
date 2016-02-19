@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Search Listings</title>	
+	<title>List your space</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,9 +13,9 @@
   <link rel="stylesheet" type="text/css" href="/css/base.css">
   <link rel="stylesheet" type="text/css" href="/css/layout.css">
   <link rel="stylesheet" type="text/css" href="/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="/css/state.css">
   
   <!-- special css sets -->
-  <link rel="stylesheet" type="text/css" href="/css/theme.css">
   <link rel="stylesheet" type="text/css" href="/css/theme.css">
   
   <!-- javascript imports -->
@@ -56,8 +56,17 @@
           </div>
       </div>
     </nav>
-
-    <h3>Not available yet! Check back later</h3>
+    <div class="wrap">
+      <h3 class="text-center">What type of space do you want to list?</h3>
+      <form id="typeOfSpace" role="form" method="get" action="/entire-home">
+        <input type="submit" id="entireHouseBtn" class="btn btn-default" value="Entrie Home">
+        </input>
+      </form>
+      <form id="typeOfSpace" role="form" method="get" action="/private-room">
+        <input type="submit" id="privateRoomBtn" class="btn btn-default" value="Private Room in your home">
+        </input>
+      </form>
+  </div>
 
   <!-- bottom scripts -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
