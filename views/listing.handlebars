@@ -6,9 +6,21 @@
       {{#each housing}}
       <div class="house">
         <h3>{{title}}</h3>
-        <img class = "img-responsive" src = "{{image1}}">
-        <img class = "img-responsive" src = "{{image2}}">
-        <img class = "img-responsive" src = "{{image3}}">
+
+        <div class="listing-slideshow">
+          <figure class="show">
+            <img src="{{image1}}" width="100%">
+          </figure>
+          <figure>
+            <img src="{{image2}}"width="100%">
+          </figure>
+          <figure>
+            <img src="{{image3}}"width="100%">
+          </figure>
+            <span class="prev">«</span>
+            <span class="next">»</span>
+          </figure>
+        </div>
         
         <div class="top-info">
           <p class="cost2">Cost: {{cost}}</p>
