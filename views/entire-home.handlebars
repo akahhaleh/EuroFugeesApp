@@ -1,34 +1,38 @@
 <!doctype html><html><head>{{> globalHead}}</head>
-<body>
-  {{> globalNavigation}}
-  <div class="wrap">
-    <h3 class="text-center">Tell us more about your space...</h3>
-    <form id="search-form" role="form" method="get" action="/add-listing">
-      <div class="form-group">
-        <label>Listing Title:</label>
-        <input type="text" class="form-control" name="title" placeholder="Cozy home for a family of 4">
-      </div>
-      <div class="form-group">
-        <label>What city is your apartment located in?</label>
-        <input type="text" class="form-control" name="city" placeholder="Berlin">
-      </div>
-      <div class="form-group">
-        <label>What's the maximum number of guests?</label></br>
-        <input type="number" class="form-control" min="1" max="20">
-      </div>
-      <div class="form-group">
-        <label>What type of place do you need?</label><br>
-        <div class="radio">
-          <label>Large Residence</label>
-          <input type="radio" id="optionsRadios1" value="option1" checked>
+  <body>
+    {{> globalNavigation}}
+    <div class="wrap">
+      <h3 class="text-center">Tell us more about your space...</h3>
+      <form id="search-form" role="form" method="get" action="/add-listing">
+        <div class="form-group">
+          <label>Listing Title:</label>
+          <input type="text" class="form-control" name="title" placeholder="Cozy home for a family of 4">
         </div>
-        <div class="radio">
-          <label>Private Room</label>
-          <input type="radio" id="optionsRadios2" value="option2">
+        <div class="form-group">
+          <label>What city is your apartment located in?</label>
+          <input type="text" class="form-control" name="city" placeholder="Berlin">
         </div>
-      </div>
-      <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
-    </form>
-  </div>
-  {{> globalBottomScripts}}
-</body></html>
+        <div class="form-group">
+          <label>What's the maximum number of guests?</label></br>
+          <input type="number" class="form-control" min="1" max="20">
+        </div>
+        <div class="form-group">
+          <label>What type of place do you need?</label><br>
+          <div class="radio">
+            <label>Large Residence</label>
+            <input type="radio" id="optionsRadios1" value="option1" checked>
+          </div>
+          <div class="radio">
+            <label>Private Room</label>
+            <input type="radio" id="optionsRadios2" value="option2">
+          </div>
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+    {{> globalBottomScripts}}
+    <script type="text/javascript" src="/js/entire-home.js"></script>
+  </body>
+</html>
+
