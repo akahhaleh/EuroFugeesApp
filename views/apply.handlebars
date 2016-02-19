@@ -1,108 +1,78 @@
-<!doctype html><html>
-<head>{{> head}}</head>
-
+<!doctype html><html><head>{{> globalHead}}</head>
 <body>
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-          </div>
+  {{> globalNavigation}}
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/src/how-it-works.html">How it works</a></li>
-                <li><a href="sign-up">Login</a></li>
-                <li><a href="sign-up">Sign up</a></li>
-                <li><a href="search">Search</a></li>
-                <li><a href="/list-your-space">">List your space</a></li>
-                <li><a href="/src/help.html">Help</a></li>
-              </ul>
-          </div>
-      </div>
-    </nav>
-    
-    <script language="JavaScript">
-		function showInput() {
-    var fn =  document.getElementById("first-name").value;
-    var ln =  document.getElementById("last-name").value;
-    var phone =  document.getElementById("phone").value;
-    var nocu =  document.getElementById("number-count").value;
-    var age= document.getElementById("age").value;
+  <script language="JavaScript">
+    function showInput() {
+      var fn =  document.getElementById("first-name").value;
+      var ln =  document.getElementById("last-name").value;
+      var phone =  document.getElementById("phone").value;
+      var nocu =  document.getElementById("number-count").value;
+      var age= document.getElementById("age").value;
 
-    document.getElementById('fn').innerHTML= "Vorname: "+fn;
-    document.getElementById('ln').innerHTML= "Nachname: "+ln;
-    document.getElementById('applicantPhone').innerHTML= "Telefon: "+phone;
-    document.getElementById('numOfOccupants').innerHTML= "Anzahl der Insassen: "+nocu;
-    document.getElementById('ageOfApplicant').innerHTML= "Alter: "+age;
-    
-    document.getElementById("message").style.display = 'block';
-    document.getElementById("application").style.display = 'none';
-    
-}
-	</script>
-    
-    <div clas="container">
-    
-      <div id="application">
-	      <form>
-		    <div class="form-group">
-		      <label>First Name</label>
-		      <input type="text" class="form-control" id="first-name" placeholder="First Name">
-		    </div>
-		    <div class="form-group">
-		      <label>Last Name</label>
-		      <input type="text" class="form-control" id="last-name" placeholder="Last Name">
-		    </div>
-		    <div class="form-group">
-		      <label>Your Phone Number</label>
-		      <input type="text" class="form-control" id="phone" placeholder="(999) 999-9999">
-		    </div>
-		    <div class="form-group">
-		    <label>How many people are with you?</label></br>
-		      <input type="number" class="form-control" min="1" max="5" id="number-count" placeholder="1 - 5">
-		    </div>
-		    <div class="form-group">
-		    <label>How old are you?</label></br>
-		      <input type="number" class="form-control" min="15" max="100" id="age" placeholder="Age">
-		    </div>
-		    <div class="form-group">
-		      <label>Who will be paying for you?</label><br>
-		      <div class="radio">
-		        <label>Large Residence</label>
-		        <input type="radio" id="optionsRadios1" id="payer" value="self" checked>
-		      </div>
-		      <div class="radio">
-		        <label>Private Room</label>
-		        <input type="radio" id="optionsRadios2" id="payer" value="Government">
-		      </div>
-		    </div>
-		  </form>
-		  <input type="submit" onclick="showInput();"><br />
-		  
-		  <form>
+      document.getElementById('fn').innerHTML= "Vorname: "+fn;
+      document.getElementById('ln').innerHTML= "Nachname: "+ln;
+      document.getElementById('applicantPhone').innerHTML= "Telefon: "+phone;
+      document.getElementById('numOfOccupants').innerHTML= "Anzahl der Insassen: "+nocu;
+      document.getElementById('ageOfApplicant').innerHTML= "Alter: "+age;
+
+      document.getElementById("message").style.display = 'block';
+      document.getElementById("application").style.display = 'none';
+
+    }
+  </script>
+
+  <div clas="container">
+    <div id="application">
+     <form>
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" id="first-name" placeholder="First Name">
       </div>
-      <div id="message" style="display: none;">
-	      <h3>We've sent the host the following email</h3>
-	      <p>Hello,</p>
-	      <p>Sie haben gerade einen neuen Auftrag für Ihren Eintrag. Hier ist der Klägerin Informationen:</p>
-		  <p id="fn"></p>
-		  <p id="ln"></p>
-		  <p id="ageOfApplicant"></p>
-		  <p id="numOfOccupants"></p>
-		  <p id="applicantPhone"></p> 
-		  <p>Danke :)</p> 
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
       </div>
+      <div class="form-group">
+        <label>Your Phone Number</label>
+        <input type="text" class="form-control" id="phone" placeholder="(999) 999-9999">
+      </div>
+      <div class="form-group">
+        <label>How many people are with you?</label></br>
+        <input type="number" class="form-control" min="1" max="5" id="number-count" placeholder="1 - 5">
+      </div>
+      <div class="form-group">
+        <label>How old are you?</label></br>
+        <input type="number" class="form-control" min="15" max="100" id="age" placeholder="Age">
+      </div>
+      <div class="form-group">
+        <label>Who will be paying for you?</label><br>
+        <div class="radio">
+          <label>Large Residence</label>
+          <input type="radio" id="optionsRadios1" id="payer" value="self" checked>
+        </div>
+        <div class="radio">
+          <label>Private Room</label>
+          <input type="radio" id="optionsRadios2" id="payer" value="Government">
+        </div>
+      </div>
+    </form>
+    <input type="submit" onclick="showInput();"><br />
+
+    <form>
     </div>
+    <div id="message" style="display: none;">
+     <h3>We've sent the host the following email</h3>
+     <p>Hello,</p>
+     <p>Sie haben gerade einen neuen Auftrag für Ihren Eintrag. Hier ist der Klägerin Informationen:</p>
+     <p id="fn"></p>
+     <p id="ln"></p>
+     <p id="ageOfApplicant"></p>
+     <p id="numOfOccupants"></p>
+     <p id="applicantPhone"></p> 
+     <p>Danke :)</p> 
+   </div>
+ </div>
 
-  <!-- bottom scripts -->
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-</body>
-
-</html>
+ {{> globalBottomScripts}}
+</body></html>

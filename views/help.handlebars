@@ -1,0 +1,14 @@
+<!doctype html><html><head>{{> globalHead}}</head>
+<body>
+  {{> globalNavigation}}
+  <div class="container">
+    <h2>Help</h2><hr>
+    {{#each questions}}
+    <div class="help-topic">
+      <h3>{{topic}}</h3>
+      <p>{{answer}}</p>
+    </div>
+    {{/each}}
+  </div>
+  {{> globalBottomScripts}}
+</body></html>

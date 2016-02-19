@@ -1,33 +1,7 @@
-<!doctype html><html>
-<head>{{> head}}</head>
-
+<!doctype html><html><head>{{> globalHead}}</head>
 <body>
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/src/how-it-works.html">How it works</a></li>
-                <li><a href="sign-up">Login</a></li>
-                <li><a href="sign-up">Sign up</a></li>
-                <li><a href="search">Search</a></li>
-                <li><a href="list-your-space">List your space</a></li>
-                <li><a href="/src/help.html">Help</a></li>
-            </ul>
-          </div>
-      </div>
-    </nav>
-    <div class="wrap">
+  {{> globalNavigation}}
+	  <div class="wrap">
       <h3 class="text-center">What type of space do you want to list?</h3>
       <form id="typeOfSpace" role="form" method="get" action="/entire-home">
         <input type="submit" id="entireHomeBtn" class="btn btn-default" value="Entrie Home">
@@ -38,11 +12,5 @@
         </input>
       </form>
   </div>
-
-  <!-- bottom scripts -->
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="/js/main.js"></script>
-  <script type="text/javascript" src="/js/list-your-space.js"></script>
-</body>
-
-</html>
+  {{> globalBottomScripts}}
+</body></html>

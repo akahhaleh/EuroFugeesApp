@@ -1,4 +1,11 @@
-/* navbar */
+/************************************
+*************************************
+NOTE: USE THIS CSS FILE ONLY FOR
+STYLES DUE TO CHANGE IN STATE
+*************************************
+************************************/
+
+/* global navigation menu states */
 
 .navbar-toggle:hover {
 	border: none;

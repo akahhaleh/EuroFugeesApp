@@ -7,5 +7,5 @@ exports.view = function(req, res){
 	console.log(localesData);
 	console.log(refugeesData);
 
-	res.render('all-listings', housingData);
+	res.render('login');
 };

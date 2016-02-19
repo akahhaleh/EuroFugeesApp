@@ -1,65 +1,34 @@
-<!doctype html><html>
-<head>{{> head}}</head>
-
+<!doctype html><html><head>{{> globalHead}}</head>
 <body>
-	<nav class="navbar navbar-fixed-top" role="navigation">
-      <div class="container">
-          <img src="/img/logo/logo-white.png" class="logo" alt="Logo">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/src/how-it-works.html">How it works</a></li>
-                <li><a href="sign-up">Login</a></li>
-                <li><a href="sign-up">Sign up</a></li>
-                <li><a href="search">Search</a></li>
-                <li><a href="/list-your-space">List your space</a></li>
-                <li><a href="/src/help.html">Help</a></li>
-              </ul>
-           </div>
-      </div>
-    </nav>
-    <div class="navbar-adjust"></div>
+  {{> globalNavigation}}
   <div class="wrap">
-  <h3 class="text-center">Search for Places to Live</h3>
-  <form id="search-form" role="form" method="get" action="/all-listings">
-    <div class="form-group">
-      <label>Where are you going?</label>
-      <input type="text" class="form-control" name="city" placeholder="City">
-    </div>
-    <div class="form-group">
-      <label>When do you need a place?</label>
-      <input type="date" class="form-control" name="date">
-    </div>
-    <div class="form-group">
-    <label>How many people are with you?</label></br>
-      <input type="number" class="form-control" min="1" max="5">
-    </div>
-    <div class="form-group">
-      <label>What type of place do you need?</label><br>
-      <div class="radio">
-        <label>Large Residence</label>
-        <input type="radio" id="optionsRadios1" name="option" value="option1" checked>
+    <h3 class="text-center">Search for Places to Live</h3>
+    <form id="search-form" role="form" method="get" action="/all-listings">
+      <div class="form-group">
+        <label>Where are you going?</label>
+        <input type="text" class="form-control" name="city" placeholder="City">
       </div>
-      <div class="radio">
-        <label>Private Room</label>
-        <input type="radio" id="optionsRadios2" name="option" value="option2">
+      <div class="form-group">
+        <label>When do you need a place?</label>
+        <input type="date" class="form-control" name="date">
       </div>
-    </div>
-    <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
-  </form>
+      <div class="form-group">
+        <label>How many people are with you?</label></br>
+        <input type="number" class="form-control" min="1" max="5">
+      </div>
+      <div class="form-group">
+        <label>What type of place do you need?</label><br>
+        <div class="radio">
+          <label>Large Residence</label>
+          <input type="radio" id="optionsRadios1" name="option" value="option1" checked>
+        </div>
+        <div class="radio">
+          <label>Private Room</label>
+          <input type="radio" id="optionsRadios2" name="option" value="option2">
+        </div>
+      </div>
+      <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
+    </form>
   </div>
-  <!-- bottom scripts -->
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="/js/main.js"></script>
-</body>
-</html>
+  {{> globalBottomScripts}}
+</body></html>

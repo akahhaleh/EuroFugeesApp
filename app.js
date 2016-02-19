@@ -8,17 +8,21 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
+// basics
 var landing = require('./routes/landing');
-
-// Example route
-var allListings = require('./routes/all-listings');
-var search = require('./routes/search');
-var apply = require('./routes/apply');
 var signUp = require('./routes/sign-up');
-var listYourSpace = require('./routes/list-your-space');
+var login = require('./routes/login');
+var howItWorks = require('./routes/how-it-works');
+var help = require('./routes/help');
+// listings
+var search = require('./routes/search');
 var allListings = require('./routes/all-listings');
 var listing = require('./routes/listing');
 var entireHome = require('./routes/entire-home');
+// locales
+var listYourSpace = require('./routes/list-your-space');
+// refugees
+var apply = require('./routes/apply');
 
 var app = express();
 
@@ -42,17 +46,21 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// Add routes here
+// basics pages
 app.get('/', landing.view);
-app.get('/all-listings', allListings.view);
-app.get('/search', search.view);
-app.get('/listing', listing.view);
-app.get('/apply', apply.view);
 app.get('/sign-up', signUp.view);
-app.get('/list-your-space', listYourSpace.view);
+app.get('/login', login.view);
+app.get('/how-it-works', howItWorks.view);
+app.get('/help', help.view);
+// listings pages
+app.get('/search', search.view);
+app.get('/all-listings', allListings.view);
+app.get('/listing', listing.view);
 app.get('/entire-home', entireHome.view);
-// Example route
-// app.get('/users', user.list);
+// locales pages
+app.get('/list-your-space', listYourSpace.view);
+// refugees pages
+app.get('/apply', apply.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

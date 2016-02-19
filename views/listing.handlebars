@@ -1,72 +1,39 @@
-<!doctype html><html>
-<head>{{> head}}</head>
-
+<!doctype html><html><head>{{> globalHead}}</head>
 <body>
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/src/how-it-works.html">How it works</a></li>
-                <li><a href="sign-up">Login</a></li>
-                <li><a href="sign-up">Sign up</a></li>
-                <li><a href="search">Search</a></li>
-                <li><a href="list-your-space">List your space</a></li>
-                <li><a href="/src/help.html">Help</a></li>
-              </ul>
-          </div>
-      </div>
-    </nav>
-
-    <div clas="container">
-    
-      <div class="listings-description">
-        {{#each housing}}
-        <div class="house">
-          <h3>{{title}}</h3>
-          <img class = "img-responsive" src = "{{image1}}">
-          <img class = "img-responsive" src = "{{image2}}">
-          <img class = "img-responsive" src = "{{image3}}">
-          
-          <div class="top-info">
-	          <p class="cost2">Cost: {{cost}}</p>
-			  <p class="city">Location: {{city}}</p>
-			  <p class="availability">Available on: {{availability}}</p>
-          </div>
-          <div class="basic-info">
-	        <h4>Basic Information</h4>
-		    <p class="bed">type: {{type}}</p>
-			<p class="bath">Bed: {{bed}}</p>
-			<p class="bath">Bath: {{bath}}</p>
-          </div>
-          <div class="Description">
-	        <h4>Description</h4>
-		    <p>{{description}}</p>
-          </div>
-          <div class="contact">
-	        <h4>Host Contact info</h4>
-		    <p class="phone">Phone number: {{phone}}</p>
-			<p class="email">email address: {{email}}</p>
-          </div>
+  {{> globalNavigation}}
+  <div clas="container">
+    <div class="listings-description">
+      {{#each housing}}
+      <div class="house">
+        <h3>{{title}}</h3>
+        <img class = "img-responsive" src = "{{image1}}">
+        <img class = "img-responsive" src = "{{image2}}">
+        <img class = "img-responsive" src = "{{image3}}">
+        
+        <div class="top-info">
+          <p class="cost2">Cost: {{cost}}</p>
+          <p class="city">Location: {{city}}</p>
+          <p class="availability">Available on: {{availability}}</p>
         </div>
-        {{/each}} 
-        <a href="/apply" class="btn btn-default">Contact Host</a>
+        <div class="basic-info">
+          <h4>Basic Information</h4>
+          <p class="bed">type: {{type}}</p>
+          <p class="bath">Bed: {{bed}}</p>
+          <p class="bath">Bath: {{bath}}</p>
+        </div>
+        <div class="Description">
+          <h4>Description</h4>
+          <p>{{description}}</p>
+        </div>
+        <div class="contact">
+          <h4>Host Contact info</h4>
+          <p class="phone">Phone number: {{phone}}</p>
+          <p class="email">email address: {{email}}</p>
+        </div>
       </div>
+      {{/each}} 
+      <a href="/apply" class="btn btn-default">Contact Host</a>
     </div>
-    
-  <!-- bottom scripts -->
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="/js/main.js"></script>
-</body>
-
-</html>
+  </div>
+  {{> globalBottomScripts}}
+</body></html>
