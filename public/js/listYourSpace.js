@@ -15,8 +15,8 @@ function initializePage() {
 	var numOfBaths = 0;
 	var numOfBeds = 0;
 	var numOfOccupants = 0;
-	$("#entireHomeBtn").click(entireHomeClicked);
-	$("#privateRoomBtn").click(privateRoomClicked);
+	$("#entireHomeBtn").unbind().click(entireHomeClicked);
+	$("#privateRoomBtn").unbind().click(privateRoomClicked);
 }
 
 function anagrammedName(name) {
@@ -53,12 +53,14 @@ function anagrammedName(name) {
 }
 
 function entireHomeClicked(e){
-	housingType = 'entire';
+	var housingType = 'entire';
 	localStorage.setItem('type', housingType);
-	
+	$("#entireHomePanel").slideToggle("slowly");
 
 }
 
 function privateRoomClicked(e){
-
+	var housingType = 'private';
+	localStorage.setItem('type', housingType);
+	$("#privateRoomPanel").slideToggle("slowly");
 }

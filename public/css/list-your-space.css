@@ -8,5 +8,16 @@ LISTING-YOUR-SPACE PAGES
 
 #entireHomeBtn, #privateRoomBtn{
 	display: block;
-	margin: 1%;
 }
+
+#privateRoomBtn{
+	margin-top: 2%;
+}
+
+
+#entireHomePanel, #privateRoomPanel{
+	display: none;
+	padding: 1%;
+	background: rgba(58, 145, 182, 0.5);
+}
+
