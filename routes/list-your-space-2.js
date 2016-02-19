@@ -1,6 +1,5 @@
 var housingData = require('../housing.json');
-var localesData = require('../locales.json');
-var refugeesData = require('../refugees.json');
+var data = require('../data.json');
 
 exports.view = function(req, res){
 
@@ -10,5 +9,5 @@ exports.view = function(req, res){
 	var numOfOccupants  = (typeof req.query.occupants !=='undefined')?req.query.occupants:0;
 	console.log("We logged: city= "+city+" #beds= "+numOfBeds+" #baths= "+numOfBaths+" #occupants= "+numOfOccupants);
 
-	res.render('sign-up', {city, numOfBeds, numOfBaths, numOfOccupants});
+	res.render('list-your-space-2', {housingData, city, numOfBeds, numOfBaths, numOfOccupants} );	
 };

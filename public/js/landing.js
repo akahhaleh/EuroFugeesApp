@@ -14,6 +14,7 @@ function initializePage() {
 	if(typeof userLoggedIn === 'undefined'){
 		console.log("userLoggedIn is not defined yet")
     	var userLoggedIn = false;
+    	localStorage.setItem('userLoggedIn', userLoggedIn);
     };
 }
 

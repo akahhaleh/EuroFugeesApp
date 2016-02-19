@@ -15,9 +15,13 @@ LISTING-YOUR-SPACE PAGES
 }
 
 
-#entireHomePanel, #privateRoomPanel{
+#entireHomePanel, #privateRoomPanel, #listYourSpace2Panel{
 	display: none;
 	padding: 1%;
 	background: rgba(58, 145, 182, 0.5);
+}
+
+#hiddenField {
+	display: none;
 }
 

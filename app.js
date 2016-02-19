@@ -21,6 +21,8 @@ var listing = require('./routes/listing');
 var entireHome = require('./routes/entire-home');
 // locales
 var listYourSpace = require('./routes/list-your-space');
+var listYourSpace2 = require('./routes/list-your-space-2');
+var addListing = require('./routes/add-listing');
 // refugees
 var apply = require('./routes/apply');
 
@@ -59,6 +61,8 @@ app.get('/listing', listing.view);
 app.get('/entire-home', entireHome.view);
 // locales pages
 app.get('/list-your-space', listYourSpace.view);
+app.get('/list-your-space-2', listYourSpace2.view);
+app.get('/add-listing', addListing.view);
 // refugees pages
 app.get('/apply', apply.view);
 

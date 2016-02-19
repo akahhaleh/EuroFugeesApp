@@ -7,5 +7,10 @@ exports.view = function(req, res){
 	console.log(localesData);
 	console.log(refugeesData);
 
-	res.render('entire-home', housingData);
+	reqCity = req.query.city;
+	reqBath = req.query.bath;
+	
+	//var text = reqName+" "+reqBath;
+	res.render('entire-home', {housingData, reqCity, reqBath});
 };
+

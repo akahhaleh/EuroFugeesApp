@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+  <link rel="stylesheet" type="text/css" href="/css/list-your-space.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+
+  {{> globalNavigation}}
+  <script type="text/javascript">
+    var userLoggedIn = localStorage.getItem('userLoggedIn');
+    if (userLoggedIn==="true"){
+      console.log("{{city}}");
+      localStorage.setItem('city', "{{city}}"); 
+      localStorage.setItem('numOfBaths', "{{numOfBaths}}");
+      localStorage.setItem('numOfBeds', "{{numOfBeds}}");
+      localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
+    }else{
+      localStorage.setItem('userLoggedIn', "true")
+    }
+  </script>
+  <div class="wrap">
+    <h3 class="text-center" id="greetingUser"></h3>
+    <div id="listYourSpace2Panel">
+      <!--form id="entireHome" role="form" method="get" action="JavaScript:handleClick()"-->
+      <form id="listingYourSpace2Form" name="listingYourSpace2Form" role="form" method="get" onsubmit="return onsubmitform();">
+        <div class="form-group" id="hiddenField">
+          <label>What city is your apartment located in?</label>
+          <input type="text" class="form-control" name="city" placeholder="Berlin">
+        </div>
+        <div class="form-group" id="hiddenField">
+          <label>Number of bedrooms</label>
+          <input type="number" class="form-control" min="0" max="10" name="bed" placeholder="2 Bedrooms">
+        </div>
+        <div class="form-group" id="hiddenField">
+          <label>Number of bathrooms</label>
+          <input type="number" class="form-control" min="0" max="10" name="bath"placeholder="1 bathroom">
+        </div>
+        <div class="form-group" id="hiddenField">
+          <label>What's the maximum number of occupants?</label>
+          <input type="number" class="form-control" min="1" max="20" name="occupants" placeholder="3">
+        </div>
+        <div class="form-group" id="hiddenField">
+          <label>email</label>
+          <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group" id="hiddenField">
+          <label>phone</label>
+          <input type="number" class="form-control" name="phone">
+        </div>
+        <div class="form-group">
+          <label>Give a title to your listing</label>
+          <input type="text" class="form-control" name="title" placeholder="Cozy and comfortable 1-bedroom">
+        </div>
+        <div class="form-group">
+          <label>When will it be available?</label>
+          <input type="date" class="form-control" name="availability" placeholder="11/25/2016">
+        </div>
+        <div class="form-group">
+          <label>Monthly rate (in €)</label>
+          <input type="number" class="form-control" name="cost" placeholder="€ 450">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" class="form-control" name="description" placeholder="(optional) - New paint and hardwood floors">
+        </div>
+         <div class="form-group">
+          <label>link to image</label>
+          <input type="text" class="form-control" name="image1" placeholder="http://m.rgbimg.com/cache1t5fk2/users/a/ay/ayla87/600/nH6D82C.jpg">
+        </div>
+        <input type="submit" class="btn btn-default" value="Submit Listing"></input>
+      </form>
+    </div>
+  {{> globalBottomScripts}}
+  <script type="text/javascript" src="/js/listYourSpace2.js"></script>
+</body></html>

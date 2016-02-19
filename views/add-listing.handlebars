@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+  <link rel="stylesheet" type="text/css" href="/css/list-your-space.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+
+  {{> globalNavigation}}
+  <script type="text/javascript">
+    console.log("{{city}}");
+    localStorage.setItem('city', "{{city}}"); 
+    localStorage.setItem('numOfBaths', "{{numOfBaths}}");
+    localStorage.setItem('numOfBeds', "{{numOfBeds}}");
+    localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
+  </script>
+  <div class="wrap">
+    <h3 class="text-center" id="greetingUser"></h3>
+    <div class = "text-center">
+      <a href="/search" class="btn btn-default">search listings</a>
+    </div>
+  </div>
+  {{> globalBottomScripts}}
+  <script type="text/javascript" src="/js/addListing.js"></script>
+</body></html>
