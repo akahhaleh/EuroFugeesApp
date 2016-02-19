@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Play);
 
+/************************************
+*************************************
+NOTE: USE THIS CSS FILE ONLY FOR
+THEMES, BACKGROUNDS, AND TYPOGRAPHY
+EXCEPT FOR ALIGNMENTS
+*************************************
+************************************/
+
 /*
 color1: #A9C4BD
 color2: #E4DDCB
@@ -8,7 +16,7 @@ color3: #EC7B59
 color5: #524556
  */
 
-/* whole elements */
+/* basic elements theme */
 
 * {
 	color: #fff;
@@ -26,30 +34,60 @@ a {
 	color: #524556;
 }
 
-/* form edits */
-label {
-	font-weight: normal;
+/* headlines theme */
+h3 {
+	font-family: "Play", "Arial", sans-serif;
 }
 
-/* buttons */
+/* buttons theme */
 .btn, .btn-default {
 	border-radius: 0;
 	font-size: 1.3em;
 }
 
-.landing-selection {
+/* form edits */
+label {
+	font-weight: normal;
+}
+
+/* landing page theme */
+.landing-feature h2 {
+	background: rgba(0,0,0,.75);
+	font-family: "Play", "Arial", sans-serif;
+}
+
+/* global navigation menu theme */
+.navbar {
 	background: #CE4648;
 }
 
-.landing-selection .btn-default {
-	width: 100%;
+.navbar .button {
+	background: none;
 }
 
-/* headlines */
-h3 {
-	font-family: "Play", "Arial", sans-serif;
+.navbar .icon-bar {
+	background: #fff;	
+}
+
+.navbar-nav li:last-of-type a {
+	border-bottom: none;
+}
+
+.navbar-toggle {
+	border: none;
+}
+
+.navbar-nav a {
+	color: #fff;
 	text-transform: uppercase;
-	font-size: 1.3em;
+	letter-spacing: 2px;
+	font-size: 1.25em;
 }
 
-/* form headlines */
+/* special body backgrounds */
+#landing {
+	background: url('../img/pro/landing.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
