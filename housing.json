@@ -14,7 +14,7 @@
 			"image2": "/img/pictures/img2.PNG",
 			"image3": "/img/pictures/img3.PNG",
 			"phone": "(999) - 999-9999",
-			"email": "email@example.com"	
+			"email": "email@example.com"
 		},
 		{
 			"id": "2",
@@ -94,7 +94,7 @@
 			"image2": "/img/pictures/img8.PNG",
 			"image3": "/img/pictures/img9.PNG",
 			"phone": "(999) - 999-9999",
-			"email": "email@example.com"			
+			"email": "email@example.com"
 		}
 	]
 }
