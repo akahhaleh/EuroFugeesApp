@@ -1,16 +1,27 @@
-<!doctype html><html><head>{{> globalHead}}</head>
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+  <link rel="stylesheet" type="text/css" href="/css/list-your-space.css">
+</head>
 <body>
   {{> globalNavigation}}
 	  <div class="wrap">
       <h3 class="text-center">What type of space do you want to list?</h3>
-      <form id="typeOfSpace" role="form" method="get" action="/entire-home">
-        <input type="submit" id="entireHomeBtn" class="btn btn-default" value="Entrie Home">
-        </input>
-      </form>
+      <div id="entireHomeBtn"class="btn btn-default text-center">Entire Home</div>
+      <div id="entireHousePanel">
+        <form id="entireHouse" role="form" method="get" action="/entire-home">
+          <input type="submit" class="btn btn-default" value="Next">
+          </input>
+        </form>
+      </div>
+      <div id="privateRoomBtn"class="btn btn-default text-center">Private Room in your home</div>
+      
       <form id="typeOfSpace" role="form" method="get" action="/private-room">
-        <input type="submit" id="privateRoomBtn" class="btn btn-default" value="Private Room in your home">
+        <input type="submit" class="btn btn-default" value="Next">
         </input>
       </form>
   </div>
   {{> globalBottomScripts}}
+  <script type="text/javascript" src="/js/listYourSpace.js"></script>
 </body></html>

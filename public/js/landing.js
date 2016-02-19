@@ -10,7 +10,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	$(".friendName").click(nameClicked);
+	//$(".friendName").click(nameClicked);
+	if(typeof userLoggedIn === 'undefined'){
+		console.log("userLoggedIn is not defined yet")
+    	var userLoggedIn = false;
+    };
 }
 
 function anagrammedName(name) {

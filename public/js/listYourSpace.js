@@ -10,7 +10,13 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	var housingType = "";
+	var city = ""; 
+	var numOfBaths = 0;
+	var numOfBeds = 0;
+	var numOfOccupants = 0;
 	$("#entireHomeBtn").click(entireHomeClicked);
+	$("#privateRoomBtn").click(privateRoomClicked);
 }
 
 function anagrammedName(name) {
@@ -47,5 +53,12 @@ function anagrammedName(name) {
 }
 
 function entireHomeClicked(e){
-	localStorage.setItem('type', 'Shared');
+	housingType = 'entire';
+	localStorage.setItem('type', housingType);
+	
+
+}
+
+function privateRoomClicked(e){
+
 }

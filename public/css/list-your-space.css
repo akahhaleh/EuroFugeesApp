@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Play);
+
+/************************************
+*************************************
+NOTE: USE THIS CSS FILE ONLY FOR
+LISTING-YOUR-SPACE PAGES
+*************************************/
+
+#entireHomeBtn, #privateRoomBtn{
+	display: block;
+	margin: 1%;
+}
