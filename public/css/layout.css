@@ -124,3 +124,53 @@ form {
 .help-topic > p, .tutorial-topic > p {
 	color: #000;
 }
+
+/* css for slideshow */
+.listing-slideshow {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.listing-slideshow figure {
+	position: absolute;
+	opacity: 0;
+	transition: 1s opacity;
+}
+
+.listing-slideshow figure.show {
+	opacity: 1;
+	position: static;
+	transition: 1s opacity;
+}
+
+.listing-slideshow .next, .listing-slideshow .prev {
+	color: #fff;
+	position: absolute;
+	background: rgba(0,0,0, .6);
+	top: 50%;
+	z-index: 1;
+	font-size: 2em;
+	margin-top: -.75em;
+	opacity: .3;
+	user-select: none;
+}
+
+.listing-slideshow .next:hover, .listing-slideshow .prev:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.listing-slideshow .next {
+	right: 0;
+	padding: 10px 5px 15px 10px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.listing-slideshow .prev {
+	left: 0;
+	padding: 10px 10px 15px 5px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
