@@ -1,11 +1,11 @@
 {
-  "name": "IntroHCI",
+  "name": "EuroFugees",
   "version": "0.0.1",
-  "author": "Intro HCI Staff",
+  "author": "Amr Kahhaleh",
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab5"
+    "url": "https://github.com/akahhaleh/EuroFugeesA6"
   },
   "license": "MIT",
 
