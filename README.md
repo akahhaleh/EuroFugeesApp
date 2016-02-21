@@ -1,4 +1,4 @@
-Lab 5
+EuroFugees
 ====
 
-Lab 5: Putting it together
+App that connects refugees in Europe to local hosts

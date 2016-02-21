@@ -21,9 +21,9 @@ var listing = require('./routes/listing');
 // locales
 var listYourSpace = require('./routes/list-your-space');
 var listYourSpace2 = require('./routes/list-your-space-2');
-var addListing = require('./routes/add-listing');
 // refugees
 var apply = require('./routes/apply');
+var addListing = require('./routes/add-listing');
 
 var app = express();
 
@@ -60,9 +60,9 @@ app.get('/listing', listing.view);
 // locales pages
 app.get('/list-your-space', listYourSpace.view);
 app.get('/list-your-space-2', listYourSpace2.view);
-app.get('/add-listing', addListing.view);
 // refugees pages
 app.get('/apply', apply.view);
+app.get('/add-listing', addListing.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

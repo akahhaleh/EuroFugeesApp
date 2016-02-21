@@ -1,5 +1,3 @@
-var housingData = require('../housing.json');
-
 exports.view = function(req, res){
 
 	var city = (typeof req.query.city !=='undefined')?req.query.city:" ";
@@ -8,5 +6,10 @@ exports.view = function(req, res){
 	var numOfOccupants  = (typeof req.query.occupants !=='undefined')?req.query.occupants:0;
 	console.log("We logged: city= "+city+" #beds= "+numOfBeds+" #baths= "+numOfBaths+" #occupants= "+numOfOccupants);
 
-	res.render('sign-up', {city, numOfBeds, numOfBaths, numOfOccupants});
+	var text = '{"variables": [{"city" : "'+city+'","numOfBeds" : "'+numOfBeds+'","numOfBaths" : "'+numOfBaths+'","numOfOccupants" : "'+numOfOccupants+'"}]}';
+	
+	console.log("text object includes:", text);
+	var localVariables = JSON.parse(text);
+
+	res.render('sign-up', localVariables);
 };

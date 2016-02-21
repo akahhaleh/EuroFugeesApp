@@ -11,11 +11,13 @@
   <script type="text/javascript">
     var userLoggedIn = localStorage.getItem('userLoggedIn');
     if (userLoggedIn==="true"){
+      {{#each variables}}
       console.log("{{city}}");
       localStorage.setItem('city', "{{city}}"); 
       localStorage.setItem('numOfBaths', "{{numOfBaths}}");
       localStorage.setItem('numOfBeds', "{{numOfBeds}}");
       localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
+      {{/each}}
     }else{
       localStorage.setItem('userLoggedIn', "true")
     }

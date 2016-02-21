@@ -1,22 +1,18 @@
-<!doctype html>
-<html>
-<head>
-	{{> globalHead}}
-	<link rel="stylesheet" type="text/css" href="/css/list-your-space.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-</head>
+<!doctype html><html><head>{{> globalHead}}</head>
 <body>
 	{{> globalNavigation}}
 	<script type="text/javascript">
+		{{#each variables}}
 		console.log("{{city}}");
 		localStorage.setItem('city', "{{city}}"); 
 		localStorage.setItem('numOfBaths', "{{numOfBaths}}");
 		localStorage.setItem('numOfBeds', "{{numOfBeds}}");
 		localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
+		{{/each}}
 	</script>
+
 	<div class="wrap">
     <h3 class="text-center">Before listing your space, let's sign you up for an account really quick.</h3>
-    <!--div id="entireHomeBtn"class="btn btn-default text-center">Entire Home</div-->
     <div id="sign-up-panel">
       <!--form id="entireHome" role="form" method="get" action="JavaScript:handleClick()"-->
       <form id="signUpForm" name="signUpForm" role="form" method="get" onsubmit="return onsubmitform();">
@@ -43,7 +39,6 @@
         <input type="submit" class="btn btn-default" value="Sign Up"></input>
       </form>
     </div>
-  	{{> globalBottomScripts}}
-  	<script type="text/javascript" src="/js/signUp.js"></script>
-</body>
-</html>
+	<script type="text/javascript" src="/js/signUp.js"></script>
+ 	{{> globalBottomScripts}}
+</body></html>

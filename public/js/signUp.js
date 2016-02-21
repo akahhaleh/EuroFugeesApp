@@ -10,23 +10,8 @@ $(document).ready(function() {
  */
 function initializePage() { 
 	console.log("Javascript connected! - signUp.js");
-	//$("#entireHomeBtn").unbind().click(entireHomeClicked);
-	//$("#privateRoomBtn").unbind().click(privateRoomClicked);
 }
 
-
-function entireHomeClicked(e){
-	var housingType = 'entire';
-	localStorage.setItem('type', housingType);
-	$("#entireHomePanel").slideToggle("slowly");
-
-}
-
-function privateRoomClicked(e){
-	var housingType = 'private';
-	localStorage.setItem('type', housingType);
-	$("#privateRoomPanel").slideToggle("slowly");
-}
 
 function onsubmitform(e){
 	var fn =  document.getElementById("first-name").value;
