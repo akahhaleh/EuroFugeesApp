@@ -13,3 +13,9 @@ function initializePage() {
 	var city = location.search.substr(6);
 	console.log(city);
 }
+
+
+function registerID(id){
+	console.log("selectedListingID = "+id);
+	localStorage.setItem('selectedListingID', id);
+}
