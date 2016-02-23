@@ -1,5 +1,4 @@
-{
-	"housing": [
+[
 		{
 			"id": "1",
 			"title": "Nice view in safe area",
@@ -97,4 +96,3 @@
 			"email": "email@example.com"
 		}
 	]
-}
