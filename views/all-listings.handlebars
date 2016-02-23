@@ -10,7 +10,7 @@
   		<div class="house">
   			<h3>{{title}}</h3>
   			<!-- make this linke call a js functuin that is {{id}} and then the function sets locat storage to that ID to be used by next page. -->
-  			<a class="house-card" href="/listing" onclick="registerID({{id}})">
+  			<a class="house-card" href="/listing-details" onclick="registerID({{id}})">
   				<img class = "img-responsive" src = "{{image1}}">
   			</a>
         <p class="cost">Cost: {{cost}}</p>
@@ -24,4 +24,5 @@
   </div>
 
   {{> globalBottomScripts}}
+  <script src="/js/all-listings.js"></script>
 </body></html>

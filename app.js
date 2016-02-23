@@ -17,7 +17,7 @@ var help = require('./routes/help');
 // listings
 var search = require('./routes/search');
 var allListings = require('./routes/all-listings');
-var listing = require('./routes/listing');
+var listingDetails = require('./routes/listing-details');
 // locales
 var listYourSpace = require('./routes/list-your-space');
 var listYourSpace2 = require('./routes/list-your-space-2');
@@ -56,7 +56,7 @@ app.get('/help', help.view);
 // listings pages
 app.get('/search', search.view);
 app.get('/all-listings', allListings.view);
-app.get('/listing', listing.view);
+app.get('/listing-details', listingDetails.view);
 // locales pages
 app.get('/list-your-space', listYourSpace.view);
 app.get('/list-your-space-2', listYourSpace2.view);
