@@ -43,12 +43,16 @@ function initializePage() {
 function addListingInfo(result){
 	console.log("JSON file returned: "+ result);
 
+	var i=1;
+
+	while (typeof result['image'+i] != 'undefined'){
+		console.log (result['image'+i])
+		document.getElementById("image"+i).src = result['image'+i];
+		i++;
+	}
+
 	var projectHTML = '<div class="house"><h3>'
-					  +result['title']+'</h3><div class="listing-slideshow">'
-					  +'<figure class="show"><img src="'+result['image1']
-					  +'" width="100%"></figure><figure><img src="'
-					  +result['image2']+'"width="100%">'+'</figure>'
-					  +'<figure><img src="'+result['image3']+'"width="100%">'+'</figure></div>'
+					  +result['title']+'</h3>'
 					  +'<div class="top-info"><p class="cost2">Cost: '+result['cost']+'</p>'
 					  +'<p class="city">Location: ' + result['city']+'</p>'
 					  +'<p class="availability">Available on: '+result['availability']+'</p>'
