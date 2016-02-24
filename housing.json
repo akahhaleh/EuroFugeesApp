@@ -1,6 +1,6 @@
 [
 		{
-			"id": "1",
+			"id": "0",
 			"title": "Nice view in safe area",
 			"type": "Shared",
 			"bed": "1",
@@ -16,7 +16,7 @@
 			"email": "email@example.com"
 		},
 		{
-			"id": "2",
+			"id": "1",
 			"title": "Spacious private room",
 			"type": "Private",
 			"bed": "2",
@@ -32,7 +32,7 @@
 			"email": "email@example.com"			
 		},
 		{
-			"id": "3",
+			"id": "2",
 			"title": "Home with nice large backyard",
 			"type": "Entire",
 			"bed": "3",
@@ -48,7 +48,7 @@
 			"email": "email@example.com"	
 		},
 		{
-			"id": "4",
+			"id": "3",
 			"title": "Large shared room",
 			"type": "Shared",
 			"bed": "2",
@@ -64,7 +64,7 @@
 			"email": "email@example.com"			
 		},
 		{
-			"id": "5",
+			"id": "4",
 			"title": "Cozy private apartment",
 			"type": "Private",
 			"bed": "1",
@@ -80,7 +80,7 @@
 			"email": "email@example.com"		
 		},
 		{
-			"id": "6",
+			"id": "5",
 			"title": "Modern apartment in Berlin",
 			"type": "Apartment",
 			"bed": "1",

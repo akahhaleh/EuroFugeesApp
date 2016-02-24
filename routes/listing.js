@@ -1,7 +1,9 @@
 var housingData = require('../housing.json');
 
 exports.listingInfo = function(req, res) { 
+
 	var listingID = req.params.id;
+
 	/*
 	if (projectID == "random") {
 		projectID = Math.floor(Math.random() * projects.length) + 1;
@@ -11,6 +13,6 @@ exports.listingInfo = function(req, res) { 
 	*/
 	listingID = parseInt (listingID);
 
-  	var listing = housingData[listingID-1]; // of by one, our first project has index 0
+  	var listing = housingData[listingID]; // of by one, our first project has index 0
   	res.json(listing);
 }

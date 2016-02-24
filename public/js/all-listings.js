@@ -9,7 +9,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected!");
+	console.log("Javascript connected! - all-listing.js");
 	var city = location.search.substr(6);
 	console.log(city);
 }

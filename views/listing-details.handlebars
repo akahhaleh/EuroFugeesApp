@@ -1,8 +1,11 @@
 <!doctype html><html><head>{{> globalHead}}</head>
 <body>
   {{> globalNavigation}}
+
   <div clas="container">
+
     <div class="listings-description">
+      <!--
       {{#each house}}
       <div class="house">
         <h3>{{title}}</h3>
@@ -43,9 +46,11 @@
           <p class="email">email address: {{email}}</p>
         </div>
       </div>
-      {{/each}} 
-      <a href="/apply" class="btn btn-default">Contact Host</a>
+      {{/each}}
+      --> 
     </div>
+    <a href="/apply" class="btn btn-default">Contact Host</a>
   </div>
   {{> globalBottomScripts}}
+  <script type="text/javascript" src="/js/listingDetails.js"></script>
 </body></html>

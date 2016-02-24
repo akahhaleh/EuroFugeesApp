@@ -5,7 +5,7 @@ exports.view = function(req, res){
 	console.log(housingData);
 	console.log("the length of housing.json is "+Object.keys(housingData).length);
 
-	var id = (housingData.length)+1;
+	var id = (housingData.length);
 	var title = (typeof req.query.title !=='undefined')?req.query.title:" ";
 	var type = (typeof req.query.occupants !=='undefined')?req.query.occupants:0;
 	var bed = (typeof req.query.bed !=='undefined')?req.query.bed:0;

@@ -9,21 +9,20 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected! - list-your-space-2.js");
+	console.log("Javascript connected! - listingDetails.js");
 
-	// get local storage variables about user
-	var listingProcess = localStorage.getItem('listingProcess');
-	var userFirstName = localStorage.getItem('user-firstName');
-	var userEmail = localStorage.getItem('user-email');
-	var userPhone = localStorage.getItem('user-phone');
+	// Get listing id from local sotrage
+	var listingID = localStorage.getItem('selectedListingID');
 
-	// get local storage variables about listing
-	var city = localStorage.getItem('city');
-	var numOfBeds = localStorage.getItem('numOfBeds');
-	var numOfBaths = localStorage.getItem('numOfBaths');
-	var numOfOccupants = localStorage.getItem('numOfOccupants');
+	// Call function to get listing information from JSON file
+	$.get("listing/"+listingID, addListingInfo)
+	console.log("Getting info for listing ID = " + listingID);
+
+	
+	// Call function to add info to page
 
 
+	/*
 	// Display user name in header
 	document.getElementById('greetingUser').innerHTML = "Welcome "+userFirstName+". Let's wrap up your listing.";
 	$("#listYourSpace2Panel").slideDown("slow");
@@ -36,10 +35,42 @@ function initializePage() {
 	oFormObject.elements["occupants"].value = numOfOccupants;
 	oFormObject.elements["email"].value = userEmail;
 	oFormObject.elements["phone"].value = userPhone;
+	*/
+
 
 }
 
+function addListingInfo(result){
+	console.log("JSON file returned: "+ result);
 
-function onsubmitform(e){
-	document.listingYourSpace2Form.action ="/add-listing";	
+	var projectHTML = '<div class="house"><h3>'
+					  +result['title']+'</h3><div class="listing-slideshow">'
+					  +'<figure class="show"><img src="'+result['image1']
+					  +'" width="100%"></figure><figure><img src="'
+					  +result['image2']+'"width="100%">'+'</figure>'
+					  +'<figure><img src="'+result['image3']+'"width="100%">'+'</figure></div>'
+					  +'<div class="top-info"><p class="cost2">Cost: '+result['cost']+'</p>'
+					  +'<p class="city">Location: ' + result['city']+'</p>'
+					  +'<p class="availability">Available on: '+result['availability']+'</p>'
+					  +'</div>'
+					  +'<div class="basic-info"><h4>Basic Information</h4>'
+					  +'<p class="bed">type: '+result['type']+'</p>'
+					  +'<p class="bed">Bed: '+result['bed']+'</p>'
+					  +'<p class="bath">Bath: '+result['bath']+'</p></div>'
+					  +'<div class="Description"><h4>Description</h4>'
+					  +'<p>'+result['description']+'</p></div>'
+					  +'<div class="contact"><h4>Host Contact info</h4>'
+					  +'<p class="phone">Phone number: '+result['phone']+'</p>'
+					  +'<p class="email">email address: '+result['email']+'</p>'
+					  +'</div></div>';
+
+
+	//var projectID = $(this).closest('.details');
+	$('.listings-description').html(projectHTML);
 }
+
+
+
+
+
+
