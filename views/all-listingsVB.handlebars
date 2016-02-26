@@ -1,0 +1,64 @@
+<!doctype html><html>
+<head>{{> globalHead}}
+  <link rel="stylesheet" type="text/css" href="/css/list-your-space.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+  {{> globalNavigation}}
+	<div class="wrap">
+    <div id="privateRoomBtn"class="btn btn-default text-center">Refine Search</div>
+      <div id="privateRoomPanel">
+        <form id="privateRoomForm" name="privateRoomForm" role="form" method="get" onsubmit="#">
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" placeholder="Berlin">
+          </div>
+          <div class="form-group">
+            <label>Number of bathrooms</label>
+            <input type="number" class="form-control" min="0" max="10" name="bath"placeholder="1 bathroom">
+          </div>
+          <div class="form-group">
+            <label>Number of Bedrooms</label>
+            <input type="number" class="form-control" min="1" max="20" name="occupants" placeholder="3">
+          </div>
+          <input type="submit" class="btn btn-default" value="Refine"></input>
+        </form>
+      </div>
+    <div class="all-listings">
+  		{{#each house}}
+  		<div class="house">
+        <a style = "color:white" class="house-card" href="/listing-details" onclick="registerID({{id}})">
+  			 <h3>{{title}}</h3>
+      </a>
+  			<!-- make this linke call a js functuin that is {{id}} and then the function sets locat storage to that ID to be used by next page. -->
+  				<div class="listing-slideshow">
+            <figure class="show">
+              <img id="image1" src = "{{image1}}" width="100%">
+            </figure>
+            <figure>
+              <img id="image2" src = "{{image2}}" width="100%">
+            </figure> 
+            <figure>
+              <img id="image3" src = "{{image1}}" width="100%">
+            </figure>
+              <span class="prev">«</span>
+              <span class="next">»</span>
+          </div>
+  			
+        <p class="cost">Cost: {{cost}}</p>
+        <div class="bed-bath">
+          <p class="bed">Bed: {{bed}}</p>
+    			<p class="bath">Bath: {{bath}}</p>
+          <p class="bath"> availability: {{availability}}</p>
+          <p class="bath"> housing-type: {{type}}</p>
+        </div>
+  		</div>
+  		{{/each}}	
+  	</div>
+  </div>
+
+  {{> globalBottomScripts}}
+  <script src="/js/all-listings.js"></script>
+  <script type="text/javascript" src="/js/listYourSpace.js"></script>
+</body></html>
