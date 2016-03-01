@@ -4,7 +4,7 @@ exports.view = function(req, res){
 	//console.log(housingData);
 
 	var city = req.query.city.toLowerCase();
-	console.log("the passed city is: "+ city);
+	console.log("The passed city is: "+ city);
 	var housingDataLength = housingData.length;
 	var searchResults = [];
 

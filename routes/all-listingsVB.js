@@ -4,7 +4,8 @@ exports.view = function(req, res){
 	//console.log(housingData);
 
 	var city = req.query.city.toLowerCase();
-	console.log("the passed city is: "+ city);
+	var count = 
+	console.log("The passed city is: "+ city);
 	var housingDataLength = housingData.length;
 	var searchResults = [];
 
@@ -18,5 +19,5 @@ exports.view = function(req, res){
 	}
 
 		res.render('all-listingsVB', {
-		'house': searchResults});
+		'house': searchResults, 'searchQuery':{"city":"damas", "occupants":"3", "cost":"500"}});
 };

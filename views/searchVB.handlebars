@@ -10,11 +10,11 @@
       </div>
       <div class="form-group">
         <label id = "search-occupants">How many occupants total?</label>
-        <input type="number" class="form-control" name="occupants" placeholder="Berlin">
+        <input type="number" class="form-control" min="0" max="10" name="occupants" placeholder="1 - 10">
       </div>
       <div class="form-group">
-        <label id = "search-cost">What's your price limit?</label>
-        <input type="number" class="form-control" name="cost" placeholder="€ 350">
+        <label id = "search-cost">What's your price limit (in €)?</label>
+        <input type="number" class="form-control" min="0" max="10000" name="cost" placeholder="€ 350">
       </div>
       <button type="submit" id="submitBtn" class="btn btn-default">Search</button>
     </form>

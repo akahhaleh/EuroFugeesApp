@@ -1,28 +1,28 @@
 <!doctype html><html>
 <head>{{> globalHead}}
-  <link rel="stylesheet" type="text/css" href="/css/list-your-space.css">
+  <link rel="stylesheet" type="text/css" href="/css/global-styling.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 
 <body>
   {{> globalNavigation}}
 	<div class="wrap">
-    <div id="privateRoomBtn"class="btn btn-default text-center">Refine Search</div>
-      <div id="privateRoomPanel">
-        <form id="privateRoomForm" name="privateRoomForm" role="form" method="get" onsubmit="#">
-          <div class="form-group">
-            <label>City</label>
-            <input type="text" class="form-control" name="city" placeholder="Berlin">
+    <div id="refineSearch"class="btn btn-default text-center" >Refine Search</div>
+      <div id="fadedPanel">
+        <form id="search-form" role="form" method="get" action="/all-listingsVB">
+          <div class="form-group" id="search-city">
+            <label>Where are you going?</label>
+            <input type="text" class="form-control" name="city" value="{{searchQuery.city}}">
           </div>
           <div class="form-group">
-            <label>Number of bathrooms</label>
-            <input type="number" class="form-control" min="0" max="10" name="bath"placeholder="1 bathroom">
+            <label id = "search-occupants">How many occupants total?</label>
+            <input type="number" class="form-control" min="0" max="10" name="occupants" value="{{searchQuery.occupants}}">
           </div>
           <div class="form-group">
-            <label>Number of Bedrooms</label>
-            <input type="number" class="form-control" min="1" max="20" name="occupants" placeholder="3">
+            <label id = "search-cost">What's your price limit?</label>
+            <input type="number" class="form-control" min="0" max="10000" name="cost" value="{{searchQuery.cost}}" >
           </div>
-          <input type="submit" class="btn btn-default" value="Refine"></input>
+          <button type="submit" id="refineSearchApply" class="btn btn-default">Apply</button>
         </form>
       </div>
     <div class="all-listings">
@@ -59,6 +59,5 @@
   </div>
 
   {{> globalBottomScripts}}
-  <script src="/js/all-listings.js"></script>
-  <script type="text/javascript" src="/js/listYourSpace.js"></script>
+  <script src="/js/allListingsVB.js"></script>
 </body></html>

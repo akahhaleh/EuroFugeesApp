@@ -6,6 +6,11 @@ NOTE: USE THIS CSS FILE ONLY FOR
 LISTING-YOUR-SPACE PAGES
 *************************************/
 
+.wrap > .btn{
+	display: block;
+	margin-top: 2%;
+}
+
 #entireHomeBtn, #privateRoomBtn{
 	display: block;
 }
@@ -15,7 +20,7 @@ LISTING-YOUR-SPACE PAGES
 }
 
 
-#entireHomePanel, #privateRoomPanel, #listYourSpace2Panel{
+#entireHomePanel, #privateRoomPanel, #listYourSpace2Panel, #fadedPanel{
 	display: none;
 	padding: 1%;
 	background: rgba(58, 145, 182, 0.5);
