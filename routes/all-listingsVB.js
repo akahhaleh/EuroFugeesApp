@@ -3,21 +3,43 @@ var housingData = require('../housing.json');
 exports.view = function(req, res){
 	//console.log(housingData);
 
+	// get variables from request query
 	var city = req.query.city.toLowerCase();
-	var count = 
+	var occupants = req.query.occupants;
+	var area = 45 + ((occupants-1)*15);
+	var cost = req.query.cost;
+
+	// print passed results 
 	console.log("The passed city is: "+ city);
+	console.log("The passed occupants is: "+ occupants);
+	console.log("The passed cost is: "+ cost);
+
+
 	var housingDataLength = housingData.length;
 	var searchResults = [];
 
 	for (i = 0; i < housingDataLength; i++) { 
-    	var listingCity = housingData[i].city.toLowerCase();
-    	console.log('The city of listing #' + i +' is: '+listingCity); 
 
+		// Get variables of each listing from json file
+    	var listingCity = housingData[i].city.toLowerCase();
+    	var listingArea = housingData[i].area;
+    	var listingCost = housingData[i].cost;
+
+    	console.log('The city of listing #' + i +' is: '+listingCity); 
+    	console.log('The cost of listing #' + i +' is: '+listingCost); 
+    	console.log('The area of listing #' + i +' is: '+listingArea); 
     	if (listingCity === city){
-    		searchResults.push(housingData[i]);
+    		console.log("passed city");
+    		if (listingCost <= cost){
+    			console.log("passed cost");
+    			if (area <= listingArea){
+    				console.log("passed cost");
+    				searchResults.push(housingData[i]);
+    			}
+    		}
     	}
 	}
 
 		res.render('all-listingsVB', {
-		'house': searchResults, 'searchQuery':{"city":"damas", "occupants":"3", "cost":"500"}});
+		'house': searchResults, 'searchQuery':{"city":city, "occupants":occupants, "cost":cost}});
 };
