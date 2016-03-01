@@ -4,13 +4,17 @@
   <div class="wrap">
     <h3 class="text-center">Search for Places to Live</h3>
     <form id="search-form" role="form" method="get" action="/all-listingsVB">
-      <div class="form-group">
+      <div class="form-group" id="search-city">
         <label>Where are you going?</label>
-        <input type="text" class="form-control" name="city" placeholder="City">
+        <input type="text" class="form-control" name="city" placeholder="Berlin">
       </div>
       <div class="form-group">
-        <label>When do you need a place?</label>
-        <input type="date" class="form-control" name="date">
+        <label id = "search-occupants">How many occupants total?</label>
+        <input type="number" class="form-control" name="occupants" placeholder="Berlin">
+      </div>
+      <div class="form-group">
+        <label id = "search-cost">What's your price limit?</label>
+        <input type="number" class="form-control" name="cost" placeholder="€ 350">
       </div>
       <button type="submit" id="submitBtn" class="btn btn-default">Search</button>
     </form>

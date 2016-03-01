@@ -51,7 +51,7 @@ function addListingInfo(result){
 		i++;
 	}
 
-	var projectHTML = '<div class="house"><h3>'
+	var listingHTML = '<div class="house"><h3>'
 					  +result['title']+'</h3>'
 					  +'<div class="top-info"><p class="cost2">Cost: '+result['cost']+'</p>'
 					  +'<p class="city">Location: ' + result['city']+'</p>'
