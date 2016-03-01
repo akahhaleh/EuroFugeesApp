@@ -17,27 +17,6 @@ function initializePage() {
 	// Call function to get listing information from JSON file
 	$.get("listing/"+listingID, addListingInfo)
 	console.log("Getting info for listing ID = " + listingID);
-
-	
-	// Call function to add info to page
-
-
-	/*
-	// Display user name in header
-	document.getElementById('greetingUser').innerHTML = "Welcome "+userFirstName+". Let's wrap up your listing.";
-	$("#listYourSpace2Panel").slideDown("slow");
-
-	// fill out hidden form fields
-	var oFormObject = document.forms['listingYourSpace2Form'];
-	oFormObject.elements["city"].value = city;
-	oFormObject.elements["bed"].value = numOfBeds;
-	oFormObject.elements["bath"].value = numOfBaths;
-	oFormObject.elements["occupants"].value = numOfOccupants;
-	oFormObject.elements["email"].value = userEmail;
-	oFormObject.elements["phone"].value = userPhone;
-	*/
-
-
 }
 
 function addListingInfo(result){

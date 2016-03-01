@@ -18,6 +18,7 @@ var search = require('./routes/search');
 var searchVB = require('./routes/searchVB');
 var allListings = require('./routes/all-listings');
 var allListingsVB = require('./routes/all-listingsVB');
+var refineSeachVB = require('./routes/refine-search');
 var listingDetails = require('./routes/listing-details');
 var listing = require('./routes/listing');
 // locales
@@ -60,6 +61,7 @@ app.get('/search', search.view);
 app.get('/searchVB', searchVB.view);
 app.get('/all-listings', allListings.view);
 app.get('/all-listingsVB', allListingsVB.view);
+app.get('/refine-search/:city/:occupants/:cost/:pets/:children/:smoking/:availability', refineSeachVB.updateResults);
 app.get('/listing-details', listingDetails.view);
 app.get('/listing/:id', listing.listingInfo);
 

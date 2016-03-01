@@ -9,19 +9,24 @@
 	<div class="wrap">
     <div id="refineSearch"class="btn btn-default text-center" >Refine Search</div>
       <div id="fadedPanel">
-        <form id="search-form" role="form" method="get" action="/all-listingsVB">
-          <div class="form-group" id="search-city">
+        <form id="refine-form" role="form" method="get">
+          <div class="form-group" id="refine-city">
             <label>Where are you going?</label>
-            <input type="text" class="form-control" name="city" value="{{searchQuery.city}}">
+            <input type="text" class="form-control" name="refine-city" value="{{searchQuery.city}}">
           </div>
           <div class="form-group">
-            <label id = "search-occupants">How many occupants total?</label>
-            <input type="number" class="form-control" min="1" max="10" name="occupants" value="{{searchQuery.occupants}}">
+            <label id = "refine-occupants">How many occupants total?</label>
+            <input type="number" class="form-control" min="1" max="10" name="refine-occupants" value="{{searchQuery.occupants}}">
           </div>
           <div class="form-group">
-            <label id = "search-cost">What's your price limit (in €)?</label>
-            <input type="number" class="form-control" min="1" max="10000" name="cost" value="{{searchQuery.cost}}" >
+            <label id = "refine-cost">What's your price limit (in €)?</label>
+            <input type="number" class="form-control" min="1" max="10000" name="refine-cost" value="{{searchQuery.cost}}" >
           </div>
+          <p>Other options:</p>
+          <input type="checkbox" name="refine-pets" value="true"> Pets-friendly<br>
+          <input type="checkbox" name="refine-children" value="true"> children-friendly<br>
+          <input type="checkbox" name="refine-smoking" value="true"> smoking-friendly<br>
+          <input type="checkbox" name="refine-availability" value="now"> Available Now<br>
           <button type="submit" id="refineSearchApply" class="btn btn-default">Apply</button>
         </form>
       </div>
