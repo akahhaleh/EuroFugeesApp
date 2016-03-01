@@ -5,6 +5,7 @@
 			"type": "Shared",
 			"bed": "1",
 			"bath": "1",
+			"area": "75",
 			"cost": "€ 500",
 			"city": "Berlin",
 			"availability": "5/2/2016",
