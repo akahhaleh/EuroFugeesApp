@@ -10,9 +10,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected! - listingDetails.js");
+	ga('send','pageview');
 
 	// Get listing id from local sotrage
 	var listingID = localStorage.getItem('selectedListingID');
+
+	$("#applyButton").unbind().click(contactHostButtonClicked);
 
 	// Call function to get listing information from JSON file
 	$.get("listing/"+listingID, addListingInfo)
@@ -49,11 +52,12 @@ function addListingInfo(result){
 
 
 	//var projectID = $(this).closest('.details');
-	$('.listings-description').html(projectHTML);
+	$('.listings-description').html(listingHTML);
 }
 
-
-
+function contactHostButtonClicked(e){
+	ga("send", "event", 'contactHostButtonClicked', 'click');
+}
 
 
 

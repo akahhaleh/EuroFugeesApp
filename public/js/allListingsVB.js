@@ -12,17 +12,20 @@ function initializePage() {
 	console.log("Javascript connected! - all-listingVB.js");
 	$("#refineSearch").unbind().click(refineSearchClicked);
 	$('#refineSearchApply').unbind().click(refineSearchApplyClicked);
+	ga('send','pageview');
 }
 
 // Function that lets refine search panel slide
 function refineSearchClicked(e){
 	$("#fadedPanel").slideToggle("slowly");
+	ga("send", "event", 'refineSearchButtonClicked', 'click');
 
 }
 
 function refineSearchApplyClicked(e){
 	e.preventDefault();
 	console.log("refine clicked");
+	ga("send", "event", 'refineSearchApplyButtonClicked', 'click');
 
 	// Get refine form values
 	var oFormObject = document.forms['refine-form'];
