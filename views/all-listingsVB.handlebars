@@ -23,40 +23,39 @@
             <input type="number" class="form-control" min="1" max="10000" name="refine-cost" value="{{searchQuery.cost}}" >
           </div>
           <p>Other options:</p>
-          <input type="checkbox" name="refine-pets" value="true"> Pets-friendly<br>
-          <input type="checkbox" name="refine-children" value="true"> children-friendly<br>
-          <input type="checkbox" name="refine-smoking" value="true"> smoking-friendly<br>
-          <input type="checkbox" name="refine-availability" value="now"> Available Now<br>
+          <input type="checkbox" name="refine-pets" value = "undefined" onclick="$(this).attr('value', this.checked ? 'true' : 'false')"> Pets-friendly<br>
+          <input type="checkbox" name="refine-children" value = "undefined"onclick="$(this).attr('value', this.checked ? 'true' : 'false')"> children-friendly<br>
+          <input type="checkbox" name="refine-smoking" value = "undefined"onclick="$(this).attr('value', this.checked ? 'true' : 'false')"> smoking-friendly<br>
+          <input type="checkbox" name="refine-availability" value = "undefined" onclick="$(this).attr('value', this.checked ? 'now' : 'false')"> Available Now<br>
           <button type="submit" id="refineSearchApply" class="btn btn-default">Apply</button>
         </form>
       </div>
-    <div class="all-listings">
+    <div class="all-listings" id="listing-result">
   		{{#each house}}
   		<div class="house">
         <a style = "color:white" class="house-card" href="/listing-details" onclick="registerID({{id}})">
-  			 <h3>{{title}}</h3>
-      </a>
-  			<!-- make this linke call a js functuin that is {{id}} and then the function sets locat storage to that ID to be used by next page. -->
-  				<div class="listing-slideshow">
-            <figure class="show">
-              <img id="image1" src = "{{image1}}" width="100%">
-            </figure>
-            <figure>
-              <img id="image2" src = "{{image2}}" width="100%">
-            </figure> 
-            <figure>
-              <img id="image3" src = "{{image1}}" width="100%">
-            </figure>
-              <span class="prev">«</span>
-              <span class="next">»</span>
-          </div>
+  			  <h3>{{title}}</h3>
+        </a>
+			  <!-- make this linke call a js function that is {{id}} and then the function sets locat storage to that ID to be used by next page. -->
+				<div class="listing-slideshow">
+          <figure class="show">
+            <img id="image1" src = "{{image1}}" width="100%">
+          </figure>
+          <figure>
+            <img id="image2" src = "{{image2}}" width="100%">
+          </figure> 
+          <figure>
+            <img id="image3" src = "{{image1}}" width="100%">
+          </figure>
+          <span class="prev">«</span>
+          <span class="next">»</span>
+        </div>
   			
-        <p class="cost">Cost: {{cost}}</p>
-        <div class="bed-bath">
-          <p class="bed">Bed: {{bed}}</p>
-    			<p class="bath">Bath: {{bath}}</p>
-          <p class="bath"> availability: {{availability}}</p>
-          <p class="bath"> housing-type: {{type}}</p>
+        <p class="cost">Cost: € {{cost}}</p>
+        <div class="card-info">
+          <p >Beds: {{bed}}</p>
+    			<p >Baths: {{bath}}</p>
+          <p >Availability: {{availability}}</p>
         </div>
   		</div>
   		{{/each}}	

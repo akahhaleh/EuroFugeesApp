@@ -21,6 +21,7 @@ exports.updateResults = function(req, res) { 
 	console.log("The refined children is: "+ children);
 	console.log("The refined smoking is: "+ smoking);
 	console.log("The refined availability is: "+ availability);
+	console.log("============================================");
 
 
 	var housingDataLength = housingData.length;
@@ -50,13 +51,13 @@ exports.updateResults = function(req, res) { 
     			console.log("passed cost");
     			if (area <= listingArea){
     				console.log("passed cost");
-    				if (pets === listingPets){
+    				if (pets === listingPets || pets === 'undefined'){
     					console.log("passed pets");
-    					if (children === listingChildren){
+    					if (children === listingChildren || children === 'undefined'){
     						console.log("passed children");
-    						if (smoking === listingSmoking){
+    						if (smoking === listingSmoking || smoking === 'undefined'){
     							console.log("passed smoking");
-    							if (availability === listingAvailability){
+    							if (availability === listingAvailability || availability === 'undefined'){
     								console.log("passed availability - listing ID#"+i+" has passed");
     								searchResults.push(housingData[i]);
     							}
