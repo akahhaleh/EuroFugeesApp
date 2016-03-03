@@ -8,7 +8,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 // basics
-var landing = require('./routes/landing');
+var index = require('./routes/index');
 var howItWorks = require('./routes/how-it-works');
 var help = require('./routes/help');
 // listings
@@ -51,7 +51,7 @@ if ('development' == app.get('env')) {
 }
 
 // basics
-app.get('/', landing.view);
+app.get('/', index.view);
 app.get('/help', help.view);
 app.get('/how-it-works', howItWorks.view);
 // listings
