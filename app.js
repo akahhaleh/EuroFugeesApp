@@ -8,7 +8,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 // basics
-var index = require('./routes/index');
+var landing = require('./routes/landing');
 var howItWorks = require('./routes/how-it-works');
 var help = require('./routes/help');
 // listings
@@ -51,25 +51,25 @@ if ('development' == app.get('env')) {
 }
 
 // basics
-app.get('/', index.view);
+app.get('/', landing.view);
 app.get('/help', help.view);
 app.get('/how-it-works', howItWorks.view);
 // listings
-app.get('/add-listing', listing/addListing.view);
-app.get('/list-your-space', listing/listYourSpace.view);
-app.get('/list-your-space-2', listing/listYourSpace2.view);
-app.get('/listing/:id', listing/listing.listingInfo);
-app.get('/listing-details', listing/listingDetails.view);
+app.get('/add-listing', addListing.view);
+app.get('/list-your-space', listYourSpace.view);
+app.get('/list-your-space-2', listYourSpace2.view);
+app.get('/listing/:id', listing.listingInfo);
+app.get('/listing-details', listingDetails.view);
 // search
-app.get('/search', search/search.view);
-app.get('/searchVB', search/searchVB.view);
-app.get('/all-listings', search/allListings.view);
-app.get('/all-listingsVB', search/allListingsVB.view);
-app.get('/refine-search/:city/:occupants/:cost/:pets/:children/:smoking/:availability', search/refineSeachVB.updateResults);
+app.get('/search', search.view);
+app.get('/searchVB', searchVB.view);
+app.get('/all-listings', allListings.view);
+app.get('/all-listingsVB', allListingsVB.view);
+app.get('/refine-search/:city/:occupants/:cost/:pets/:children/:smoking/:availability', refineSeachVB.updateResults);
 // user
-app.get('/sign-up', user/signUp.view);
-app.get('/login', user/login.view);
-app.get('/apply', user/apply.view);
+app.get('/sign-up', signUp.view);
+app.get('/login', login.view);
+app.get('/apply', apply.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
