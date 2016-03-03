@@ -1,4 +1,4 @@
-var housingData = require('../housing.json');
+var housingData = require('../../housing.json');
 
 exports.view = function(req, res){
 	//console.log(housingData);
@@ -8,9 +8,9 @@ exports.view = function(req, res){
 	var housingDataLength = housingData.length;
 	var searchResults = [];
 
-	for (i = 0; i < housingDataLength; i++) { 
+	for (i = 0; i < housingDataLength; i++) {
     	var listingCity = housingData[i].city.toLowerCase();
-    	console.log('The city of listing #' + i +' is: '+listingCity); 
+    	console.log('The city of listing #' + i +' is: '+listingCity);
 
     	if (listingCity === city){
     		searchResults.push(housingData[i]);

@@ -7,7 +7,7 @@ exports.view = function(req, res){
 	console.log("We logged: city= "+city+" #beds= "+numOfBeds+" #baths= "+numOfBaths+" #occupants= "+numOfOccupants);
 
 	var text = '{"variables": [{"city" : "'+city+'","numOfBeds" : "'+numOfBeds+'","numOfBaths" : "'+numOfBaths+'","numOfOccupants" : "'+numOfOccupants+'"}]}';
-	
+
 	console.log("text object includes:", text);
 	var localVariables = JSON.parse(text);
 

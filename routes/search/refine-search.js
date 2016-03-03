@@ -1,4 +1,4 @@
-var housingData = require('../housing.json');
+var housingData = require('../../housing.json');
 
 exports.updateResults = function(req, res) { 
 
@@ -13,7 +13,7 @@ exports.updateResults = function(req, res) { 
 	var smoking = req.params.smoking;
 	var availability = req.params.availability;
 
-	// print passed results 
+	// print passed results
 	console.log("The refined city is: "+ city);
 	console.log("The refined occupants is: "+ occupants);
 	console.log("The refined cost is: "+ cost);
@@ -27,7 +27,7 @@ exports.updateResults = function(req, res) { 
 	var housingDataLength = housingData.length;
 	var searchResults = [];
 
-	for (i = 0; i < housingDataLength; i++) { 
+	for (i = 0; i < housingDataLength; i++) {
 
 		// Get variables of each listing from json file
     	var listingCity = housingData[i].city.toLowerCase();
@@ -38,8 +38,8 @@ exports.updateResults = function(req, res) { 
     	var listingSmoking = housingData[i].smoking;
     	var listingAvailability = housingData[i].availability;
 
-    	console.log('The city of listing #' + i +' is: '+listingCity); 
-    	console.log('The cost of listing #' + i +' is: '+listingCost); 
+    	console.log('The city of listing #' + i +' is: '+listingCity);
+    	console.log('The cost of listing #' + i +' is: '+listingCost);
     	console.log('The area of listing #' + i +' is: '+listingArea);
     	console.log('The pets of listing #' + i +' is: '+listingPets);
     	console.log('The children of listing #' + i +' is: '+listingChildren);
@@ -63,7 +63,7 @@ exports.updateResults = function(req, res) { 
     							}
     						}
     					}
-    				}	
+    				}
     			}
     		}
     	}

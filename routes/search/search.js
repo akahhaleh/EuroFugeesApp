@@ -1,4 +1,4 @@
-var housingData = require('../housing.json');
+var housingData = require('../../housing.json');
 
 exports.view = function(req, res){
 	console.log(housingData);

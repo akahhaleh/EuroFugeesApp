@@ -1,4 +1,4 @@
-var housingData = require('../housing.json');
+var housingData = require('../../housing.json');
 
 exports.view = function(req, res){
 
@@ -18,12 +18,12 @@ exports.view = function(req, res){
 	var phone = (typeof req.query.phone !=='undefined')?req.query.phone:"(999) - 999-9999";
 	var email = (typeof req.query.email !=='undefined')?req.query.email:"email@example.com";
 
-	res.render('add-listing');	
+	res.render('add-listing');
 
 	var text = '{"id": "'+id+'","title": "'+title+'","type": "'+type+'","bed": "'+bed+'","bath": "'+bath+'","cost": "€ '+cost+'","city": "'+city+'","availability": "'+availability+'","description": "'+description+'","image1": "'+image1+'","phone": "'+phone+'","email": "'+email+'"}';
 
 	console.log("text object includes:", text);
 	var newListing = JSON.parse(text);
-	
+
 	housingData.push(newListing);
 };
