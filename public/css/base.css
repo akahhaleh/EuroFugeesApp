@@ -122,6 +122,30 @@ body {
     padding: 0;
 }
 
+.wrap > .btn{
+    display: block;
+    margin-top: 2%;
+}
+
+#entireHomeBtn, #privateRoomBtn{
+    display: block;
+}
+
+#privateRoomBtn{
+    margin-top: 2%;
+}
+
+
+#entireHomePanel, #privateRoomPanel, #listYourSpace2Panel, #fadedPanel{
+    display: none;
+    padding: 1%;
+    background: rgba(58, 145, 182, 0.5);
+}
+
+#hiddenField {
+    display: none;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
