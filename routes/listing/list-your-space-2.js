@@ -13,5 +13,5 @@ exports.view = function(req, res){
 	console.log("text object includes:", text);
 	var localVariables = JSON.parse(text);
 
-	res.render('list-your-space-2', localVariables);
+	res.render('listing/list-your-space-2', localVariables);
 };

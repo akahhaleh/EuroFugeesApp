@@ -11,5 +11,5 @@ exports.view = function(req, res){
 	console.log("text object includes:", text);
 	var localVariables = JSON.parse(text);
 
-	res.render('sign-up', localVariables);
+	res.render('user/sign-up', localVariables);
 };

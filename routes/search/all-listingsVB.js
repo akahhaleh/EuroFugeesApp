@@ -40,6 +40,6 @@ exports.view = function(req, res){
     	}
 	}
 
-		res.render('all-listingsVB', {
+		res.render('search/all-listingsVB', {
 		'house': searchResults, 'searchQuery':{"city":city, "occupants":occupants, "cost":cost}});
 };

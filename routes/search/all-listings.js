@@ -17,6 +17,6 @@ exports.view = function(req, res){
     	}
 	}
 
-		res.render('all-listings', {
+		res.render('search/all-listings', {
 		'house': searchResults});
 };
