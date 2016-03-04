@@ -9,8 +9,10 @@ var handlebars = require('express3-handlebars')
 
 // basics
 var landing = require('./routes/landing');
-var howItWorks = require('./routes/how-it-works');
-var help = require('./routes/help');
+var about = require('./routes/about');
+var faqs = require('./routes/faqs');
+var support = require('./routes/support');
+var settings = require('./routes/settings');
 // listings
 var listing = require('./routes/listing/listing');
 var addListing = require('./routes/listing/add-listing');
@@ -44,6 +46,7 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 // development only
 if ('development' == app.get('env')) {
@@ -52,8 +55,10 @@ if ('development' == app.get('env')) {
 
 // basics
 app.get('/', landing.view);
-app.get('/help', help.view);
-app.get('/how-it-works', howItWorks.view);
+app.get('/about', about.view);
+app.get('/faqs', faqs.view);
+app.get('/support', support.view);
+app.get('/settings', settings.view);
 // listings
 app.get('/add-listing', addListing.view);
 app.get('/list-your-space', listYourSpace.view);

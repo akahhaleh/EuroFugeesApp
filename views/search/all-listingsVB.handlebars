@@ -1,68 +1,141 @@
-<!doctype html><html>
-<head>{{> globalHead}}
-  <link rel="stylesheet" type="text/css" href="/css/global-styling.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
 </head>
-
-<body>
-  {{> globalNavigation}}
-	<div class="wrap">
-    <div id="refineSearch"class="btn btn-default text-center" >Refine Search</div>
-      <div id="fadedPanel">
-        <form id="refine-form" role="form" method="get">
-          <div class="form-group" id="refine-city">
-            <label>Where are you going?</label>
-            <input type="text" class="form-control" name="refine-city" value="{{searchQuery.city}}">
-          </div>
-          <div class="form-group">
-            <label id = "refine-occupants">How many occupants total?</label>
-            <input type="number" class="form-control" min="1" max="10" name="refine-occupants" value="{{searchQuery.occupants}}">
-          </div>
-          <div class="form-group">
-            <label id = "refine-cost">What's your price limit (in €)?</label>
-            <input type="number" class="form-control" min="1" max="10000" name="refine-cost" value="{{searchQuery.cost}}" >
-          </div>
-          <p>Other options:</p>
-          <input type="checkbox" name="refine-pets" value = "undefined" onclick="$(this).attr('value', this.checked ? 'true' : 'false')"> Pets-friendly<br>
-          <input type="checkbox" name="refine-children" value = "undefined"onclick="$(this).attr('value', this.checked ? 'true' : 'false')"> children-friendly<br>
-          <input type="checkbox" name="refine-smoking" value = "undefined"onclick="$(this).attr('value', this.checked ? 'true' : 'false')"> smoking-friendly<br>
-          <input type="checkbox" name="refine-availability" value = "undefined" onclick="$(this).attr('value', this.checked ? 'now' : 'false')"> Available Now<br>
-          <button type="submit" id="refineSearchApply" class="btn btn-default">Apply</button>
-        </form>
+<body id="search">
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <header class="header">
+        <h3>Results</h3>
+      </header>
+      <div class="content">
+        <!-- button to refine search -->
+        <button id="refineSearch" class="pure-button is-full-width center-text">Refine Search</button>
+        <!-- hidden operations -->
+        <div id="fadedPanel">
+          <form id="refine-form" role="form" method="get" class="pure-form pure-form-stacked">
+            <fieldset>
+              <!-- city -->
+              <label><span class="fa fa-map-marker"></span> Destination</label>
+              <input type="text" id="refine-city" name="refine-city" value="{{searchQuery.city}}">
+              <!-- occupants -->
+              <label><span class="fa fa-users"></span> Occupants</label>
+              <div class="pure-g">
+                <div class="pure-u-3-5">
+                  <p># of Refugees</p>
+                </div>
+                <div class="pure-u-2-5">
+                  <input type="number" id="refine-occupants" min="1" max="19" name="refine-occupants" value="{{searchQuery.occupants}}">
+                </div>
+              </div>
+              <!-- price limit -->
+              <label><span class="fa fa-money"></span> Rent Limit / Month</label>
+              <div class="pure-g">
+                <div class="pure-u-2-5 eurofix"><span class="fa fa-euro"></span> In Euros</div>
+                <div class="pure-u-3-5">
+                  <input type="number" id = "refine-cost" min="10" max="10000" name="refine-cost" value="{{searchQuery.cost}}" >
+                </div>
+              </div>
+              <!-- other options -->
+              <label><span class="fa fa-tasks"></span> Other options</label>
+              <div class="refine-extra-options">
+                <div class="pure-g">
+                  <div class="pure-u-3-4">Pet-Friendly</div>
+                  <div class="pure-u-1-4">
+                    <input type="checkbox" name="refine-pets" value="undefined" onclick="$(this).attr('value', this.checked ? 'true' : 'false')">
+                  </div>
+                </div>
+                <div class="pure-g">
+                  <div class="pure-u-3-4">Children-Friendly</div>
+                  <div class="pure-u-1-4">
+                    <input type="checkbox" name="refine-children" value="undefined"onclick="$(this).attr('value', this.checked ? 'true' : 'false')">
+                  </div>
+                </div>
+                <div class="pure-g">
+                  <div class="pure-u-3-4">Smoking-Friendly</div>
+                  <div class="pure-u-1-4">
+                    <input type="checkbox" name="refine-smoking" value="undefined"onclick="$(this).attr('value', this.checked ? 'true' : 'false')">
+                  </div>
+                </div>
+                <div class="pure-g">
+                  <div class="pure-u-3-4">Available Now</div>
+                  <div class="pure-u-1-4">
+                    <input type="checkbox" name="refine-availability" value="undefined" onclick="$(this).attr('value', this.checked ? 'now' : 'false')">
+                  </div>
+                </div>
+              </div>
+              <!-- form submit -->
+              <button type="submit" id="refineSearchApply" class="pure-button pure-button-red is-full-width is-centered"><span class="fa fa-check"></span> Apply Changes</button>
+            </fieldset>
+          </form>
+        </div>
+        <!-- listings -->
+        <div class="all-listings" id="listing-result">
+          {{#each listings}}
+          <article class="listing">
+            <section class="listing-primary-details">
+              <header class="content">
+                <div class="listing-tag">{{type}} in {{city}}</div>
+                <h3 class="offerTitle">{{title}}</h3>
+                <div class="pure-g">
+                  <div class="pure-u-2-5">
+                    <p class="offerType"><span class="fa fa-home"></span> {{type}}</p>
+                  </div>
+                  <div class="pure-u-3-5">
+                    <p class="offerPrice"><span class="fa fa-euro"></span> {{cost}}/month</p>
+                  </div>
+                </div>
+              </header>
+              <a class="house-card listing-slideshow" href="/listing-details" onclick="registerID({{id}})">
+                <figure class="show">
+                  <img id="image1" src="{{image1}}" width="100%">
+                </figure>
+                <figure>
+                  <img id="image2" src="{{image2}}" width="100%">
+                </figure>
+                <figure>
+                  <img id="image3" src="{{image1}}" width="100%">
+                </figure>
+                <span class="prev">«</span>
+                <span class="next">»</span>
+              </a>
+            </section>
+            <section class="listing-secondary-details content">
+              <div class="listing-shown">
+                <div class="offerDateAvailable">
+                  <div class="pure-g">
+                    <div class="pure-u-1-2">
+                      <p><span class="fa fa-calendar-o"></span> Available:</p>
+                    </div>
+                    <div class="pure-u-1-2">
+                      <p>{{availability}}</p>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="pure-button-primary is-full-width">Go to listing <span class="fa fa-angle-double-right"></span></a>
+                <a href="#" class="pure-button is-full-width">Some Details <span class="fa fa-angle-double-down listingSomeDetails"></span></a>
+              </div>
+              <div class="listing-hidden">
+                <div class="pure-g">
+                  <div class="pure-u-1-2">
+                    <p class="placeBed">Bedrooms: {{bed}}</p>
+                  </div>
+                  <div class="pure-u-1-2">
+                    <p class="placeBath">Bathrooms: {{bath}}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+          {{/each}}
+        </div>
       </div>
-    <div class="all-listings" id="listing-result">
-  		{{#each house}}
-  		<div class="house">
-        <a class="house-card" href="/listing-details" onclick="registerID({{id}})">
-  			  <h3>{{title}}</h3>
-        </a>
-			  <!-- make this linke call a js function that is {{id}} and then the function sets locat storage to that ID to be used by next page. -->
-				<div class="listing-slideshow">
-          <figure class="show">
-            <img id="image1" src = "{{image1}}" width="100%">
-          </figure>
-          <figure>
-            <img id="image2" src = "{{image2}}" width="100%">
-          </figure> 
-          <figure>
-            <img id="image3" src = "{{image1}}" width="100%">
-          </figure>
-          <span class="prev">«</span>
-          <span class="next">»</span>
-        </div>
-  			
-        <p class="cost">Cost: € {{cost}}</p>
-        <div class="card-info">
-          <p >Beds: {{bed}}</p>
-    			<p >Baths: {{bath}}</p>
-          <p >Availability: {{availability}}</p>
-        </div>
-  		</div>
-  		{{/each}}	
-  	</div>
+    </div>
   </div>
-
+  <!-- end main content -->
   {{> globalBottomScripts}}
-  <script src="/js/allListingsVB.js"></script>
   {{> googleAnalytics}}
+  <script src="/js/allListingsVB.js"></script>
 </body></html>

@@ -1,2 +1,15 @@
 <!-- bottom scripts -->
-<script src="js/main.js"></script>
+<script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/js/modules/progressBar.js"></script>
+<script src="/js/modules/side-menu.js"></script>
+<script src="/js/main.js"></script>
+
+<script>
+if (window.jQuery) {
+console.log("JQuery is loaded!")   // jQuery is not loaded
+// jQuery is loaded
+} else {
+console.log("JQuery is not loaded...")   // jQuery is not loaded
+}
+</script>

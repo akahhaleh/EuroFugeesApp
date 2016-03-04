@@ -1,14 +1,28 @@
-<!doctype html><html><head>{{> globalHead}}</head>
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
 <body id="landing">
-  {{> globalNavigation}}
-  <section class="landing-feature">
-    <h2 class="text-center">EuroFugees connects refugees in need to local hosts</h2>
-  </section>
-  <section class="fixed-bottom text-center landing-selection">
-    <a href="/search" class="btn btn-default">I'm a Refugee</a>
-    <a href="/list-your-space" class="btn btn-default">I'm a Local</a>
-</section>
-{{> globalBottomScripts}}
-{{> googleAnalytics}}
-<script type="text/javascript" src="/js/landing.js"></script>
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <div class="header">
+        <img src="/img/logo/logo-white.png" alt="EuroFugees Logo" class="logo">
+      </div>
+      <div class="content">
+        <a class="pure‐button pure-button-primary is-full-width" href="/searchVB">
+          <i class="fa fa-search"></i> Find a Residence
+        </a>
+        <a class="pure-button pure-button-primary is-full-width is-centered" href="/list-your-space">
+          <i class="fa fa-plus"></i> List a Residence
+        </a>
+        <a class="pure-button pure-button-secondary is-full-width" href="/about">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <!-- end main content -->
+  {{> globalBottomScripts}}
+  {{> googleAnalytics}}
+  <script type="text/javascript" src="/js/landing.js"></script>
 </body></html>

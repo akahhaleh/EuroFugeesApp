@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Play);
+@import url('/fonts/Quicksand/webfontkit/stylesheet.css');
+@import url('/fonts/Roboto_Slab/webfontkit/stylesheet.css');
 
 /************************************
 *************************************
@@ -8,86 +9,225 @@ EXCEPT FOR ALIGNMENTS
 *************************************
 ************************************/
 
-/*
-color1: #A9C4BD
-color2: #E4DDCB
-color3: #EC7B59
-// primary: color4: #CE4648
-color5: #524556
- */
+/* THIS IS THE COLOR THEME
+1. #556270
+2. #4ECDC4
+3. #C7F464
+4. #FF6B6B
+5. #C44D58
+*/
 
-/* basic elements theme */
-
+/* SERIF quicksand font implementations */
 * {
-	color: #fff;
-	font-family: "Play", "Arial", sans-serif;
-	font-weight: normal;
-	border: none;
+  font-family: "quicksandregular", Times, sans-serif;
 }
 
-body {
-	background: url('../img/patterns/lodyas.png');
-	background-repeat: repeat;
+/* SANS-SERIF roboto slab font implementations */
+p {
+  font-family: "roboto_slabregular", Times, sans-serif;
+}
+
+/************************************
+*************************************
+BASIC ELEMENT THEME
+*************************************
+************************************/
+
+/*
+When setting the primary font stack, apply it to the Pure grid units along
+with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
+specific font stacks to ensure the greatest OS/browser compatibility.
+*/
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  /* Set your content font stack here: */
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 a {
-	color: #524556;
+  color: #4ECDC4;
 }
 
-/* headlines theme */
-h3 {
-	font-family: "Play", "Arial", sans-serif;
+/************************************
+*************************************
+SIDE MENU THEME
+*************************************
+************************************/
+.pure-menu-heading {
+  background: #4ECDC4 !important;
 }
 
-/* buttons theme */
-.btn, .btn-default {
-	border-radius: 0;
-	font-size: 1.3em;
+.menu-link {
+  background: #fff !important;
 }
 
-/* form edits */
-label {
-	font-weight: normal;
+.menu-link > span, .menu-link > span::before, .menu-link > span::after {
+  background: #4ECDC4 !important;
 }
 
-/* landing page theme */
-.landing-feature h2 {
-	background: rgba(0,0,0,.75);
-	font-family: "Play", "Arial", sans-serif;
+/************************************
+*************************************
+BUTTON THEME
+*************************************
+************************************/
+.pure-button-primary {
+  background: #4ECDC4 !important;
 }
 
-/* global navigation menu theme */
-.navbar {
-	background: #CE4648;
+.pure-button-red {
+  background: #FF6B6B;
+  color: #fff;
 }
 
-.navbar .button {
-	background: none;
+/************************************
+*************************************
+LIST YOUR SPACE
+*************************************
+************************************/
+#list-your-space form strong {
+  color: #FF6B6B;
 }
 
-.navbar .icon-bar {
-	background: #fff;
+/************************************
+*************************************
+SEARCH
+*************************************
+************************************/
+
+
+/************************************
+*************************************
+ALL LISTINGS
+*************************************
+************************************/
+
+/* listings search results themes */
+#search #main > header {
+  color: #C7F464;
+  background: #556270;
 }
 
-.navbar-nav li:last-of-type a {
-	border-bottom: none;
+#search {
+  background: #ddd;
 }
 
-.navbar-toggle {
-	border: none;
+.listing {
+  padding: 0;
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 5px;
 }
 
-.navbar-nav a {
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 1.25em;
+.listing .content {
+  padding: 15px;
+  margin: 0;
 }
 
-/* special body backgrounds */
-#landing {
-	background: url('../img/pro/landing.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+.listing-tag {
+  padding: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 0.75em;
+}
+
+.listing-primary-details > header {
+  margin: 0;
+}
+
+.listing-primary-details > header .offerTitle {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.listing-primary-details > header .offerPrice,
+.listing-primary-details > header .offerType {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.listing-primary-details > header .offerPrice {
+  text-align: center;
+}
+
+.listing-primary-details .offerImageFirst {
+  width: 100%;
+}
+
+.listing-primary-details .offerImageFirst > img {
+  width: 100%;
+}
+
+.listing-secondary-details {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.listing-secondary-details .offerDateAvailable {
+  border: 1px solid #556270;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0 5px;
+}
+
+.listing-hidden {
+  border: 1px solid #556270;
+  margin: 10px 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.listing-hidden * {
+  margin: 0; padding: 0;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div p {
+  margin: 0; padding: 0;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div:first-of-type p {
+  font-family: "Quicksandregular", "Arial", serif;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div:last-of-type p {
+  text-align: right;
+  font-weight: bold;
+}
+
+#listing-result .listing {
+  background: #fff;
+  color: #556270;
+}
+
+#listing-result .listing-tag {
+  background: #556270;
+  color: #fff;
+}
+
+#listing-result .listing-primary-details > header .offerTitle {
+  color: #333;
+  font-family: "roboto_slabregular", "Times", serif;
+  font-weight: normal;
+}
+
+#listing-result .listing-primary-details > header .offerPrice,
+#listing-result .listing-primary-details > header .offerType {
+  font-family: "Quicksandregular", "Arial", sans-serif;
+}
+
+#listing-result .listing-primary-details > header .offerPrice {
+  background: #C7F464;
+  color: #000;
+  border-radius: 5px;
+}
+
+#house-card,
+#house-card img,
+#house-card figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+figure.show {
+  margin: 0 !important;
 }

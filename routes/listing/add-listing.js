@@ -18,7 +18,7 @@ exports.view = function(req, res){
 	var phone = (typeof req.query.phone !=='undefined')?req.query.phone:"(999) - 999-9999";
 	var email = (typeof req.query.email !=='undefined')?req.query.email:"email@example.com";
 
-	res.render('add-listing');
+	res.render('listing/add-listing');
 
 	var text = '{"id": "'+id+'","title": "'+title+'","type": "'+type+'","bed": "'+bed+'","bath": "'+bath+'","cost": "€ '+cost+'","city": "'+city+'","availability": "'+availability+'","description": "'+description+'","image1": "'+image1+'","phone": "'+phone+'","email": "'+email+'"}';
 

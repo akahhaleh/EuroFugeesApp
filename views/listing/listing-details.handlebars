@@ -1,59 +1,35 @@
-<!doctype html><html><head>{{> globalHead}}</head>
-<body>
-  {{> globalNavigation}}
-
-  <div clas="container">
-
-    <div class="listing-slideshow">
-      <figure class="show">
-        <img id="image1" width="100%">
-      </figure>
-      <figure>
-        <img id="image2" width="100%">
-      </figure>
-      <figure>
-        <img id="image3" width="100%">
-      </figure>
-        <span class="prev">«</span>
-        <span class="next">»</span>
-    </div>
-
-    <div class="listings-description">
-      <!--
-      {{#each house}}
-      <div class="house">
-        <h3>{{title}}</h3>
-
-        -->
-        <!--
-        <div class="top-info">
-          <p class="cost2">Cost: {{cost}}</p>
-          <p class="city">Location: {{city}}</p>
-          <p class="availability">Available on: {{availability}}</p>
-        </div>
-        <div class="basic-info">
-          <h4>Basic Information</h4>
-          <p class="bed">type: {{type}}</p>
-          <p class="bath">Bed: {{bed}}</p>
-          <p class="bath">Bath: {{bath}}</p>
-        </div>
-        <div class="Description">
-          <h4>Description</h4>
-          <p>{{description}}</p>
-        </div>
-        <div class="contact">
-          <h4>Host Contact info</h4>
-          <p class="phone">Phone number: {{phone}}</p>
-          <p class="email">email address: {{email}}</p>
-        </div>
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
+<body id="template">
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <div class="listing-slideshow">
+        <figure class="show">
+          <img id="image1" width="100%">
+        </figure>
+        <figure>
+          <img id="image2" width="100%">
+        </figure>
+        <figure>
+          <img id="image3" width="100%">
+        </figure>
+        <span class="prev"><span class="fa fa-angle-double-left"></span></span>
+        <span class="next"><span class="fa fa-angle-double-right"></span></span>
       </div>
-      {{/each}}
-      --> 
+      <div class="header">
+      </div>
+      <div class="content">
+        <div class="listings-description">
+        </div>
+        <button id="applyButton" class="pure-button pure-button-red is-full-width center-text" onclick="location.href='/apply'"><span class="fa fa-envelope"></span> Contact Host</button>
+      </div>
     </div>
-    <div id="applyButton" style="display: block; margin: 5%;" class="btn btn-default text-center" onclick="location.href='/apply'">Contact Host</div>
-    <br>
-    <br>
   </div>
+  <!-- end main content -->
   {{> globalBottomScripts}}
   {{> googleAnalytics}}
   <script type="text/javascript" src="/js/listingDetails.js"></script>

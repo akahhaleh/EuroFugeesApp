@@ -20,5 +20,5 @@ function initializePage() {
 }
 
 function onsubmitform(e){
-	document.listingYourSpace2Form.action ="/search";	
+	document.listingYourSpace2Form.action ="/search";
 }

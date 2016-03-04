@@ -5,17 +5,9 @@
 </head>
 <body id="template">
   <div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-      <!-- Hamburger icon -->
-      <span></span>
-    </a>
-    <div id="menu">
-      {{> globalNavigation}}
-    </div>
+    {{> globalNavigation}}
     <div id="main">
       <div class="header">
-        <img src="/img/logo/logo-white.png" alt="EuroFugees Logo" class="logo">
       </div>
       <div class="content">
       </div>
@@ -23,5 +15,4 @@
   </div>
   <!-- end main content -->
   {{> globalBottomScripts}}
-  <script src="/js/modules/side-menu.js"></script>
 </body></html>

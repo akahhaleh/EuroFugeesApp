@@ -1,34 +1,39 @@
-<!doctype html><html>
-<head>{{> globalHead}}</head>
-<body>
-	{{> globalNavigation}}
-  <!-- login module -->
-  <div class="join">
-    <header id="header" class="logo-banner">
-      <div class="wrap"><img src="img/logo/logo-white.png" alt="Eurofugees Logo" class="logo is-left"></div>
-    </header><!-- /header -->
-    <div class="login-content wrap">
-      <h1 class="title">Welcome Back</h1>
-      <h2 class="subtitle">Login to your account <span class="fa fa-user"></span></h2>
-      <form action="login_submit" method="get" accept-charset="utf-8">
-        <p class="control">
-          <input class="input" type="text" placeholder="Username or Email">
-        </p><!-- username -->
-        <p class="control">
-          <input class="input" type="password" placeholder="Password">
-        </p><!-- password -->
-        <p class="control login-buttons">
-          <button class="button is-success">Submit</button>
-          <button class="button">Cancel</button>
-        </p><!-- buttons -->
-      </form><hr>
-      <p class="subtitle is-centered">OR</p>
-      <a class="button is-info login-with-facebook"><span class="fa fa-facebook"></span>Login with Facebook</a><hr>
-      <div class="login-extras">
-        <a href="#">New? Sign Up!</a>
-        <a href="#">Forgot Password</a>
+
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
+<body id="login">
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <div class="header">
+      </div>
+      <div class="content">
+        <!-- login module -->
+        <h1 class="subtitle center-text"><span class="fa fa-sign-in"></span> Login</h1>
+        <h2 class="title center-text">Welcome Back</h2>
+        <form action="login_submit" method="get" accept-charset="utf-8" class="pure-form pure-form-stacked">
+          <fieldset>
+            <!-- login details -->
+            <label><span class="fa fa-user"></span> Username or Email</label>
+            <input type="text" placeholder="Username or Email">
+            <label><span class="fa fa-asterisk"></span> Password</label>
+            <input type="password" placeholder="Password">
+            <!-- form submit -->
+            <button type="submit" class="pure-button pure-button-red is-full-width is-centered">Next <span class="fa fa-angle-double-right"></span></button>
+            <a href="/" class="pure-button is-full-width is-centered">Cancel</a>
+          </fieldset>
+        </form>
+        <div class="login-extras">
+          <a href="/sign-up">New? <strong>Sign Up!</strong></a>
+          <a href="#">Forgot Password</a>
+        </div>
       </div>
     </div>
   </div>
+  <!-- end main content -->
   {{> globalBottomScripts}}
 </body></html>
+

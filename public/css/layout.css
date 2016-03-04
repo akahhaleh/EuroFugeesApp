@@ -6,127 +6,136 @@ INCLUDES TEXT ALIGNS AND SUCH
 *************************************
 ************************************/
 
-/* global navigation menu */
-
-/* global navigation menu - logo */
-.navbar-adjust {
-	height: 50px;
-	width: 100%;
+/************************************
+*************************************
+CRITICAL FIXES
+*************************************
+************************************/
+.header {
+  border: none !important;
 }
 
-.navbar-nav li {
-	padding: 0 30px;
+/************************************
+*************************************
+GENERAL UTILITIES
+*************************************
+************************************/
+.is-full-width {
+  width: 100%;
 }
 
-.navbar-nav a {
-	text-align: center;
-	border-bottom: 1px solid #a43839;
+.center-text {
+  text-align: center;
 }
 
-.navbar-nav li:last-of-type a {
-	border-bottom: none;
+.vertically-centered-text {
+  height: 1em;
+  line-height: 1em;
 }
 
-.navbar .logo {
-	float: left;
-	height: 40px;
-	margin: 5px 0;
+.push-down {
+  margin-top: 20%;
 }
 
-/* landing page layout */
-.landing-feature {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-
+.fa-fix {
+  margin-top: 5px;
 }
 
-.landing-feature h2 {
-	width: 80%;
-	padding: 15px;
-	margin: 35% auto 0;
+#hiddenField {
+    display: none;
 }
 
-.landing-selection {
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	padding: 10%;
+/************************************
+*************************************
+LIST YOUR SPACE PAGE LAYOUT
+*************************************
+************************************/
+
+#entireHomePanel,
+#privateRoomPanel,
+#listYourSpace2Panel,
+#fadedPanel{
+    display: none;
 }
 
-.landing-selection .btn-default {
-	width: 100%;
-	margin-bottom: 10px;
+/************************************
+*************************************
+LIST YOUR SPACE FORM LAYOUT
+*************************************
+************************************/
+
+#list-your-space,
+#addListing {
+  background: url('/img/featured/city-street.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
-.landing-selection .btn-default:last-of-type {
-	margin-bottom: 0;
+#list-your-space .content,
+#addListing .content {
+	margin-top: 10%;
 }
 
-.landing-selection > div {
-	margin: 5px 0;
+#list-your-space form fieldset {
+	border: none;
+	border-bottom: 1px solid #a1a1a1;
+	padding: 20px 0;
+	margin: 0 0 20px;
 }
 
-/* listings page layout */
-.house {
-	margin-bottom: 30px;
-}
-
-/* form layouts */
-form {
-	text-align: center;
-	margin: 1%;
-}
-
-
-/* listings edits */
-.all-listings {
-	margin: 20px 0;
-}
-
-.house {
-	background: rgba(0,0,0,0.5);
-	border-radius: 5px;
-	padding: 1px 10px 10px;
-}
-
-.house h3 {
-	text-align: center;
-	color: #007cff;
-}
-
-
-
-
-.cost, .bed-bath , .top-info, .basic-info, .Description, .contact, .card-info{
+#list-your-space form legend {
+	box-sizing: border-box;
 	background: #fff;
-	padding: 5px;
-	color: #4b8bf1;
-	margin: 5px 0;	
-}
-
-.bed-bath > p, .cost > p, .bed-bath > p, .top-info > p, .basic-info > p, .Description > p, .contact > p, .card-info > *{
-	color: #333;
-	margin: 0;
-}
-
-/* help and how it works layout */
-.help-topic, .tutorial-topic {
-	background: #fff;
-	padding: 20px;
 	border-radius: 5px;
-	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
 }
 
-.help-topic:last-of-type, .tutorial-topic:last-of-type {
-	margin-bottom: 0;
+#list-your-space label,
+#search label {
+  color: #fff;
+  background: #556270;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
 }
 
-.help-topic > p, .tutorial-topic > p {
-	color: #000;
+.pure-form input,
+.pure-form textarea,
+.pure-form select {
+  width: 100%;
+  padding: 0 20px;
+  color: #556270;
 }
 
-/* css for slideshow */
+#list-your-space input,
+#login input,
+#search input {
+  height: 3em;
+}
+
+#list-your-space textarea {
+  height: auto;
+  padding: 20px;
+}
+
+#list-your-space form .pure-g > div:first-of-type {
+	text-align: left;
+}
+
+label + * {
+	padding: 0 5px;
+}
+
+/************************************
+*************************************
+SLIDESHOW INTERACTIONS
+*************************************
+************************************/
 .listing-slideshow {
 	position: relative;
 	display: block;
@@ -174,4 +183,23 @@ form {
 	padding: 10px 10px 15px 5px;
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
+}
+
+/************************************
+*************************************
+SEARCH
+*************************************
+************************************/
+
+
+/************************************
+*************************************
+ALL LISTINGS
+*************************************
+************************************/
+#search #main > header {
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px !important;
+  font-size: 1.5em;
 }

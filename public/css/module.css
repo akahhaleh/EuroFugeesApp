@@ -1,0 +1,160 @@
+@import url('/fonts/Quicksand/webfontkit/stylesheet.css');
+@import url('/fonts/Roboto_Slab/webfontkit/stylesheet.css');
+
+/************************************
+*************************************
+BUTTON STYLINGS
+*************************************
+************************************/
+.pure-button,
+.pure-button-primary,
+.pure-button-secondary {
+  display: inline-block;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/************************************
+*************************************
+LANDING PAGE STYLINGS
+*************************************
+************************************/
+#landing img.logo {
+  width: 90%;
+  margin: 30px 0;
+}
+
+
+#landing {
+  background: url('/img/featured/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#landing .pure-button,
+#landing .pure-button-primary {
+  font-size: 1.25em;
+}
+
+/************************************
+*************************************
+SIDE MENU SPECIAL EDITS
+*************************************
+************************************/
+#landing #menuLink,
+#login #menuLink,
+#signIn #menuLink,
+#addListing #menuLink,
+#search #menuLink,
+#list-your-space #menuLink {
+  background: none !important;
+}
+
+#landing #menuLink > span,
+#landing #menuLink > span::before,
+#landing #menuLink > span::after,
+#login #menuLink > span,
+#login #menuLink > span::before,
+#login #menuLink > span::after,
+#signIn #menuLink > span,
+#signIn #menuLink > span::before,
+#signIn #menuLink > span::after,
+#search #menuLink > span,
+#search #menuLink > span::before,
+#search #menuLink > span::after,
+#addListing #menuLink > span,
+#addListing #menuLink > span::before,
+#addListing #menuLink > span::after,
+#list-your-space #menuLink > span,
+#list-your-space #menuLink > span::before,
+#list-your-space #menuLink > span::after {
+  background: #fff !important;
+}
+
+/************************************
+*************************************
+LIST YOUR SPACE PAGE
+*************************************
+************************************/
+#list-your-space #main .header {
+  background: #FF6B6B;
+  padding: 20px 0;
+  height: 2em;
+  line-height: 2em;
+}
+
+#list-your-space #main .header > h2 {
+  font-family: "roboto_slabthin", Times, serif;
+  color: #fff;
+}
+
+#list-your-space #main .content > p {
+  font-family: "Quicksandbold", Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+/* euro symbol fix to alin with form */
+.eurofix, .eurofix > span {
+  height: 3em;
+  line-height: 3em;
+}
+
+.eurofix {
+  margin-top: 5px;
+}
+
+/* login and signup */
+#login, #signIn {
+  background: #4ECDC4;
+  color: #fff;
+}
+
+#login input,
+#signIn input,
+#search input {
+  margin-bottom: 15px;
+}
+
+.login-extras {
+  border-top: 1px solid #fff;
+  padding: 20px 0;
+}
+
+.login-extras a {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+/* about page */
+#about .logo {
+  width: 100%;
+}
+
+/* refine search */
+
+#refineSearch {
+  background: #fff;
+}
+
+#refine-form {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* checkboxes */
+input[type="checkbox"] {
+  height: 20px !important;
+}
+
+/* house */
+.house > div {
+  border-bottom: 1px solid #333;
+}

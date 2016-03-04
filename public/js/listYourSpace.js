@@ -19,7 +19,6 @@ function entireHomeClicked(e){
 	var housingType = 'entire';
 	localStorage.setItem('type', housingType);
 	$("#entireHomePanel").slideToggle("slowly");
-
 }
 
 function privateRoomClicked(e){
@@ -30,15 +29,16 @@ function privateRoomClicked(e){
 
 function onsubmitform(e){
 	var loginStatus = localStorage.getItem('userLoggedIn');
-	
+
 	if (loginStatus === "true"){
 		document.entireHomeForm.action ="/list-your-space-2";
 		document.privateRoomForm.action ="/list-your-space-2";
+		console.log("User is logged in");
 	} else {
 		var listingProcess = "true";
 		localStorage.setItem('listingProcess', listingProcess)
 		document.entireHomeForm.action ="/sign-up";
 		document.privateRoomForm.action ="/sign-up";
-
-	}	
+		console.log("User is not logged in");
+	}
 }
