@@ -8,6 +8,17 @@ INCLUDES TEXT ALIGNS AND SUCH
 
 /************************************
 *************************************
+TOP-LEVEL EDITS
+*************************************
+************************************/
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+/************************************
+*************************************
 CRITICAL FIXES
 *************************************
 ************************************/
@@ -45,24 +56,80 @@ GENERAL UTILITIES
     display: none;
 }
 
+figure.show {
+  margin: 0 !important;
+}
+
 /************************************
 *************************************
-LIST YOUR SPACE PAGE LAYOUT
+LANDING
+*************************************
+************************************/
+
+#landing img.logo {
+  width: 90%;
+  margin: 30px 0;
+}
+
+
+#landing {
+  background: url('/img/featured/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#landing .pure-button,
+#landing .pure-button-primary {
+  font-size: 1.25em;
+}
+
+/************************************
+*************************************
+FAQS/SUPPORT
+*************************************
+************************************/
+
+/************************************
+*************************************
+SIGNIN/SIGNUP
+*************************************
+************************************/
+
+#login input,
+#signIn input,
+#search input {
+  margin-bottom: 15px;
+}
+
+.login-extras {
+  border-top: 1px solid #fff;
+  padding: 20px 0;
+}
+
+.login-extras a {
+  display: block;
+  text-align: center;
+}
+
+/************************************
+*************************************
+ACCOUNT
+*************************************
+************************************/
+
+/************************************
+*************************************
+LIST YOUR SPACE
 *************************************
 ************************************/
 
 #entireHomePanel,
 #privateRoomPanel,
 #listYourSpace2Panel,
-#fadedPanel{
+#fadedPanel {
     display: none;
 }
-
-/************************************
-*************************************
-LIST YOUR SPACE FORM LAYOUT
-*************************************
-************************************/
 
 #list-your-space,
 #addListing {
@@ -70,7 +137,6 @@ LIST YOUR SPACE FORM LAYOUT
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: #fff;
 }
 
 #list-your-space .content,
@@ -95,8 +161,6 @@ LIST YOUR SPACE FORM LAYOUT
 
 #list-your-space label,
 #search label {
-  color: #fff;
-  background: #556270;
   margin: 10px 0;
   padding: 10px;
   text-align: center;
@@ -104,12 +168,11 @@ LIST YOUR SPACE FORM LAYOUT
   border-radius: 5px;
 }
 
-.pure-form input,
-.pure-form textarea,
-.pure-form select {
+input,
+textarea,
+select {
   width: 100%;
   padding: 0 20px;
-  color: #556270;
 }
 
 #list-your-space input,
@@ -131,11 +194,171 @@ label + * {
 	padding: 0 5px;
 }
 
+#list-your-space #main .header {
+  padding: 20px 0;
+  height: 2em;
+  line-height: 2em;
+}
+
+#list-your-space #main .content > p {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+/* euro symbol fix to alin with form */
+.eurofix, .eurofix > span {
+  height: 3em;
+  line-height: 3em;
+}
+
+.eurofix {
+  margin-top: 5px;
+}
+
+/************************************
+*************************************
+SEARCH
+*************************************
+************************************/
+
+/************************************
+*************************************
+ALL LISTINGS
+*************************************
+************************************/
+
+.listing {
+  padding: 0;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.listing .content {
+  padding: 15px;
+  margin: 0;
+}
+
+.listing-tag {
+  padding: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 0.75em;
+}
+
+.listing-primary-details > header {
+  margin: 0;
+}
+
+.listing-primary-details > header .offerTitle {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.listing-primary-details > header .offerPrice,
+.listing-primary-details > header .offerType {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.listing-primary-details > header .offerPrice {
+  text-align: center;
+}
+
+.listing-primary-details .offerImageFirst {
+  width: 100%;
+}
+
+.listing-primary-details .offerImageFirst > img {
+  width: 100%;
+}
+
+.listing-secondary-details {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.listing-secondary-details .offerDateAvailable {
+  border: 1px solid #556270;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0 5px;
+}
+
+.listing-hidden {
+  border: 1px solid #556270;
+  margin: 10px 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.listing-hidden * {
+  margin: 0; padding: 0;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div p {
+  margin: 0; padding: 0;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div:last-of-type p {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* listing result */
+
+#listing-result .listing-primary-details > header .offerTitle {
+  font-weight: normal;
+}
+
+#listing-result .listing-primary-details > header .offerPrice {
+  border-radius: 5px;
+}
+
+/* house card */
+
+#house-card,
+#house-card img,
+#house-card figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* refine search */
+
+#refine-form {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* checkboxes */
+input[type="checkbox"] {
+  height: 20px !important;
+}
+
+/* house */
+.house > div {
+  border-bottom: 1px solid #333;
+}
+
+/************************************
+*************************************
+LISTING
+*************************************
+************************************/
+
+/************************************
+*************************************
+CONTACT
+*************************************
+************************************/
+
 /************************************
 *************************************
 SLIDESHOW INTERACTIONS
 *************************************
 ************************************/
+
 .listing-slideshow {
 	position: relative;
 	display: block;
@@ -197,9 +420,33 @@ SEARCH
 ALL LISTINGS
 *************************************
 ************************************/
+
 #search #main > header {
   padding: 20px;
   text-transform: uppercase;
   letter-spacing: 5px !important;
   font-size: 1.5em;
 }
+
+/************************************
+*************************************
+BUTTONS
+*************************************
+************************************/
+
+.pure-button,
+.pure-button-primary,
+.pure-button-secondary {
+  display: inline-block;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/************************************
+*************************************
+SIDE MENU SPECIAL EDITS
+*************************************
+************************************/

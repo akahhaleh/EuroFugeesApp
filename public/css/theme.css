@@ -17,6 +17,12 @@ EXCEPT FOR ALIGNMENTS
 5. #C44D58
 */
 
+/************************************
+*************************************
+GLOBAL TYPOGRAPHY
+*************************************
+************************************/
+
 /* SERIF quicksand font implementations */
 * {
   font-family: "quicksandregular", Times, sans-serif;
@@ -29,15 +35,10 @@ p {
 
 /************************************
 *************************************
-BASIC ELEMENT THEME
+BASIC ELEMENTS
 *************************************
 ************************************/
 
-/*
-When setting the primary font stack, apply it to the Pure grid units along
-with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
-specific font stacks to ensure the greatest OS/browser compatibility.
-*/
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
   /* Set your content font stack here: */
@@ -48,44 +49,91 @@ a {
   color: #4ECDC4;
 }
 
-/************************************
-*************************************
-SIDE MENU THEME
-*************************************
-************************************/
-.pure-menu-heading {
-  background: #4ECDC4 !important;
-}
-
-.menu-link {
-  background: #fff !important;
-}
-
-.menu-link > span, .menu-link > span::before, .menu-link > span::after {
-  background: #4ECDC4 !important;
-}
 
 /************************************
 *************************************
-BUTTON THEME
+LANDING
 *************************************
 ************************************/
-.pure-button-primary {
-  background: #4ECDC4 !important;
-}
 
-.pure-button-red {
-  background: #FF6B6B;
+/************************************
+*************************************
+FAQS/SUPPORT
+*************************************
+************************************/
+
+/************************************
+*************************************
+SIGNIN/SIGNUP
+*************************************
+************************************/
+
+#login, #signIn {
+  background: #4ECDC4;
   color: #fff;
 }
+
+.login-extras a {
+  color: #fff;
+}
+
+/************************************
+*************************************
+ACCOUNT
+*************************************
+************************************/
 
 /************************************
 *************************************
 LIST YOUR SPACE
 *************************************
 ************************************/
-#list-your-space form strong {
+
+/*#list-your-space form*/
+strong {
   color: #FF6B6B;
+}
+
+#list-your-space,
+#addListing {
+  color: #fff;
+}
+
+/*#list-your-space*/
+legend {
+  color: #fff;
+  background: #556270;
+}
+
+input,
+textarea,
+select {
+  color: #556270;
+}
+
+#list-your-space #main .header {
+  background: #FF6B6B;
+}
+
+#list-your-space #main .header > h2 {
+  font-family: "roboto_slabthin", Times, serif;
+  color: #fff;
+}
+
+#list-your-space #main .content > p {
+  font-family: "Quicksandbold", Arial, sans-serif;
+  color: #fff;
+}
+
+
+/* refine search */
+
+#refineSearch {
+  background: #fff;
+}
+
+#refine-form {
+  background: #fff;
 }
 
 /************************************
@@ -94,14 +142,6 @@ SEARCH
 *************************************
 ************************************/
 
-
-/************************************
-*************************************
-ALL LISTINGS
-*************************************
-************************************/
-
-/* listings search results themes */
 #search #main > header {
   color: #C7F464;
   background: #556270;
@@ -111,88 +151,27 @@ ALL LISTINGS
   background: #ddd;
 }
 
+/************************************
+*************************************
+ALL LISTINGS
+*************************************
+************************************/
+
+/************************************
+*************************************
+LISTING
+*************************************
+************************************/
+
 .listing {
-  padding: 0;
-  margin: 10px 0;
   background: #fff;
-  border-radius: 5px;
-}
-
-.listing .content {
-  padding: 15px;
-  margin: 0;
-}
-
-.listing-tag {
-  padding: 3px;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 5px;
-  font-size: 0.75em;
-}
-
-.listing-primary-details > header {
-  margin: 0;
-}
-
-.listing-primary-details > header .offerTitle {
-  margin: 10px 0 0;
-  padding: 0;
-}
-
-.listing-primary-details > header .offerPrice,
-.listing-primary-details > header .offerType {
-  box-sizing: border-box;
-  padding: 5px;
-}
-
-.listing-primary-details > header .offerPrice {
-  text-align: center;
-}
-
-.listing-primary-details .offerImageFirst {
-  width: 100%;
-}
-
-.listing-primary-details .offerImageFirst > img {
-  width: 100%;
-}
-
-.listing-secondary-details {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.listing-secondary-details .offerDateAvailable {
-  border: 1px solid #556270;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: 10px 0 5px;
-}
-
-.listing-hidden {
-  border: 1px solid #556270;
-  margin: 10px 0 5px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.listing-hidden * {
-  margin: 0; padding: 0;
-}
-
-.listing-secondary-details .offerDateAvailable .pure-g div p {
-  margin: 0; padding: 0;
 }
 
 .listing-secondary-details .offerDateAvailable .pure-g div:first-of-type p {
   font-family: "Quicksandregular", "Arial", serif;
 }
 
-.listing-secondary-details .offerDateAvailable .pure-g div:last-of-type p {
-  text-align: right;
-  font-weight: bold;
-}
+/* listing result */
 
 #listing-result .listing {
   background: #fff;
@@ -207,7 +186,6 @@ ALL LISTINGS
 #listing-result .listing-primary-details > header .offerTitle {
   color: #333;
   font-family: "roboto_slabregular", "Times", serif;
-  font-weight: normal;
 }
 
 #listing-result .listing-primary-details > header .offerPrice,
@@ -218,16 +196,51 @@ ALL LISTINGS
 #listing-result .listing-primary-details > header .offerPrice {
   background: #C7F464;
   color: #000;
-  border-radius: 5px;
 }
 
-#house-card,
-#house-card img,
-#house-card figure {
-  margin: 0 !important;
-  padding: 0 !important;
+/************************************
+*************************************
+CONTACT
+*************************************
+************************************/
+
+/************************************
+*************************************
+SIDE MENU THEME
+*************************************
+************************************/
+
+.pure-menu-heading {
+  background: #4ECDC4 !important;
 }
 
-figure.show {
-  margin: 0 !important;
+.menu-link {
+  background: none !important;
 }
+
+.menu-link > span,
+.menu-link > span::before,
+.menu-link > span::after {
+  background: #fff !important;
+}
+
+/************************************
+*************************************
+BUTTON THEME
+*************************************
+************************************/
+
+.pure-button-primary {
+  background: #4ECDC4 !important;
+}
+
+.pure-button-red {
+  background: #FF6B6B;
+  color: #fff;
+}
+
+/************************************
+*************************************
+SLIDESHOW INTERACTIONS
+*************************************
+************************************/
