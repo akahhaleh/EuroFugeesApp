@@ -62,12 +62,12 @@ function registerID(id){
 }
 
 function updateSearchResultsAfterRefine(result){
+  document.getElementById('listing-result').innerHTML='';
 	var refinedResultsCount = result.length;
   console.log("found " + refinedResultsCount + " result that matched refine!")
 	if (refinedResultsCount === 0){
 		document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3>";
 		console.log("found no results");
-    document.getElementById('listing-result').innerHTML='';
 	}else{
 		document.getElementById('query-result').innerHTML="<h3>Results that match your query:</h3>";
 		for (var i=0; i<refinedResultsCount; i++){

@@ -48,7 +48,7 @@ exports.updateResults = function(req, res) { 
     	console.log('The availability of listing #' + i +' is: '+listingAvailability);
     	if (listingCity === city){
     		console.log("passed city");
-    		if (listingCost <= cost){
+    		if (listingCost <= cost || cost === 0){
     			console.log("passed cost");
     			if (listingArea <= maxArea){
     				console.log("passed area");

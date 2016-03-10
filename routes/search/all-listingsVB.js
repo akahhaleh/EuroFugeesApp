@@ -7,7 +7,7 @@ exports.view = function(req, res){
 	var city = req.query.city.toLowerCase();
 	var occupants = parseInt(req.query.occupants);
 	var maxArea = 45 + ((occupants-1)*15);
-	var cost = parseInt(req.query.cost);
+	var cost = (req.query.cost !=='')?parseInt(req.query.cost):0;
 
 	// print passed results
 	console.log("The passed city is: "+ city);
@@ -31,7 +31,7 @@ exports.view = function(req, res){
     	console.log('The area of listing #' + i +' is: '+listingArea);
     	if (listingCity === city){
     		console.log("passed city");
-    		if (listingCost <= cost){
+    		if (listingCost <= cost || cost === 0){
     			console.log("passed cost");
     			if (listingArea <= maxArea){
     				console.log("passed cost AND ALL TESTS");
