@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
+<body id="faqs">
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <div class="header">
+      </div>
+      <div class="content">
+        <h2 class="text-center"><span class="fa fa-question-circle"></span> FAQs</h2>
+        {{#each tutorials}}
+        <div class="tutorial-topic" id="{{id}}">
+          <a href="#">
+            <h3>{{topic}}</h3>
+          </a>
+          <p>{{answer}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <!-- end main content -->
+  {{> globalBottomScripts}}
+</body></html>

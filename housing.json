@@ -13,9 +13,9 @@
 			"smoking":"true",
 			"availability": "5/2/2016",
 			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
-			"image1": "/img/pictures/img1.PNG",
-			"image2": "/img/pictures/img2.PNG",
-			"image3": "/img/pictures/img3.PNG",
+			"image1": "/img/listings/img1.PNG",
+			"image2": "/img/listings/img2.PNG",
+			"image3": "/img/listings/img3.PNG",
 			"phone": "(999) - 999-9999",
 			"email": "email@example.com"
 		},
@@ -33,11 +33,11 @@
 			"smoking":"false",
 			"availability": "2/27/2016",
 			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
-			"image1": "/img/pictures/img4.PNG",
-			"image2": "/img/pictures/img5.PNG",
-			"image3": "/img/pictures/img6.PNG",
+			"image1": "/img/listings/img4.PNG",
+			"image2": "/img/listings/img5.PNG",
+			"image3": "/img/listings/img6.PNG",
 			"phone": "(999) - 999-9999",
-			"email": "email@example.com"			
+			"email": "email@example.com"
 		},
 		{
 			"id": "2",
@@ -53,11 +53,11 @@
 			"smoking":"false",
 			"availability": "5/12/2016",
 			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
-			"image1": "/img/pictures/img7.PNG",
-			"image2": "/img/pictures/img8.PNG",
-			"image3": "/img/pictures/img9.PNG",
+			"image1": "/img/listings/img7.PNG",
+			"image2": "/img/listings/img8.PNG",
+			"image3": "/img/listings/img9.PNG",
 			"phone": "(999) - 999-9999",
-			"email": "email@example.com"	
+			"email": "email@example.com"
 		},
 		{
 			"id": "3",
@@ -73,11 +73,11 @@
 			"smoking":"true",
 			"availability": "now",
 			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
-			"image1": "/img/pictures/img1.PNG",
-			"image2": "/img/pictures/img2.PNG",
-			"image3": "/img/pictures/img3.PNG",
+			"image1": "/img/listings/img1.PNG",
+			"image2": "/img/listings/img2.PNG",
+			"image3": "/img/listings/img3.PNG",
 			"phone": "(999) - 999-9999",
-			"email": "email@example.com"			
+			"email": "email@example.com"
 		},
 		{
 			"id": "4",
@@ -93,11 +93,11 @@
 			"smoking":"false",
 			"availability": "3/24/2016",
 			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
-			"image1": "/img/pictures/img4.PNG",
-			"image2": "/img/pictures/img5.PNG",
-			"image3": "/img/pictures/img6.PNG",
+			"image1": "/img/listings/img4.PNG",
+			"image2": "/img/listings/img5.PNG",
+			"image3": "/img/listings/img6.PNG",
 			"phone": "(999) - 999-9999",
-			"email": "email@example.com"		
+			"email": "email@example.com"
 		},
 		{
 			"id": "5",
@@ -113,9 +113,9 @@
 			"smoking":"true",
 			"availability": "now",
 			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
-			"image1": "/img/pictures/img7.PNG",
-			"image2": "/img/pictures/img8.PNG",
-			"image3": "/img/pictures/img9.PNG",
+			"image1": "/img/listings/img7.PNG",
+			"image2": "/img/listings/img8.PNG",
+			"image3": "/img/listings/img9.PNG",
 			"phone": "(999) - 999-9999",
 			"email": "email@example.com"
 		},
@@ -133,10 +133,11 @@
 			"smoking":"false",
 			"availability": "5/27/2016",
 			"description": "Spacious and bright, this remodeled unit located on the 2nd floor in a gated complex. Granite tile floors, large wall-to-wall closet in bedroom, built-in storage in the bathroom.",
-			"image1": "/img/pictures/img1.PNG",
-			"image2": "/img/pictures/img3.PNG",
-			"image3": "/img/pictures/img7.PNG",
+			"image1": "/img/listings/img1.PNG",
+			"image2": "/img/listings/img3.PNG",
+			"image3": "/img/listings/img7.PNG",
 			"phone": "(999) - 999-9999",
+<<<<<<< HEAD
 			"email": "email@example.com"			
 		},
 
@@ -391,10 +392,5 @@
 			"phone": "(999) - 999-9999",
 			"email": "email@example.com"			
 		},
-
-
-
-
-
 
 	]

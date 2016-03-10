@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <!--{{> searchExperiment}}-->
+  {{> globalHead}}
+</head>
+<body id="search">
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <header class="header">
+        <h3>Search</h3>
+      </header>
+      <div class="content">
+        <h3 class="center-text">Search for Places to Live</h3>
+        <form id="search-form" role="form" method="get" action="/all-listings" class="pure-form pure-form-stacked">
+          <fieldset>
+            <label>Where are you going?</label>
+            <input type="text" class="form-control" name="city" placeholder="City">
+            <label>When do you need a place?</label>
+            <input type="date" class="form-control" name="date">
+            <label>How many people are with you?</label></br>
+            <input type="number" class="form-control" min="0" max="5">
+            <label>What type of place do you need?</label><br>
+            <div class="radio">
+              <label>Large Residence</label>
+              <input type="radio" id="optionsRadios1" name="option" value="option1" checked>
+            </div>
+            <div class="radio">
+              <label>Private Room</label>
+              <input type="radio" id="optionsRadios2" name="option" value="option2">
+            </div>
+            <!-- form submit -->
+            <button type="submit" id="submitBtn" class="pure-button pure-button-red is-full-width is-centered"><span class="fa fa-search"></span> Search Now <span class="fa fa-angle-right"></span></button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- end main content -->
+  {{> globalBottomScripts}}
+  {{> googleAnalytics}}
+</body></html>

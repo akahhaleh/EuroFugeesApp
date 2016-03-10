@@ -6,127 +6,359 @@ INCLUDES TEXT ALIGNS AND SUCH
 *************************************
 ************************************/
 
-/* global navigation menu */
+/************************************
+*************************************
+TOP-LEVEL EDITS
+*************************************
+************************************/
 
-/* global navigation menu - logo */
-.navbar-adjust {
-	height: 50px;
-	width: 100%;
+html, body {
+    width: 100%;
+    min-height: 100%;
 }
 
-.navbar-nav li {
-	padding: 0 30px;
+/************************************
+*************************************
+CRITICAL FIXES
+*************************************
+************************************/
+.header {
+  border: none !important;
 }
 
-.navbar-nav a {
-	text-align: center;
-	border-bottom: 1px solid #a43839;
+/************************************
+*************************************
+GENERAL UTILITIES
+*************************************
+************************************/
+.is-full-width {
+  width: 100%;
 }
 
-.navbar-nav li:last-of-type a {
-	border-bottom: none;
+.center-text {
+  text-align: center;
 }
 
-.navbar .logo {
-	float: left;
-	height: 40px;
-	margin: 5px 0;
+.vertically-centered-text {
+  height: 1em;
+  line-height: 1em;
 }
 
-/* landing page layout */
-.landing-feature {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-
+.push-down {
+  margin-top: 20%;
 }
 
-.landing-feature h2 {
-	width: 80%;
-	padding: 15px;
-	margin: 35% auto 0;
+.fa-fix {
+  margin-top: 5px;
 }
 
-.landing-selection {
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	padding: 10%;
+#hiddenField {
+    display: none;
 }
 
-.landing-selection .btn-default {
-	width: 100%;
-	margin-bottom: 10px;
+figure.show {
+  margin: 0 !important;
 }
 
-.landing-selection .btn-default:last-of-type {
-	margin-bottom: 0;
-}
+/************************************
+*************************************
+LANDING
+*************************************
+************************************/
 
-.landing-selection > div {
-	margin: 5px 0;
-}
-
-/* listings page layout */
-.house {
-	margin-bottom: 30px;
-}
-
-/* form layouts */
-form {
-	text-align: center;
-	margin: 1%;
+#landing img.logo {
+  width: 90%;
+  margin: 30px 0;
 }
 
 
-/* listings edits */
-.all-listings {
-	margin: 20px 0;
+#landing {
+  background: url('/img/featured/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.house {
-	background: rgba(0,0,0,0.5);
-	border-radius: 5px;
-	padding: 1px 10px 10px;
+#landing .pure-button,
+#landing .pure-button-primary {
+  font-size: 1.25em;
 }
 
-.house h3 {
-	text-align: center;
-	color: #007cff;
+/************************************
+*************************************
+FAQS/SUPPORT
+*************************************
+************************************/
+
+/************************************
+*************************************
+SIGNIN/SIGNUP
+*************************************
+************************************/
+
+#login input,
+#signIn input,
+#search input {
+  margin-bottom: 15px;
 }
 
+.login-extras {
+  border-top: 1px solid #fff;
+  padding: 20px 0;
+}
 
+.login-extras a {
+  display: block;
+  text-align: center;
+}
 
+/************************************
+*************************************
+ACCOUNT
+*************************************
+************************************/
 
-.cost, .bed-bath , .top-info, .basic-info, .Description, .contact, .card-info{
+/************************************
+*************************************
+LIST YOUR SPACE
+*************************************
+************************************/
+
+#entireHomePanel,
+#privateRoomPanel,
+#listYourSpace2Panel,
+#fadedPanel {
+    display: none;
+}
+
+#list-your-space,
+#addListing {
+  background: url('/img/featured/city-street.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#list-your-space .content,
+#addListing .content {
+	margin-top: 10%;
+}
+
+#list-your-space form fieldset {
+	border: none;
+	border-bottom: 1px solid #a1a1a1;
+	padding: 20px 0;
+	margin: 0 0 20px;
+}
+
+#list-your-space form legend {
+	box-sizing: border-box;
 	background: #fff;
-	padding: 5px;
-	color: #4b8bf1;
-	margin: 5px 0;	
-}
-
-.bed-bath > p, .cost > p, .bed-bath > p, .top-info > p, .basic-info > p, .Description > p, .contact > p, .card-info > *{
-	color: #333;
-	margin: 0;
-}
-
-/* help and how it works layout */
-.help-topic, .tutorial-topic {
-	background: #fff;
-	padding: 20px;
 	border-radius: 5px;
-	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
 }
 
-.help-topic:last-of-type, .tutorial-topic:last-of-type {
-	margin-bottom: 0;
+#list-your-space label,
+#search label {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
 }
 
-.help-topic > p, .tutorial-topic > p {
-	color: #000;
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0 20px;
 }
 
-/* css for slideshow */
+#list-your-space input,
+#login input,
+#search input {
+  height: 3em;
+}
+
+#list-your-space textarea {
+  height: auto;
+  padding: 20px;
+}
+
+#list-your-space form .pure-g > div:first-of-type {
+	text-align: left;
+}
+
+label + * {
+	padding: 0 5px;
+}
+
+#list-your-space #main .header {
+  padding: 20px 0;
+  height: 2em;
+  line-height: 2em;
+}
+
+#list-your-space #main .content > p {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+/* euro symbol fix to alin with form */
+.eurofix, .eurofix > span {
+  height: 3em;
+  line-height: 3em;
+}
+
+.eurofix {
+  margin-top: 5px;
+}
+
+/************************************
+*************************************
+SEARCH
+*************************************
+************************************/
+
+/************************************
+*************************************
+ALL LISTINGS
+*************************************
+************************************/
+
+.listing {
+  padding: 0;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.listing .content {
+  padding: 15px;
+  margin: 0;
+}
+
+.listing-tag {
+  padding: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 0.75em;
+}
+
+.listing-primary-details > header {
+  margin: 0;
+}
+
+.listing-primary-details > header .offerTitle {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.listing-primary-details > header .offerPrice,
+.listing-primary-details > header .offerType {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.listing-primary-details > header .offerPrice {
+  text-align: center;
+}
+
+.listing-primary-details .offerImageFirst {
+  width: 100%;
+}
+
+.listing-primary-details .offerImageFirst > img {
+  width: 100%;
+}
+
+.listing-secondary-details {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.listing-secondary-details .offerDateAvailable {
+  border: 1px solid #556270;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0 5px;
+}
+
+.listing-hidden {
+  border: 1px solid #556270;
+  margin: 10px 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.listing-hidden * {
+  margin: 0; padding: 0;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div p {
+  margin: 0; padding: 0;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div:last-of-type p {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* listing result */
+
+#listing-result .listing-primary-details > header .offerTitle {
+  font-weight: normal;
+}
+
+#listing-result .listing-primary-details > header .offerPrice {
+  border-radius: 5px;
+}
+
+/* house card */
+
+#house-card,
+#house-card img,
+#house-card figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* refine search */
+
+#refine-form {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* checkboxes */
+input[type="checkbox"] {
+  height: 20px !important;
+}
+
+/* house */
+.house > div {
+  border-bottom: 1px solid #333;
+}
+
+/************************************
+*************************************
+LISTING
+*************************************
+************************************/
+
+/************************************
+*************************************
+CONTACT
+*************************************
+************************************/
+
+/************************************
+*************************************
+SLIDESHOW INTERACTIONS
+*************************************
+************************************/
+
 .listing-slideshow {
 	position: relative;
 	display: block;
@@ -175,3 +407,46 @@ form {
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
 }
+
+/************************************
+*************************************
+SEARCH
+*************************************
+************************************/
+
+
+/************************************
+*************************************
+ALL LISTINGS
+*************************************
+************************************/
+
+#search #main > header {
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px !important;
+  font-size: 1.5em;
+}
+
+/************************************
+*************************************
+BUTTONS
+*************************************
+************************************/
+
+.pure-button,
+.pure-button-primary,
+.pure-button-secondary {
+  display: inline-block;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/************************************
+*************************************
+SIDE MENU SPECIAL EDITS
+*************************************
+************************************/

@@ -8,7 +8,7 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
-function initializePage() { 
+function initializePage() {
 	console.log("Javascript connected! - signUp.js");
 }
 
@@ -18,15 +18,15 @@ function onsubmitform(e){
     var ln =  document.getElementById("last-name").value;
     var email =  document.getElementById("email").value;
     var password =  document.getElementById("password").value;
-    var phone =  document.getElementById("telephone").value; 
-	
+    var phone =  document.getElementById("telephone").value;
+
 	//oFormObject = document.forms['sign-up-form'];
 	localStorage.setItem('user-firstName',fn);
 	localStorage.setItem('user-lastName',ln);
 	localStorage.setItem('user-email',email);
 	localStorage.setItem('user-password',password);
 	localStorage.setItem('user-phone',phone);
-	
+
 	var listingProcess = localStorage.getItem('listingProcess');
 	console.log("the process is " + listingProcess);
 	if (listingProcess === "true"){
@@ -34,5 +34,5 @@ function onsubmitform(e){
 	} else {
 		document.signUpForm.action ="/";
 
-	}	
+	}
 }

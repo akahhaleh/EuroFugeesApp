@@ -33,7 +33,7 @@ function initializePage() {
 }
 
 function addHelpAnswer(e) {
-	console.log("working"); 	 	
+	console.log("working");
 	e.preventDefault();
 }
 

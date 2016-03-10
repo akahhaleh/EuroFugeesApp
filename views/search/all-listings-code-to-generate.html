@@ -1,0 +1,47 @@
+<article class="listing">
+  <section class="listing-primary-details">
+    <header class="content">
+      <div class="listing-tag">{{type}} in {{city}}</div>
+      <h3 class="offerTitle">{{title}}</h3>
+      <div class="pure-g">
+        <div class="pure-u-2-5">
+          <p class="offerType"><span class="fa fa-home"></span> {{type}}</p>
+        </div>
+        <div class="pure-u-3-5">
+          <p class="offerPrice"><span class="fa fa-euro"></span> {{cost}}/month</p>
+        </div>
+      </div>
+    </header>
+    <a class="house-card listing-slideshow" href="/listing-details" onclick="registerID({{id}})">
+      <figure class="show">
+        <img id="image1" src="{{image1}}" width="100%">
+      </figure>
+    </a>
+  </section>
+  <section class="listing-secondary-details content">
+    <div class="listing-shown">
+      <div class="offerDateAvailable">
+        <div class="pure-g">
+          <div class="pure-u-1-2">
+            <p><span class="fa fa-calendar-o"></span> Available:</p>
+          </div>
+          <div class="pure-u-1-2">
+            <p>{{availability}}</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="pure-button-primary is-full-width">Go to listing <span class="fa fa-angle-double-right"></span></a>
+      <a href="#" class="pure-button is-full-width">Some Details <span class="fa fa-angle-double-down listingSomeDetails"></span></a>
+    </div>
+    <div class="listing-hidden">
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <p class="placeBed">Bedrooms: {{bed}}</p>
+        </div>
+        <div class="pure-u-1-2">
+          <p class="placeBath">Bathrooms: {{bath}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

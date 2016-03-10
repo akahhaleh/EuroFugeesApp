@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Play);
+@import url('/fonts/Quicksand/webfontkit/stylesheet.css');
+@import url('/fonts/Roboto_Slab/webfontkit/stylesheet.css');
 
 /************************************
 *************************************
@@ -8,86 +9,238 @@ EXCEPT FOR ALIGNMENTS
 *************************************
 ************************************/
 
-/*
-color1: #A9C4BD
-color2: #E4DDCB
-color3: #EC7B59
-// primary: color4: #CE4648
-color5: #524556
- */
+/* THIS IS THE COLOR THEME
+1. #556270
+2. #4ECDC4
+3. #C7F464
+4. #FF6B6B
+5. #C44D58
+*/
 
-/* basic elements theme */
+/************************************
+*************************************
+GLOBAL TYPOGRAPHY
+*************************************
+************************************/
 
+/* SERIF quicksand font implementations */
 * {
-	color: #fff;
-	font-family: "Play", "Arial", sans-serif;
-	font-weight: normal;
-	border: none;
+  font-family: "quicksandregular", Times, sans-serif;
 }
 
-body {
-	background: url('../img/patterns/lodyas.png');
-	background-repeat: repeat;	
+/* SANS-SERIF roboto slab font implementations */
+p {
+  font-family: "roboto_slabregular", Times, sans-serif;
+}
+
+/************************************
+*************************************
+BASIC ELEMENTS
+*************************************
+************************************/
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  /* Set your content font stack here: */
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 a {
-	color: #524556;
+  color: #4ECDC4;
 }
 
-/* headlines theme */
-h3 {
-	font-family: "Play", "Arial", sans-serif;
+
+/************************************
+*************************************
+LANDING
+*************************************
+************************************/
+
+/************************************
+*************************************
+FAQS/SUPPORT
+*************************************
+************************************/
+
+/************************************
+*************************************
+SIGNIN/SIGNUP
+*************************************
+************************************/
+
+#login, #signIn {
+  background: #4ECDC4;
+  color: #fff;
 }
 
-/* buttons theme */
-.btn, .btn-default {
-	border-radius: 0;
-	font-size: 1.3em;
+.login-extras a {
+  color: #fff;
 }
 
-/* form edits */
-label {
-	font-weight: normal;
+/************************************
+*************************************
+ACCOUNT
+*************************************
+************************************/
+
+/************************************
+*************************************
+LIST YOUR SPACE
+*************************************
+************************************/
+
+/*#list-your-space form*/
+strong {
+  color: #FF6B6B;
 }
 
-/* landing page theme */
-.landing-feature h2 {
-	background: rgba(0,0,0,.75);
-	font-family: "Play", "Arial", sans-serif;
+#list-your-space,
+#addListing {
+  color: #fff;
 }
 
-/* global navigation menu theme */
-.navbar {
-	background: #CE4648;
+/*#list-your-space*/
+legend {
+  color: #fff;
+  background: #556270;
 }
 
-.navbar .button {
-	background: none;
+input,
+textarea,
+select {
+  color: #556270;
 }
 
-.navbar .icon-bar {
-	background: #fff;	
+#list-your-space #main .header {
+  background: #FF6B6B;
 }
 
-.navbar-nav li:last-of-type a {
-	border-bottom: none;
+#list-your-space #main .header > h2 {
+  font-family: "roboto_slabthin", Times, serif;
+  color: #fff;
 }
 
-.navbar-toggle {
-	border: none;
+#list-your-space #main .content > p {
+  font-family: "Quicksandbold", Arial, sans-serif;
+  color: #fff;
 }
 
-.navbar-nav a {
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 1.25em;
+
+/* refine search */
+
+#refineSearch {
+  background: #fff;
 }
 
-/* special body backgrounds */
-#landing {
-	background: url('../img/pro/landing.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+#refine-form {
+  background: #fff;
 }
+
+/************************************
+*************************************
+SEARCH
+*************************************
+************************************/
+
+#search #main > header {
+  color: #C7F464;
+  background: #556270;
+}
+
+#search {
+  background: #ddd;
+}
+
+/************************************
+*************************************
+ALL LISTINGS
+*************************************
+************************************/
+
+/************************************
+*************************************
+LISTING
+*************************************
+************************************/
+
+.listing {
+  background: #fff;
+}
+
+.listing-secondary-details .offerDateAvailable .pure-g div:first-of-type p {
+  font-family: "Quicksandregular", "Arial", serif;
+}
+
+/* listing result */
+
+#listing-result .listing {
+  background: #fff;
+  color: #556270;
+}
+
+#listing-result .listing-tag {
+  background: #556270;
+  color: #fff;
+}
+
+#listing-result .listing-primary-details > header .offerTitle {
+  color: #333;
+  font-family: "roboto_slabregular", "Times", serif;
+}
+
+#listing-result .listing-primary-details > header .offerPrice,
+#listing-result .listing-primary-details > header .offerType {
+  font-family: "Quicksandregular", "Arial", sans-serif;
+}
+
+#listing-result .listing-primary-details > header .offerPrice {
+  background: #C7F464;
+  color: #000;
+}
+
+/************************************
+*************************************
+CONTACT
+*************************************
+************************************/
+
+/************************************
+*************************************
+SIDE MENU THEME
+*************************************
+************************************/
+
+.pure-menu-heading {
+  background: #4ECDC4 !important;
+}
+
+.menu-link {
+  background: none !important;
+}
+
+.menu-link > span,
+.menu-link > span::before,
+.menu-link > span::after {
+  background: #fff !important;
+}
+
+/************************************
+*************************************
+BUTTON THEME
+*************************************
+************************************/
+
+.pure-button-primary {
+  background: #4ECDC4 !important;
+}
+
+.pure-button-red {
+  background: #FF6B6B;
+  color: #fff;
+}
+
+/************************************
+*************************************
+SLIDESHOW INTERACTIONS
+*************************************
+************************************/

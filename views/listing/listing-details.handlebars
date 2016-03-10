@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
+<body id="template">
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <div class="listing-slideshow">
+        <figure class="show">
+          <img id="image1" width="100%">
+        </figure>
+        <figure>
+          <img id="image2" width="100%">
+        </figure>
+        <figure>
+          <img id="image3" width="100%">
+        </figure>
+        <span class="prev"><span class="fa fa-angle-double-left"></span></span>
+        <span class="next"><span class="fa fa-angle-double-right"></span></span>
+      </div>
+      <div class="header">
+      </div>
+      <div class="content">
+        <div class="listings-description">
+        </div>
+        <button id="applyButton" class="pure-button pure-button-red is-full-width center-text" onclick="location.href='/apply'"><span class="fa fa-envelope"></span> Contact Host</button>
+      </div>
+    </div>
+  </div>
+  <!-- end main content -->
+  {{> globalBottomScripts}}
+  {{> googleAnalytics}}
+  <script type="text/javascript" src="/js/listingDetails.js"></script>
+</body></html>

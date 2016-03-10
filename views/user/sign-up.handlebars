@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
+<body id="signIn">
+  <script type="text/javascript">
+    {{#each variables}}
+    console.log("{{city}}");
+    localStorage.setItem('city', "{{city}}");
+    localStorage.setItem('numOfBaths', "{{numOfBaths}}");
+    localStorage.setItem('numOfBeds', "{{numOfBeds}}");
+    localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
+    {{/each}}
+  </script>
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <div class="header">
+      </div>
+      <div class="content">
+        <h1 class="subtitle center-text"><span class="fa fa-user-plus"></span> Sign Up</h1>
+        <h3 class="center-text">Before listing your space, let's sign you up for an account really quick.</h3>
+        <div id="sign-up-panel">
+          <!--form id="entireHome" role="form" method="get" action="JavaScript:handleClick()"-->
+          <form id="signUpForm" name="signUpForm" role="form" method="get" class="pure-form pure-form-stacked" onsubmit="return onsubmitform();">
+            <fieldset>
+              <label><span class="fa fa-user"></span> First Name</label>
+              <input type="text" class="form-control" id="first-name" placeholder="John">
+              <label><span class="fa fa-user"></span> Last Name</label>
+              <input type="text" class="form-control" id="last-name" placeholder="Appleseed">
+              <label><span class="fa fa-envelope"></span> Email</label>
+              <input type="email" class="form-control" id="email" placeholder="john@gmail.com">
+              <label><span class="fa fa-asterisk"></span> Password</label>
+              <input type="password" class="form-control" id="password">
+              <label><span class="fa fa-phone"></span> Phone Number</label>
+              <input type="tel" class="form-control" id="telephone" placeholder="123-456-7890">
+              <!-- form submit -->
+              <button type="submit" class="pure-button pure-button-red is-full-width is-centered">Submit <span class="fa fa-angle-double-right"></span></button>
+              <a href="/" class="pure-button is-full-width is-centered">Cancel</a>
+            </fieldset>
+          </form>
+          <div class="login-extras">
+            <a href="/login">Already a member? <strong>Login!</strong></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end main content -->
+  {{> globalBottomScripts}}
+  {{> googleAnalytics}}
+  <script type="text/javascript" src="/js/signUp.js"></script>
+</body></html>

@@ -1,0 +1,76 @@
+f<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
+<body id="list-your-space">
+  <div id="layout">
+    {{> globalNavigation}}
+    <script type="text/javascript">
+      var userLoggedIn = localStorage.getItem('userLoggedIn');
+      if (userLoggedIn==="true"){
+        {{#each variables}}
+        console.log("{{city}}");
+        localStorage.setItem('city', "{{city}}");
+        localStorage.setItem('numOfBaths', "{{numOfBaths}}");
+        localStorage.setItem('numOfBeds', "{{numOfBeds}}");
+        localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
+        {{/each}}
+      }else{
+        localStorage.setItem('userLoggedIn', "true")
+      }
+    </script>
+    <div id="main">
+      <div class="header">
+        <h2>List Your Space</h2>
+      </div>
+      <div class="content">
+        <!-- greeting -->
+        <h3 id="greetingUser" class="center-text"></h3>
+        <div id="listYourSpace2Panel">
+          <!-- form -->
+          <form id="listingYourSpace2Form" name="listingYourSpace2Form" role="form" method="get" onsubmit="return onsubmitform();" class="pure-form pure-form-stacked">
+            <legend><span class="fa fa-info-circle"></span> Add additional information about your listing before you submit</span></legend>
+            <fieldset>
+              <div id="hiddenField">
+                <input type="text" class="form-control" name="city" placeholder="Berlin">
+                <input type="number" class="form-control" min="0" max="10" name="bed" placeholder="2 Bedrooms">
+                <input type="number" class="form-control" min="0" max="10" name="bath"placeholder="1 bathroom">
+                <input type="number" class="form-control" min="1" max="20" name="occupants" placeholder="3">
+                <input type="text" class="form-control" name="email">
+                <input type="number" class="form-control" name="phone">
+              </div>
+              <!-- Title -->
+              <label><span class="fa fa-th-list"></span> Listing Title</label>
+              <input type="text" name="title" placeholder="Enter a title" required>
+              <!-- Date available -->
+              <label><span class="fa fa-calendar"></span> Date Available</label>
+              <input type="date" name="availability" min="03/01/2016" max="12/31/2016" required>
+              <!-- Rate-->
+              <label><span class="fa fa-money"></span> Monthly Rate</label>
+              <div class="pure-g">
+                <div class="pure-u-2-5 eurofix"><span class="fa fa-euro"></span> In Euros</div>
+                <div class="pure-u-3-5">
+                  <input name="cost" type="number" min="10" placeholder="Rate" required>
+                </div>
+              </div>
+              <!-- Description -->
+              <label><span class="fa fa-pencil-square-o"></span> Description</label>
+              <textarea name="description" rows="4" placeholder="Enter a brief (or elaborate) description of your listing" required></textarea>
+              <!-- Image -->
+              <label><span class="fa fa-file-image-o"></span> Link to image</label>
+              <input type="text" name="image1" placeholder="image-url.jpg" required>
+            </fieldset>
+            <!-- Submit -->
+            <button type="submit" class="pure-button pure-button-red is-full-width is-centered">Submit Listing <span class="fa fa-send"></span></button>
+          </form>
+        </div>
+        <a class="pure-button is-full-width is-centered" href="/">Cancel</a>
+      </div>
+    </div>
+  </div>
+  <!-- end main content -->
+  {{> globalBottomScripts}}
+  {{> googleAnalytics}}
+  <script type="text/javascript" src="/js/listYourSpace2.js"></script>
+</body></html>

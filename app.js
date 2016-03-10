@@ -9,24 +9,26 @@ var handlebars = require('express3-handlebars')
 
 // basics
 var landing = require('./routes/landing');
-var signUp = require('./routes/sign-up');
-var login = require('./routes/login');
-var howItWorks = require('./routes/how-it-works');
-var help = require('./routes/help');
+var about = require('./routes/about');
+var faqs = require('./routes/faqs');
+var support = require('./routes/support');
+var settings = require('./routes/settings');
 // listings
-var search = require('./routes/search');
-var searchVB = require('./routes/searchVB');
-var allListings = require('./routes/all-listings');
-var allListingsVB = require('./routes/all-listingsVB');
-var refineSeachVB = require('./routes/refine-search');
-var listingDetails = require('./routes/listing-details');
-var listing = require('./routes/listing');
-// locales
-var listYourSpace = require('./routes/list-your-space');
-var listYourSpace2 = require('./routes/list-your-space-2');
-// refugees
-var apply = require('./routes/apply');
-var addListing = require('./routes/add-listing');
+var listing = require('./routes/listing/listing');
+var addListing = require('./routes/listing/add-listing');
+var listYourSpace = require('./routes/listing/list-your-space');
+var listYourSpace2 = require('./routes/listing/list-your-space-2');
+var listingDetails = require('./routes/listing/listing-details');
+// search
+var search = require('./routes/search/search');
+var searchVB = require('./routes/search/searchVB');
+var allListings = require('./routes/search/all-listings');
+var allListingsVB = require('./routes/search/all-listingsVB');
+var refineSeachVB = require('./routes/search/refine-search');
+// users
+var signUp = require('./routes/user/sign-up');
+var login = require('./routes/user/login');
+var apply = require('./routes/user/apply');
 
 var app = express();
 
@@ -44,33 +46,35 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// basics pages
+// basics
 app.get('/', landing.view);
-app.get('/sign-up', signUp.view);
-app.get('/login', login.view);
-app.get('/how-it-works', howItWorks.view);
-app.get('/help', help.view);
-// listings pages
+app.get('/about', about.view);
+app.get('/faqs', faqs.view);
+app.get('/support', support.view);
+app.get('/settings', settings.view);
+// listings
+app.get('/add-listing', addListing.view);
+app.get('/list-your-space', listYourSpace.view);
+app.get('/list-your-space-2', listYourSpace2.view);
+app.get('/listing/:id', listing.listingInfo);
+app.get('/listing-details', listingDetails.view);
+// search
 app.get('/search', search.view);
 app.get('/searchVB', searchVB.view);
 app.get('/all-listings', allListings.view);
 app.get('/all-listingsVB', allListingsVB.view);
 app.get('/refine-search/:city/:occupants/:cost/:pets/:children/:smoking/:availability', refineSeachVB.updateResults);
-app.get('/listing-details', listingDetails.view);
-app.get('/listing/:id', listing.listingInfo);
-
-// locales pages
-app.get('/list-your-space', listYourSpace.view);
-app.get('/list-your-space-2', listYourSpace2.view);
-// refugees pages
+// user
+app.get('/sign-up', signUp.view);
+app.get('/login', login.view);
 app.get('/apply', apply.view);
-app.get('/add-listing', addListing.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

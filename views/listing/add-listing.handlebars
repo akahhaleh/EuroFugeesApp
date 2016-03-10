@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  {{> globalHead}}
+</head>
+<body id="addListing">
+  <div id="layout">
+    {{> globalNavigation}}
+    <div id="main">
+      <div class="header">
+      </div>
+      <div class="content">
+        <h3 class="center-text" id="greetingUser"></h3>
+        <div class = "text-center">
+          <a href="/searchVB" class="pure-button pure-button-primary is-full-width is-centered"><span class="fa fa-list-ul"></span> Search listings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end main content -->
+  {{> globalBottomScripts}}
+  <script type="text/javascript" src="/js/addListing.js"></script>
+</body></html>
