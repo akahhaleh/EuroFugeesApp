@@ -6,12 +6,13 @@ exports.view = function(req, res){
 	// get variables from request query
 	var city = req.query.city.toLowerCase();
 	var occupants = req.query.occupants;
-	var area = 45 + ((occupants-1)*15);
-	var cost = req.query.cost;
+	var maxArea = 45 + ((occupants-1)*15);
+	var cost = parseInt(req.query.cost);
 
 	// print passed results
 	console.log("The passed city is: "+ city);
 	console.log("The passed occupants is: "+ occupants);
+	console.log("The Max area allowed  is: "+ maxArea);
 	console.log("The passed cost is: "+ cost);
 
 
@@ -32,8 +33,8 @@ exports.view = function(req, res){
     		console.log("passed city");
     		if (listingCost <= cost){
     			console.log("passed cost");
-    			if (area <= listingArea){
-    				console.log("passed cost");
+    			if (listingArea <= maxArea){
+    				console.log("passed cost AND ALL TESTS");
     				searchResults.push(housingData[i]);
     			}
     		}
