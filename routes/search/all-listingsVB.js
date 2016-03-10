@@ -5,7 +5,7 @@ exports.view = function(req, res){
 
 	// get variables from request query
 	var city = req.query.city.toLowerCase();
-	var occupants = req.query.occupants;
+	var occupants = parseInt(req.query.occupants);
 	var maxArea = 45 + ((occupants-1)*15);
 	var cost = parseInt(req.query.cost);
 

@@ -5,9 +5,9 @@ exports.updateResults = function(req, res) { 
 	// get variables from request query
 	var city = req.params.city.toLowerCase();
 	console.log(city);
-	var occupants = req.params.occupants;
-	var area = 45 + ((occupants-1)*15);
-	var cost = req.params.cost;
+	var occupants = parseInt(req.params.occupants);
+	var maxArea = 45 + ((occupants-1)*15);
+	var cost = parseInt(req.params.cost);
 	var pets = req.params.pets;
 	var children = req.params.children;
 	var smoking = req.params.smoking;
@@ -16,6 +16,7 @@ exports.updateResults = function(req, res) { 
 	// print passed results
 	console.log("The refined city is: "+ city);
 	console.log("The refined occupants is: "+ occupants);
+    console.log("The Max area allowed  is: "+ maxArea);
 	console.log("The refined cost is: "+ cost);
 	console.log("The refined pets is: "+ pets);
 	console.log("The refined children is: "+ children);
@@ -31,8 +32,8 @@ exports.updateResults = function(req, res) { 
 
 		// Get variables of each listing from json file
     	var listingCity = housingData[i].city.toLowerCase();
-    	var listingArea = housingData[i].area;
-    	var listingCost = housingData[i].cost;
+    	var listingArea = parseInt(housingData[i].area);
+    	var listingCost = parseInt(housingData[i].cost);
     	var listingPets = housingData[i].pets;
     	var listingChildren = housingData[i].children;
     	var listingSmoking = housingData[i].smoking;
@@ -49,8 +50,8 @@ exports.updateResults = function(req, res) { 
     		console.log("passed city");
     		if (listingCost <= cost){
     			console.log("passed cost");
-    			if (area <= listingArea){
-    				console.log("passed cost");
+    			if (listingArea <= maxArea){
+    				console.log("passed area");
     				if (pets === listingPets || pets === 'undefined'){
     					console.log("passed pets");
     					if (children === listingChildren || children === 'undefined'){

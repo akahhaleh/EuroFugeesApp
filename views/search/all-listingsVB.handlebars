@@ -72,9 +72,12 @@
           </form>
         </div>
         <!-- listings -->
+        <header id="query-result">
+          <h3></h3>
+        </header>
         <div class="all-listings" id="listing-result">
           {{#each house}}
-          <article class="listing">
+          <article class="listing" id="listing">
             <section class="listing-primary-details">
               <header class="content">
                 <div class="listing-tag">{{title}}</div>

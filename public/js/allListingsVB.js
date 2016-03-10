@@ -13,7 +13,15 @@ $(document).ready(function() {
    $("#refineSearch").unbind().click(refineSearchClicked);
    $('#refineSearchApply').unbind().click(refineSearchApplyClicked);
    ga('send','pageview');
+
+   var houseCard = document.getElementById("listing");
+   if (document.contains(houseCard)){ 
+    document.getElementById('query-result').innerHTML="<h3>Results that match your query:</h3>";
+  }else{
+    document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3>";
+    console.log("found no results");
  }
+}
 
 // Function that lets refine search panel slide
 function refineSearchClicked(e){
@@ -55,15 +63,17 @@ function registerID(id){
 
 function updateSearchResultsAfterRefine(result){
 	var refinedResultsCount = result.length;
+  console.log("found " + refinedResultsCount + " result that matched refine!")
 	if (refinedResultsCount === 0){
-		document.getElementById('listing-result').innerHTML = "<h3>No results match your query</h3>";
+		document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3>";
 		console.log("found no results");
+    document.getElementById('listing-result').innerHTML='';
 	}else{
-		document.getElementById('listing-result').innerHTML = "<h3>Rsults that match your query:</h3>"
+		document.getElementById('query-result').innerHTML="<h3>Results that match your query:</h3>";
 		for (var i=0; i<refinedResultsCount; i++){
 			var listingAtIndex = result[i];
 			generateSearchResultCard(result[i]);
-			addListenersToSlideShow();
+			//addListenersToSlideShow();
 		}
 	}
 }
@@ -84,8 +94,8 @@ function generateSearchResultCard(listing){
   var listingBed = listing['bed'];
   var listingBath = listing['bath'];
 
-  $('#listing-result').html($('<article class="listing"><section class="listing-primary-details"><header class="content"><div class="listing-tag">'+listingType+' in '+listingCity+'</div><div class="pure-u-1"><p class="offerPrice"><span class="fa fa-euro"></span> '+listingCost+'/month</p></div><h3 class="offerTitle">'+listingTitle+'</h3></header><a class="house-card listing-slideshow" href="/listing-details" onclick="registerID('+listingID+')"><figure class="show"><img id="image1" src="'+listingImage1+'" width="100%"></figure></a></section><section class="listing-secondary-details content"><div class="listing-shown"><div class="offerDateAvailable"><div class="pure-g"><div class="pure-u-1-2"><p><span class="fa fa-calendar-o"></span> Available:</p></div><div class="pure-u-1-2"><p>'+listingAvailability+'</p></div></div></div></div><div class="listing-hidden"><div class="pure-g"><div class="pure-u-1-2"><p class="placeBed">Bed: '+listingBed+'</p></div><div class="pure-u-1-2"><p class="placeBath">Bath: '+listingBath+'</p></div></div></div><a href="/listing-details" class="pure-button-primary is-full-width" onclick="registerID('+listingID+')">Go to listing <span class="fa fa-angle-double-right"></span></a></section></article>'));
-
+  $('#listing-result').append($('<article class="listing"><section class="listing-primary-details"><header class="content"><div class="listing-tag">'+listingType+' in '+listingCity+'</div><div class="pure-u-1"><p class="offerPrice"><span class="fa fa-euro"></span> '+listingCost+'/month</p></div><h3 class="offerTitle">'+listingTitle+'</h3></header><a class="house-card listing-slideshow" href="/listing-details" onclick="registerID('+listingID+')"><figure class="show"><img id="image1" src="'+listingImage1+'" width="100%"></figure></a></section><section class="listing-secondary-details content"><div class="listing-shown"><div class="offerDateAvailable"><div class="pure-g"><div class="pure-u-1-2"><p><span class="fa fa-calendar-o"></span> Available:</p></div><div class="pure-u-1-2"><p>'+listingAvailability+'</p></div></div></div></div><div class="listing-hidden"><div class="pure-g"><div class="pure-u-1-2"><p class="placeBed">Bed: '+listingBed+'</p></div><div class="pure-u-1-2"><p class="placeBath">Bath: '+listingBath+'</p></div></div></div><a href="/listing-details" class="pure-button-primary is-full-width" onclick="registerID('+listingID+')">Go to listing <span class="fa fa-angle-double-right"></span></a></section></article>'));
+}
 /* OLD CODE
   //Get the parent node where the card will be added
 	var listingResults = document.getElementById('listing-result');
@@ -169,8 +179,9 @@ function generateSearchResultCard(listing){
     listingCard.appendChild(listingCost);
     listingCard.appendChild(cardInfoDiv);
     listingResults.appendChild(listingCard);
-    */
+    
   }
+  */
 
 // END CARD CREATION
 
