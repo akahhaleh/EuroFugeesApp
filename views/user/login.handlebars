@@ -4,6 +4,19 @@
   {{> globalHead}}
 </head>
 <body id="login">
+  <script type="text/javascript">
+    function onLoginClick(){
+      var input = document.getElementById("usernameInputField").value;
+      var indexOfAt = input.indexOf("@");
+      if (indexOfAt == -1){
+        localStorage.setItem('user-firstName', input);
+      } else {
+        input = input.substring(0, indexOfAt);
+        localStorage.setItem('user-firstName', input);
+      }
+      localStorage.setItem('userLoggedIn','true');
+    }
+  </script>
   <div id="layout">
     {{> globalNavigation}}
     <div id="main">
@@ -13,15 +26,15 @@
         <!-- login module -->
         <h1 class="subtitle center-text"><span class="fa fa-sign-in"></span> Login</h1>
         <h2 class="title center-text">Welcome Back</h2>
-        <form action="login_submit" method="get" accept-charset="utf-8" class="pure-form pure-form-stacked">
+        <form method="get" accept-charset="utf-8" class="pure-form pure-form-stacked">
           <fieldset>
             <!-- login details -->
             <label><span class="fa fa-user"></span> Username or Email</label>
-            <input type="text" placeholder="Username or Email">
+            <input type="text" placeholder="Username or Email" id="usernameInputField">
             <label><span class="fa fa-asterisk"></span> Password</label>
             <input type="password" placeholder="Password">
             <!-- form submit -->
-            <button type="submit" class="pure-button pure-button-red is-full-width is-centered">Next <span class="fa fa-angle-double-right"></span></button>
+            <button type="submit" class="pure-button pure-button-red is-full-width is-centered" onclick="onLoginClick()">Login</button>
             <a href="/" class="pure-button is-full-width is-centered">Cancel</a>
           </fieldset>
         </form>
