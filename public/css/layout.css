@@ -96,6 +96,17 @@ LANDING
   margin: 40px 0 20px;
 }
 
+.landing-buttons {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+}
+
+.landing-buttons > * {
+  width: 80%;
+  margin: 0 auto;
+}
+
 #about img.logo {
   width: 30%;
   margin: 10px 0;
