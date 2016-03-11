@@ -48,13 +48,21 @@
             <input type="number" class="form-control" min="15" max="100" id="age" placeholder="Age" required>
             <!-- paying -->
             <label>Who will be paying for you?(من سيدفع)</label>
-            <div class="radio">
-              <label>Self (نفسي)</label>
-              <input type="radio" id="optionsRadios1" id="payer" value="self" checked>
+            <div class="pure-g paying-for">
+              <div class="pure-u-1-4 radio">
+                <input type="radio" id="optionsRadios1" id="payer" value="self" checked>
+              </div>
+              <div class="pure-u-3-4">
+                <label>Self (نفسي)</label>
+              </div>
             </div>
-            <div class="radio">
-              <label>Government(الحكومة)</label>
-              <input type="radio" id="optionsRadios2" id="payer" value="Government">
+            <div class="pure-g paying-for">
+              <div class="pure-u-1-4 radio">
+                <input type="radio" id="optionsRadios2" id="payer" value="Government">
+              </div>
+              <div class="pure-u-3-4">
+                <label>Government(الحكومة)</label>
+              </div>
             </div>
           </fieldset>
           <div class="is-full-width pure-button pure-button-red center-text" onclick="showInput();"><span class="fa fa-send"></span> Submit</div>
@@ -63,26 +71,26 @@
     </div>
     <div>
       <div class="content">
-      <form>
-        <div id="message" style="display: none;">
-          <header class="header">
-            <h3>We've sent the host the following email</h3>
-            <h4>لقد ارسلنا هذه الرسالة لصاحب البيت و سوف يتراسل معكم قريبا</h4>
-          </header>
-          <p>Hello,</p>
-          <p>Sie haben gerade einen neuen Auftrag für Ihren Eintrag. Hier ist der Klägerin Informationen:</p>
-          <p id="fn"></p>
-          <p id="ln"></p>
-          <p id="ageOfApplicant"></p>
-          <p id="numOfOccupants"></p>
-          <p id="applicantPhone"></p>
-          <p>Danke :)</p>
-          <a href="/" class="is-full-width pure-button center-text"><span class="fa fa-angle-left"></span> Home</a>
-        </div>
-      </form>
+        <form>
+          <div id="message" style="display: none;">
+            <header class="header">
+              <h3>We've sent the host the following email</h3>
+              <h4>لقد ارسلنا هذه الرسالة لصاحب البيت و سوف يتراسل معكم قريبا</h4>
+            </header>
+            <p>Hello,</p>
+            <p>Sie haben gerade einen neuen Auftrag für Ihren Eintrag. Hier ist der Klägerin Informationen:</p>
+            <p id="fn"></p>
+            <p id="ln"></p>
+            <p id="ageOfApplicant"></p>
+            <p id="numOfOccupants"></p>
+            <p id="applicantPhone"></p>
+            <p>Danke :)</p>
+            <a href="/" class="is-full-width pure-button center-text"><span class="fa fa-angle-left"></span> Home</a>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-  <!-- end main content -->
-  {{> globalBottomScripts}}
-  {{> googleAnalytics}}
-</body></html>
+    <!-- end main content -->
+    {{> globalBottomScripts}}
+    {{> googleAnalytics}}
+  </body></html>

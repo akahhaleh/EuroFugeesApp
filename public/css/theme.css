@@ -301,4 +301,13 @@ SIDE MENU THEME
 }
 
 .contact-host label {
+  color: #000;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.paying-for input {
+  text-align: right;
+  margin: 20px 0 0 !important;
 }
