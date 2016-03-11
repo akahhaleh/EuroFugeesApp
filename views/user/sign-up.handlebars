@@ -5,13 +5,17 @@
 </head>
 <body id="signIn">
   <script type="text/javascript">
-    {{#each variables}}
-    console.log("{{city}}");
-    localStorage.setItem('city', "{{city}}");
-    localStorage.setItem('numOfBaths', "{{numOfBaths}}");
-    localStorage.setItem('numOfBeds', "{{numOfBeds}}");
-    localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
-    {{/each}}
+    var listingProcess = localStorage.getItem('listingProcess');
+    console.log("the process is " + listingProcess);
+    if (listingProcess === "true"){
+      {{#each variables}}
+      console.log("{{city}}");
+      localStorage.setItem('city', "{{city}}");
+      localStorage.setItem('numOfBaths', "{{numOfBaths}}");
+      localStorage.setItem('numOfBeds', "{{numOfBeds}}");
+      localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
+      {{/each}}
+    }
   </script>
   <div id="layout">
     {{> globalNavigation}}

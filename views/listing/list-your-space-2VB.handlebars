@@ -6,11 +6,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body>
-
   {{> globalNavigation}}
   <script type="text/javascript">
-    var userLoggedIn = localStorage.getItem('userLoggedIn');
-    if (userLoggedIn==="true"){
+    var skipSignUp = localStorage.getItem('skipSignUp');
+    if (skipSignUp==="true"){
       {{#each variables}}
       console.log("{{city}}");
       localStorage.setItem('city', "{{city}}");
@@ -18,8 +17,6 @@
       localStorage.setItem('numOfBeds', "{{numOfBeds}}");
       localStorage.setItem('numOfOccupants', "{{numOfOccupants}}");
       {{/each}}
-    }else{
-      localStorage.setItem('userLoggedIn', "true")
     }
   </script>
   <div class="wrap">

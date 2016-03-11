@@ -18,7 +18,7 @@ $(document).ready(function() {
    if (document.contains(houseCard)){ 
     document.getElementById('query-result').innerHTML="<h3>Results that match your query:</h3>";
   }else{
-    document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3><p>EuroFugees services are currenlty limited to the following cities:</p><ul><li>Berlin</li><li>Munich</li></ul><p>Please limit your inqueries to only these cities.";
+    document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3><p>EuroFugees services are currenlty available to the following cities:</p><ul><li>Berlin</li><li>Munich</li></ul><p>Please limit your inqueries to only these cities.";
     console.log("found no results");
  }
 }
@@ -66,7 +66,7 @@ function updateSearchResultsAfterRefine(result){
 	var refinedResultsCount = result.length;
   console.log("found " + refinedResultsCount + " result that matched refine!")
 	if (refinedResultsCount === 0){
-		document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3><p>EuroFugees services are currenlty limited to the following cities:</p><ul><li>Berlin</li><li>Munich</li></ul><p>Please limit your inqueries to only these cities.";
+		document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3><p>EuroFugees services are currenlty available to the following cities:</p><ul><li>Berlin</li><li>Munich</li></ul><p>Please limit your inqueries to only these cities.";
 		console.log("found no results");
 	}else{
 		document.getElementById('query-result').innerHTML="<h3>Results that match your query:</h3>";

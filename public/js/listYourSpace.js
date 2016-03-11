@@ -29,16 +29,24 @@ function privateRoomClicked(e){
 
 function onsubmitform(e){
 	var loginStatus = localStorage.getItem('userLoggedIn');
-
 	if (loginStatus === "true"){
-		document.entireHomeForm.action ="/list-your-space-2";
-		document.privateRoomForm.action ="/list-your-space-2";
+		localStorage.setItem('skipSignUp', 'true');
 		console.log("User is logged in");
 	} else {
-		var listingProcess = "true";
-		localStorage.setItem('listingProcess', listingProcess)
+		localStorage.setItem('skipSignUp', 'false');
+		console.log("User is not logged in");
+	}
+
+	var skipSignUp = localStorage.getItem('skipSignUp');
+	if (skipSignUp === 'true'){
+		localStorage.setItem('skipSignUp', 'true');
+		localStorage.setItem('listingProcess','false');
+		document.entireHomeForm.action ="/list-your-space-2";
+		document.privateRoomForm.action ="/list-your-space-2";
+	}else{
+		localStorage.setItem('skipSignUp', 'false');
+		localStorage.setItem('listingProcess','true');
 		document.entireHomeForm.action ="/sign-up";
 		document.privateRoomForm.action ="/sign-up";
-		console.log("User is not logged in");
 	}
 }

@@ -1,4 +1,4 @@
-f<!doctype html>
+<!doctype html>
 <html>
 <head>
   {{> globalHead}}
@@ -7,8 +7,8 @@ f<!doctype html>
   <div id="layout">
     {{> globalNavigation}}
     <script type="text/javascript">
-      var userLoggedIn = localStorage.getItem('userLoggedIn');
-      if (userLoggedIn==="true"){
+      var skipSignUp = localStorage.getItem('skipSignUp');
+      if (skipSignUp==="true"){
         {{#each variables}}
         console.log("{{city}}");
         localStorage.setItem('city', "{{city}}");
