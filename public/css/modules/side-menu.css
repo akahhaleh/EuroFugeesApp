@@ -27,14 +27,15 @@ This is the parent `<div>` that contains the menu and the content area.
     position: relative;
     padding-left: 0;
 }
-    #layout.active #menu {
-        left: 250px;
-        width: 250px;
-    }
 
-    #layout.active .menu-link {
-        left: 250px;
-    }
+#layout.active #menu {
+    left: 80%;
+    width: 80%;
+}
+
+#layout.active .menu-link {
+    left: 80%;
+}
 /*
 The content `<div>` is where all your content goes.
 */
@@ -47,23 +48,23 @@ The content `<div>` is where all your content goes.
 }
 
 .header {
-     margin: 0;
-     color: #333;
-     text-align: center;
-     padding: 2.5em 2em 0;
-     border-bottom: 1px solid #eee;
- }
-    .header h1 {
-        margin: 0.2em 0;
-        font-size: 3em;
-        font-weight: 250;
-    }
-     .header h2 {
-        font-weight: 250;
-        color: #ccc;
-        padding: 0;
-        margin-top: 0;
-    }
+   margin: 0;
+   color: #333;
+   text-align: center;
+   padding: 2.5em 2em 0;
+   border-bottom: 1px solid #eee;
+}
+.header h1 {
+    margin: 0.2em 0;
+    font-size: 3em;
+    font-weight: 250;
+}
+.header h2 {
+    font-weight: 250;
+    color: #ccc;
+    padding: 0;
+    margin-top: 0;
+}
 
 .content-subhead {
     margin: 50px 0 20px 0;
@@ -79,8 +80,8 @@ appears on the left side of the page.
 */
 
 #menu {
-    margin-left: -250px; /* "#menu" width */
-    width: 250px;
+    margin-left: -80%; /* "#menu" width */
+    width: 80%;
     position: fixed;
     top: 0;
     left: 0;
@@ -102,8 +103,8 @@ appears on the left side of the page.
     /*
     Remove all background/borders, since we are applying them to #menu.
     */
-     #menu .pure-menu,
-     #menu .pure-menu ul {
+    #menu .pure-menu,
+    #menu .pure-menu ul {
         border: none;
         background: transparent;
     }
@@ -146,7 +147,7 @@ appears on the left side of the page.
         margin: 0;
     }
 
-/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 
 /*
 The button to open/close the Menu is custom-made and not part of Pure. Here's
@@ -171,34 +172,34 @@ small screens.
     padding: 2.1em 1.6em;
 }
 
-    .menu-link:hover,
-    .menu-link:focus {
-        background: #000;
-    }
+.menu-link:hover,
+.menu-link:focus {
+    background: #000;
+}
 
-    .menu-link span {
-        position: relative;
-        display: block;
-    }
+.menu-link span {
+    position: relative;
+    display: block;
+}
 
-    .menu-link span,
-    .menu-link span::before,
-    .menu-link span::after {
-        background-color: #fff;
-        width: 100%;
-        height: 0.2em;
-    }
+.menu-link span,
+.menu-link span::before,
+.menu-link span::after {
+    background-color: #fff;
+    width: 100%;
+    height: 0.2em;
+}
 
-        .menu-link span::before,
-        .menu-link span::after {
-            position: absolute;
-            margin-top: -0.6em;
-            content: " ";
-        }
+.menu-link span::before,
+.menu-link span::after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
 
-        .menu-link span::after {
-            margin-top: 0.6em;
-        }
+.menu-link span::after {
+    margin-top: 0.6em;
+}
 
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
@@ -215,21 +216,21 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #layout {
-        padding-left: 250px; /* left col width "#menu" */
+        padding-left: 80%; /* left col width "#menu" */
         left: 0;
     }
     #menu {
-        left: 250px;
+        left: 80%;
     }
 
     .menu-link {
         position: fixed;
-        left: 250px;
+        left: 80%;
         display: none;
     }
 
     #layout.active .menu-link {
-        left: 250px;
+        left: 80%;
     }
 }
 
@@ -239,32 +240,32 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         * Make the window small.
         * Tap the menu to trigger the active state.
         * Make the window large again.
-    */
-    #layout.active {
-        position: relative;
-        left: 250px;
+        */
+        #layout.active {
+            position: relative;
+            left: 80%;
+        }
     }
-}
 
-/* layout adjustments */
-#menu {
-    font-size: 1em;
-}
+    /* layout adjustments */
+    #menu {
+        font-size: 1em;
+    }
 
-.pure-menu-list {
-    padding: 15px 0;
-}
+    .pure-menu-list {
+        padding: 15px 0;
+    }
 
-.pure-menu-list a {
-    padding: 0 15px;
-}
+    .pure-menu-list a {
+        padding: 0 15px;
+    }
 
-.pure-menu-list a > span {
-  display: inline-block;
-  width: 40px;
-  text-align: center;
-}
+    .pure-menu-list a > span {
+      display: inline-block;
+      width: 40px;
+      text-align: center;
+  }
 
-.menu-divider-below {
-  margin-bottom: 25px;
-}
+  .menu-divider-below {
+      margin-bottom: 25px;
+  }
