@@ -21,7 +21,7 @@ exports.view = function(req, res){
 
 	res.render('listing/add-listing');
 
-	var text = '{"id": "'+id+'","title": "'+title+'","type": "'+type+'","bed": "'+bed+'","bath": "'+bath+'","area": "'+area+'","cost": "'+cost+'","pets": "true","children": "true","smoking": "true","availability": "'+availability+'","description": "'+description+'","image1": "'+image1+'","phone": "'+phone+'","email": "'+email+'"}';
+	var text = '{"id": "'+id+'","title": "'+title+'","type": "'+type+'","bed": "'+bed+'","bath": "'+bath+'","area": "'+area+'","cost": "'+cost+'","city": "'+city+'","pets": "true","children": "true","smoking": "true","availability": "'+availability+'","description": "'+description+'","image1": "'+image1+'","phone": "'+phone+'","email": "'+email+'"}';
 
 	console.log("text object includes:", text);
 	var newListing = JSON.parse(text);
