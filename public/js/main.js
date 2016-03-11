@@ -28,15 +28,21 @@ $(document).ready(function() {
 
 function initializePage() {
 
-	$('.help-topic a').click(addHelpAnswer);
-	$('.tutorial-topic a').click(addTutorialAnswer);
+	$('.help-topic a > h3').click(addHelpAnswer);
+  $('.faq-item > a > h3').click(toggleFAQItem);
 }
 
 function addHelpAnswer(e) {
 	console.log("working");
 	e.preventDefault();
+
+  $(this).parent().siblings('p').slideToggle("slow");
+  $(this).children('span').toggleClass('fa-angle-double-right').toggleClass('fa-angle-double-down');
 }
 
-function addTutorialAnswer(e) {
+function toggleFAQItem(e) {
 	e.preventDefault();
+
+  $(this).parent().siblings('p').slideToggle("slow");
+  $(this).children('span').toggleClass('fa-angle-double-right').toggleClass('fa-angle-double-down');
 }

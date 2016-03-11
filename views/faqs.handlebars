@@ -7,18 +7,26 @@
   <div id="layout">
     {{> globalNavigation}}
     <div id="main">
-      <div class="header">
-      </div>
+      <header class="header-bar">EuroFugees</header>
       <div class="content">
-        <h2 class="text-center"><span class="fa fa-question-circle"></span> FAQs</h2>
-        {{#each tutorials}}
-        <div class="tutorial-topic" id="{{id}}">
-          <a href="#">
-            <h3>{{topic}}</h3>
-          </a>
-          <p>{{answer}}</p>
+        <div class="header-group">
+          <h2 class="text-center"><span class="fa fa-question-circle"></span> FAQs</h2>
+          <h4>Frequently-Asked Questions</h4>
         </div>
-        {{/each}}
+        <div class="wrap-with-bottom">
+          {{#each tutorials}}
+          <div class="faq-item" id="{{id}}">
+            <a href="#">
+              <h3><span class="fa fa-angle-double-right"></span> {{topic}}</h3>
+            </a>
+            <p style="display: none">{{answer}}</p>
+          </div>
+          {{/each}}
+        </div>
+        <a href="/" class="small-link"><span class="fa fa-home"></span> Home</a>
+        <a href="/about" class="small-link"><span class="fa fa-info-circle"></span> What is EuroFugees?</a>
+        <a href="/search" class="small-link"><span class="fa fa-search"></span> Find a Residence</a>
+        <a href="/list-your-space" class="small-link"><span class="fa fa-plus-circle"></span> List a Residence</a>
       </div>
     </div>
   </div>

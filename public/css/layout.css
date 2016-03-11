@@ -60,6 +60,29 @@ figure.show {
   margin: 0 !important;
 }
 
+.header-group {
+  margin: 20px 0;
+}
+
+.header-group > *:first-child {
+  margin: 0;
+  padding: 0;
+  color: #4ECDC4;
+}
+
+.header-group > *:nth-child(2) {
+  margin: 5px 0;
+  padding: 0;
+  color: #556270;
+  line-height: 1em;
+}
+
+.wrap-with-bottom {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 15px;
+}
+
 /************************************
 *************************************
 LANDING
@@ -67,13 +90,30 @@ LANDING
 ************************************/
 
 #landing img.logo {
-  width: 90%;
-  margin: 30px 0;
+  width: 50%;
+  margin: 40px 0 20px;
+}
+
+#about img.logo {
+  width: 30%;
+  margin: 10px 0;
+}
+
+#landing .header > h1 {
+  color: #fff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#landing .content {
+  position: fixed;
+  bottom: 0; left: 0;
 }
 
 
 #landing {
-  background: url('/img/featured/landing.jpg');
+  background: url('/img/featured/station.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,11 +124,52 @@ LANDING
   font-size: 1.25em;
 }
 
+.small-link {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #556270;
+}
+
+#landing .small-link {
+  color: #fff;
+  text-align: center;
+}
+
 /************************************
 *************************************
 FAQS/SUPPORT
 *************************************
 ************************************/
+.header-bar {
+  height: 3em;
+  line-height: 3em;
+  background: #4ECDC4;
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-right: 20px;
+}
+
+.faq-item > a,
+.help-topic > a {
+  text-decoration: none;
+}
+
+.faq-item > a > *,
+.help-topic > a > * {
+  color: #556270;
+  border: 1px dashed #556270;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.faq-item > p,
+.help-topic > p {
+  padding: 0 5px 20px;
+}
 
 /************************************
 *************************************

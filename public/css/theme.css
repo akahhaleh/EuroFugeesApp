@@ -35,6 +35,21 @@ p {
 
 /************************************
 *************************************
+BUTTON THEME
+*************************************
+************************************/
+
+.pure-button-primary {
+  background: #4ECDC4;
+}
+
+.pure-button-red {
+  background: #FF6B6B;
+  color: #fff;
+}
+
+/************************************
+*************************************
 BASIC ELEMENTS
 *************************************
 ************************************/
@@ -55,6 +70,16 @@ a {
 LANDING
 *************************************
 ************************************/
+
+#landing .pure-button-secondary {
+    background: rgba(255,255,255,0.5);
+    color: #fff;
+}
+
+#landing .pure-button-primary {
+  background: rgba(78,205,196,0.8);
+}
+
 
 /************************************
 *************************************
@@ -198,6 +223,12 @@ LISTING
   color: #000;
 }
 
+#list-your-space label,
+#search label {
+  background: #556270;
+  color: #fff;
+}
+
 /************************************
 *************************************
 CONTACT
@@ -224,19 +255,10 @@ SIDE MENU THEME
   background: #fff !important;
 }
 
-/************************************
-*************************************
-BUTTON THEME
-*************************************
-************************************/
-
-.pure-button-primary {
+.menu-altered .menu-link > span,
+.menu-altered .menu-link > span::before,
+.menu-altered .menu-link > span::after {
   background: #4ECDC4 !important;
-}
-
-.pure-button-red {
-  background: #FF6B6B;
-  color: #fff;
 }
 
 /************************************
