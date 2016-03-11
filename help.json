@@ -3,19 +3,19 @@
     {
       "id": "1",
       "topic": "Is this website legitimate?",
-      "answer": "EuroFugees tries its best to screen housing listings to prevent potential scams. If you see or hear something suspicious about a listing on here, contact us immediately. "
-       "  يحاول قصارى جهدها لفحص قوائم السكن لمنع عمليات الاحتيال المحتملة. إذا رأيت أو سمعت شيئا مريبا حول قائمة هنا، اتصل بنا على الفور."
+      "answer": "EuroFugees tries its best to screen housing listings to prevent potential scams. If you see or hear something suspicious about a listing on here, contact us immediately. ",
+      "answer2": " يحاول قصارى جهدها لفحص قوائم السكن لمنع عمليات الاحتيال المحتملة. إذا رأيت أو سمعت شيئا مريبا حول قائمة هنا، اتصل بنا على الفور."
     },
     {
       "id": "2",
       "topic": "How can I make sure that a listing is not a scam?",
-      "answer": "We try our best to make sure all listings on the app are legitimate, but things to look out for just in case are: (a) Landlord refuses to meet in person to discuss things; (b)Landlord does not answers your questions properly or avoids them; (c) Landlord is asking for a sum of money without a tenancy agreement. (d) Landlord refuses to have the tenancy agreement checked by the social services department.  "
+      "answer": "We try our best to make sure all listings on the app are legitimate, but things to look out for just in case are: (a) Landlord refuses to meet in person to discuss things; (b)Landlord does not answers your questions properly or avoids them; (c) Landlord is asking for a sum of money without a tenancy agreement. (d) Landlord refuses to have the tenancy agreement checked by the social services department.",
       "answer2": " نحن نبذل قصارى جهدنا للتأكد من جميع القوائم على التطبيق مشروعة، ولكن الأمور لأبحث عن عادل في القضية هي: (أ) يرفض المالك أن تجتمع في شخص لمناقشة الأمور. (ب) المالك لا يجيب على الأسئلة بشكل صحيح أو يتجنب لهم. (ج) المالك ويطلبون مبلغا من المال دون عقد الإيجار. (د) المالك يرفض أن يكون عقد الإيجار فحصها من قبل قسم الخدمات الاجتماعية."
     },
     {
       "id": "3",
       "topic": "My question isn't on here, how can I contact you all?",
-      "answer": "If you have a special concern, email us at info@eurofugees.com."
+      "answer": "If you have a special concern, email us at info@eurofugees.com.",
       "answer2": "إذا كان لديك اهتمام خاص، مراسلتنا على info@eurofugees.com  "
     }
   ]
