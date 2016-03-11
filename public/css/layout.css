@@ -106,12 +106,6 @@ LANDING
   letter-spacing: 3px;
 }
 
-#landing .content {
-  position: fixed;
-  bottom: 0; left: 0;
-}
-
-
 #landing {
   background: url('/img/featured/station.jpg');
   background-size: cover;
@@ -220,23 +214,26 @@ LIST YOUR SPACE
   background-repeat: no-repeat;
 }
 
-#list-your-space .content,
-#addListing .content {
-	margin-top: 10%;
+#list-your-space .content > h1 {
+
+}
+
+#list-your-space .content > h2 {
+
 }
 
 #list-your-space form fieldset {
 	border: none;
 	border-bottom: 1px solid #a1a1a1;
-	padding: 20px 0;
-	margin: 0 0 20px;
+	padding: 10px 0;
+	margin: 0 0 10px;
 }
 
 #list-your-space form legend {
 	box-sizing: border-box;
 	background: #fff;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 10px 20px;
 	width: 100%;
 }
 
@@ -253,7 +250,7 @@ input,
 textarea,
 select {
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 #list-your-space input,
