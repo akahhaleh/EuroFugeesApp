@@ -40,11 +40,11 @@ BUTTON THEME
 ************************************/
 
 .pure-button-primary {
-  background: #4ECDC4;
+  background: #4ECDC4 !important;
 }
 
 .pure-button-red {
-  background: #FF6B6B;
+  background: #FF6B6B !important;
   color: #fff;
 }
 
@@ -75,8 +75,8 @@ LANDING
 ************************************/
 
 #landing .pure-button-secondary {
-    background: rgba(255,255,255,0.5);
-    color: #fff;
+  background: rgba(255,255,255,0.5);
+  color: #fff;
 }
 
 #landing .pure-button-primary {
@@ -153,6 +153,9 @@ select {
   color: #fff;
 }
 
+#addListing h2 {
+  font-family: "roboto_slabthin", Times, serif;
+}
 
 /* refine search */
 
@@ -264,8 +267,38 @@ SIDE MENU THEME
   background: #4ECDC4 !important;
 }
 
-/************************************
-*************************************
-SLIDESHOW INTERACTIONS
-*************************************
-************************************/
+
+/* house */
+
+.house {
+
+}
+
+.house h3 {
+  font-family: "roboto_slabregular", "Times", serif;
+
+}
+
+.house > div {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.house h4 {
+  background: #4ECDC4;
+  color: #fff;
+  margin: 15px 0 5px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.house p {
+  margin: 5px 0;
+}
+
+.contact-host label {
+}

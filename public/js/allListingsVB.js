@@ -10,12 +10,13 @@ $(document).ready(function() {
  */
  function initializePage() {
    console.log("Javascript connected! - all-listingVB.js");
+
    $("#refineSearch").unbind().click(refineSearchClicked);
    $('#refineSearchApply').unbind().click(refineSearchApplyClicked);
    ga('send','pageview');
 
    var houseCard = document.getElementById("listing");
-   if (document.contains(houseCard)){ 
+   if (document.contains(houseCard)){
     document.getElementById('query-result').innerHTML="<h3>Results that match your query:</h3>";
   }else{
     document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3><p>EuroFugees services are currenlty available to the following cities:</p><ul><li>Berlin</li><li>Munich</li></ul><p>Please limit your inqueries to only these cities.";
@@ -25,6 +26,10 @@ $(document).ready(function() {
 
 // Function that lets refine search panel slide
 function refineSearchClicked(e){
+
+  $("#refineSearch > span").toggleClass('fa-angle-double-left')
+  $("#refineSearch > span").toggleClass('fa-angle-double-down')
+
 	$("#fadedPanel").slideToggle({
     direction: "up"
   }, 500);
@@ -179,7 +184,7 @@ function generateSearchResultCard(listing){
     listingCard.appendChild(listingCost);
     listingCard.appendChild(cardInfoDiv);
     listingResults.appendChild(listingCard);
-    
+
   }
   */
 

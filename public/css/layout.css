@@ -99,7 +99,7 @@ LANDING
 .landing-buttons {
   position: fixed;
   text-align: center;
-  bottom: 30px;
+  bottom: 40px;
 }
 
 .landing-buttons > * {
@@ -227,33 +227,36 @@ LIST YOUR SPACE
   background-repeat: no-repeat;
 }
 
-#list-your-space .content > h1 {
-
+#list-your-space .content {
+  margin-top: 10px;
 }
 
-#list-your-space .content > h2 {
-
+#list-your-space .content > div {
+  padding: 0 0 10px;
+	border-bottom: 1px solid #a1a1a1;
 }
+
 
 #list-your-space form fieldset {
-	border: none;
-	border-bottom: 1px solid #a1a1a1;
-	padding: 10px 0;
-	margin: 0 0 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 #list-your-space form legend {
-	box-sizing: border-box;
-	background: #fff;
-	border-radius: 5px;
-	padding: 10px 20px;
+  margin: 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
 	width: 100%;
+  line-height: 1.15em;
 }
 
 #list-your-space label,
 #search label {
-  margin: 10px 0;
-  padding: 10px;
+  margin: 15px 0 5px;
+  padding: 5px;
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
@@ -262,14 +265,8 @@ LIST YOUR SPACE
 input,
 textarea,
 select {
+  margin: 0 0 5px !important;
   width: 100%;
-  padding: 0 10px;
-}
-
-#list-your-space input,
-#login input,
-#search input {
-  height: 3em;
 }
 
 #list-your-space textarea {
@@ -281,8 +278,8 @@ select {
 	text-align: left;
 }
 
-label + * {
-	padding: 0 5px;
+form .pure-g > div:first-of-type > p {
+  margin: 5px 0 !important;
 }
 
 #list-your-space #main .header {
@@ -293,17 +290,18 @@ label + * {
 
 #list-your-space #main .content > p {
   text-align: center;
-  font-size: 1.25em;
+}
+
+#addListing h2 {
+  line-height: 1.5em;
+  margin-top: 20%;
 }
 
 /* euro symbol fix to alin with form */
 .eurofix, .eurofix > span {
-  height: 3em;
-  line-height: 3em;
 }
 
 .eurofix {
-  margin-top: 5px;
 }
 
 /************************************
@@ -415,6 +413,8 @@ ALL LISTINGS
   padding: 0 !important;
 }
 
+
+
 /* refine search */
 
 #refine-form {
@@ -427,9 +427,42 @@ input[type="checkbox"] {
   height: 20px !important;
 }
 
-/* house */
-.house > div {
-  border-bottom: 1px solid #333;
+/* query result */
+#query-result {
+  background: #556270;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+}
+
+#query-result ul {
+  margin: 0;
+  padding: 0;
+}
+
+#query-result > h3 {
+  margin: 0;
+  padding: 0;
+}
+
+
+#query-result li {
+  margin: 0;
+  border-top: 1px solid #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  list-style-type: none;
+}
+
+#query-result li:first-of-type {
+  border-top: none;
+}
+
+#fadedPanel {
+  margin-bottom: 10px;
 }
 
 /************************************
