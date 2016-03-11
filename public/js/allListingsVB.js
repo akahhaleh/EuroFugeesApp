@@ -19,7 +19,7 @@ $(document).ready(function() {
    if (document.contains(houseCard)){
     document.getElementById('query-result').innerHTML="<h3>Results that match your query:</h3>";
   }else{
-    document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3><p>EuroFugees services are currenlty available to the following cities:</p><ul><li>Berlin</li><li>Munich</li></ul><p>Please limit your inqueries to only these cities.";
+    document.getElementById('query-result').innerHTML = "<h3>No results match your query</h3><p><strong>Tip:</strong> EuroFugees services are currenlty available to the following cities:</p><ul><li>Berlin</li><li>Munich</li></ul><p>Please limit your inqueries to only these cities.<br><p><strong>Tip:</strong> Your rent limit may be too low. Apartments generally rent for 400-800 euros.";
     console.log("found no results");
  }
 }

@@ -311,3 +311,7 @@ SIDE MENU THEME
   text-align: right;
   margin: 20px 0 0 !important;
 }
+
+#query-result > h3 {
+  font-size: 1em;
+}
