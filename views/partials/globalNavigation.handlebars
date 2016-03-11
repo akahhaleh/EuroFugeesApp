@@ -10,11 +10,11 @@
             <!-- grouping -->
             <li class="pure-menu-item"><a href="/" class="pure-menu-link"><span class="fa fa-home"></span> Home</a></li>
             <li class="pure-menu-item menu-divider-below"><a href="/about" class="pure-menu-link"><span class="fa fa-info"></span> About</a></li>
-            
+
             <!-- grouping -->
             <li class="pure-menu-item"><a href="/searchVB" class="pure-menu-link"><span class="fa fa-search"></span> Find Your Space</a></li>
             <li class="pure-menu-item menu-divider-below"><a href="/list-your-space" class="pure-menu-link"><span class="fa fa-plus"></span> List Your Space</a></li>
-            
+
             <!-- grouping when signed in-->
             <div id = "whenSignedIn">
                 <li class="pure-menu-item"><a href="/" class="pure-menu-link"><span class="fa fa-th-list"></span>My Listings</a></li>
@@ -37,7 +37,7 @@
     userLoggedIn = localStorage.getItem('userLoggedIn');
     if (userLoggedIn === 'true') {
         document.getElementById("whenSignedOut").style.display = "none";
-        document.getElementById("whenSignedIn").style.display = "block"; 
+        document.getElementById("whenSignedIn").style.display = "block";
     }else{
         document.getElementById("whenSignedIn").style.display = "none";
         document.getElementById("whenSignedOut").style.display = "block";
