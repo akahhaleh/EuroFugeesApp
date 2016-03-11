@@ -1,6 +1,8 @@
 [
 		{
 			"id": "0",
+			"active": "true",
+			"owner": "false",
 			"title": "Nice view in safe area",
 			"type": "Shared",
 			"bed": "1",
@@ -21,6 +23,8 @@
 		},
 		{
 			"id": "1",
+			"active": "true",
+			"owner": "false",
 			"title": "Spacious private room in Munich",
 			"type": "Private",
 			"bed": "2",
@@ -41,6 +45,8 @@
 		},
 		{
 			"id": "2",
+			"active": "true",
+			"owner": "false",
 			"title": "Home with nice large backyard",
 			"type": "Entire",
 			"bed": "3",
@@ -61,6 +67,8 @@
 		},
 		{
 			"id": "3",
+			"active": "true",
+			"owner": "false",
 			"title": "Large shared room",
 			"type": "Shared",
 			"bed": "2",
@@ -81,6 +89,8 @@
 		},
 		{
 			"id": "4",
+			"active": "true",
+			"owner": "false",
 			"title": "Cozy private apartment",
 			"type": "Private",
 			"bed": "1",
@@ -101,6 +111,8 @@
 		},
 		{
 			"id": "5",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern apartment in Berlin",
 			"type": "Apartment",
 			"bed": "1",
@@ -121,6 +133,8 @@
 		},
 		{
 			"id": "6",
+			"active": "true",
+			"owner": "false",
 			"title": "Munich suburbs",
 			"type": "Shared",
 			"bed": "3",
@@ -142,6 +156,8 @@
 
 		{
 			"id": "7",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern apartment in Berlin",
 			"type": "Apartment",
 			"bed": "1",
@@ -163,6 +179,8 @@
 
 		{
 			"id": "8",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern apartment in Munich",
 			"type": "Apartment",
 			"bed": "1",
@@ -184,6 +202,8 @@
 
 		{
 			"id": "9",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern apartment in Berlin",
 			"type": "Apartment",
 			"bed": "1",
@@ -205,6 +225,8 @@
 
 		{
 			"id": "10",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern apartment in nice neighborhood",
 			"type": "Apartment",
 			"bed": "1",
@@ -226,6 +248,8 @@
 
 		{
 			"id": "11",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern apartment in germany",
 			"type": "Apartment",
 			"bed": "1",
@@ -247,6 +271,8 @@
 
 		{
 			"id": "12",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern apartment downtown",
 			"type": "Apartment",
 			"bed": "1",
@@ -268,6 +294,8 @@
 
 		{
 			"id": "13",
+			"active": "true",
+			"owner": "false",
 			"title": "Bright Loft in Altstadt",
 			"type": "Apartment",
 			"bed": "2",
@@ -289,6 +317,8 @@
 
 		{
 			"id": "14",
+			"active": "true",
+			"owner": "false",
 			"title": "Munich suburbs",
 			"type": "Apartment",
 			"bed": "2",
@@ -310,6 +340,8 @@
 
 		{
 			"id": "15",
+			"active": "true",
+			"owner": "false",
 			"title": "Beautiful Condo",
 			"type": "Shared",
 			"bed": "3",
@@ -331,6 +363,8 @@
 
 		{
 			"id": "16",
+			"active": "true",
+			"owner": "false",
 			"title": "Apartment in Kreuezberg",
 			"type": "Apartment",
 			"bed": "1",
@@ -352,6 +386,8 @@
 
 		{
 			"id": "17",
+			"active": "true",
+			"owner": "false",
 			"title": "Large yet cozy Apartment in Friedrichshain",
 			"type": "Shared",
 			"bed": "2",
@@ -373,6 +409,8 @@
 
 		{
 			"id": "18",
+			"active": "true",
+			"owner": "false",
 			"title": "Modern Loft in Downtown",
 			"type": "Shared",
 			"bed": "3",
