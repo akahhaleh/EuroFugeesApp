@@ -22,7 +22,7 @@ exports.view = function(req, res){
 	for (i = 0; i < housingDataLength; i++) {
 
 		// Get variables of each listing from json file
-    	var listingCity = housingData[i].city.toLowerCase();
+    	var listingCity = housingData[i].city;
     	var listingArea = housingData[i].area;
     	var listingCost = housingData[i].cost;
 
