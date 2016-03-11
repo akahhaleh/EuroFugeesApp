@@ -17,5 +17,5 @@ exports.view = function(req, res){
     	}
 	}
 
-	res.render('user/sign-up', searchResults);
+	res.render('user/my-listings', {'house': searchResults});
 };
