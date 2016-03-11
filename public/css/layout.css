@@ -14,7 +14,9 @@ TOP-LEVEL EDITS
 
 html, body {
     width: 100%;
+    max-width: 100%;
     min-height: 100%;
+    overflow: hidden !important;
 }
 
 /************************************
