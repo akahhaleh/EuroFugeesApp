@@ -19,6 +19,7 @@
         document.getElementById('applicantPhone').innerHTML= "Telefon: "+phone;
         document.getElementById('numOfOccupants').innerHTML= "Anzahl der Insassen: "+nocu;
         document.getElementById('ageOfApplicant').innerHTML= "Alter: "+age;
+        console.log("")
 
         document.getElementById("message").style.display = 'block';
         document.getElementById("application").style.display = 'none';
@@ -50,7 +51,7 @@
             <!-- paying -->
             <label>Who will be paying for you?(من سيدفع)</label>
             <div class="radio">
-              <label>Self (انا)</label>
+              <label>Self (نفسي)</label>
               <input type="radio" id="optionsRadios1" id="payer" value="self" checked>
             </div>
             <div class="radio">
@@ -58,14 +59,17 @@
               <input type="radio" id="optionsRadios2" id="payer" value="Government">
             </div>
           </fieldset>
-          <button type="submit" class="is-full-width pure-button pure-button-red center-text" onclick="showInput();"><span class="fa fa-send"></span> Submit</button>
+          <div class="is-full-width pure-button pure-button-red center-text" onclick="showInput();"><span class="fa fa-send"></span> Submit</div>
         </form>
       </div>
-      <div class="content"
+    </div>
+    <div>
+      <div class="content">
       <form>
         <div id="message" style="display: none;">
           <header class="header">
             <h3>We've sent the host the following email</h3>
+            <h4>لقد ارسلنا هذه الرسالة لصاحب البيت و سوف يتراسل معكم قريبا</h4>
           </header>
           <p>Hello,</p>
           <p>Sie haben gerade einen neuen Auftrag für Ihren Eintrag. Hier ist der Klägerin Informationen:</p>
