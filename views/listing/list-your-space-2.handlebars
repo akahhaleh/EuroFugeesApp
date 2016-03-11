@@ -42,10 +42,10 @@
               </div>
               <!-- Title -->
               <label><span class="fa fa-th-list"></span> Listing Title</label>
-              <input type="text" name="title" placeholder="Enter a title" required>
+              <input type="text" name="title" placeholder="Enter a title" required value="5-Bedroom Suburban Home">
               <!-- Date available -->
               <label><span class="fa fa-calendar"></span> Date Available</label>
-              <input type="date" name="availability" min="03/01/2016" max="12/31/2016" required>
+              <input type="date" name="availability" required value="2016-04-01">
               <!-- Area-->
               <label><span class="fa fa-arrows-alt"></span> Area of listing</label>
               <div class="pure-g">
@@ -53,7 +53,7 @@
                   <p>In square meters</p>
                 </div>
                 <div class="pure-u-2-5">
-                  <input name="area" type="number" min="0" placeholder="Area" required>
+                  <input name="area" type="number" min="0" placeholder="Area" required value="2100">
                 </div>
               </div>
               <!-- Rate-->
@@ -63,15 +63,15 @@
                     <p>In Euros <span class="fa fa-euro"></span></p>
                   </div>
                   <div class="pure-u-3-5">
-                    <input name="cost" type="number" min="0" placeholder="Rate" required>
+                    <input name="cost" type="number" min="0" placeholder="Rate" required value="975">
                 </div>
               </div>
               <!-- Description -->
               <label><span class="fa fa-pencil-square-o"></span> Description</label>
-              <textarea name="description" rows="4" placeholder="Enter a brief (or elaborate) description of your listing" required></textarea>
+              <textarea name="description" rows="4" placeholder="Enter a brief (or elaborate) description of your listing" required>This is a decent home in a good neighborhood in East Berlin. We require a security deposit of one month's worth of rent.</textarea>
               <!-- Image -->
               <label><span class="fa fa-file-image-o"></span> Link to image</label>
-              <input type="text" name="image1" placeholder="image-url.jpg" required>
+              <input type="text" name="image1" placeholder="image-url.jpg" required value="https://upload.wikimedia.org/wikipedia/commons/3/3c/Albert_Einstein_home_Berlin_100.JPG">
             </fieldset>
             <!-- Submit -->
             <button type="submit" class="pure-button pure-button-red is-full-width is-centered">Submit Listing <span class="fa fa-send"></span></button>
