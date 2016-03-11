@@ -10,16 +10,36 @@
             <!-- grouping -->
             <li class="pure-menu-item"><a href="/" class="pure-menu-link"><span class="fa fa-home"></span> Home</a></li>
             <li class="pure-menu-item menu-divider-below"><a href="/about" class="pure-menu-link"><span class="fa fa-info"></span> About</a></li>
+            
             <!-- grouping -->
             <li class="pure-menu-item"><a href="/searchVB" class="pure-menu-link"><span class="fa fa-search"></span> Find Your Space</a></li>
             <li class="pure-menu-item menu-divider-below"><a href="/list-your-space" class="pure-menu-link"><span class="fa fa-plus"></span> List Your Space</a></li>
-            <!-- grouping -->
-            <li class="pure-menu-item"><a href="/login" class="pure-menu-link"><span class="fa fa-sign-in"></span> Sign In</a></li>
-            <li class="pure-menu-item menu-divider-below"><a href="/sign-up" class="pure-menu-link"><span class="fa fa-user-plus"></span> Sign Up</a></li>
+            
+            <!-- grouping when signed in-->
+            <div id = "whenSignedIn">
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link"><span class="fa fa-th-list"></span>My Listings</a></li>
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link"><span class="fa fa-sign-out"></span>Logout</a></li>
+                <br>
+            </div>
+            <!-- grouping when signed out-->
+            <div id = "whenSignedOut">
+                <li class="pure-menu-item"><a href="/login" class="pure-menu-link"><span class="fa fa-sign-in"></span> Sign In</a></li>
+                <li class="pure-menu-item menu-divider-below"><a href="/sign-up" class="pure-menu-link"><span class="fa fa-user-plus"></span> Sign Up</a></li>
+            </div>
             <!-- grouping -->
             <li class="pure-menu-item"><a href="/faqs" class="pure-menu-link"><span class="fa fa-question"></span> FAQs</a></li>
             <li class="pure-menu-item"><a href="/support" class="pure-menu-link"><span class="fa fa-envelope"></span> Support</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="fa fa-cog"></span> Settings</a></li>
         </ul>
     </div>
 </div>
+
+<script type="text/javascript">
+    userLoggedIn = localStorage.getItem('userLoggedIn');
+    if (userLoggedIn === 'true') {
+        document.getElementById("whenSignedOut").style.display = "none";
+        document.getElementById("whenSignedIn").style.display = "block"; 
+    }else{
+        document.getElementById("whenSignedIn").style.display = "none";
+        document.getElementById("whenSignedOut").style.display = "block";
+    }
+</script>
