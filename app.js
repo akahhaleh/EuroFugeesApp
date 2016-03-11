@@ -29,6 +29,7 @@ var refineSeachVB = require('./routes/search/refine-search');
 var signUp = require('./routes/user/sign-up');
 var login = require('./routes/user/login');
 var apply = require('./routes/user/apply');
+var myListings = require('./routes/user/my-listings');
 
 var app = express();
 
@@ -75,6 +76,7 @@ app.get('/refine-search/:city/:occupants/:cost/:pets/:children/:smoking/:availab
 app.get('/sign-up', signUp.view);
 app.get('/login', login.view);
 app.get('/apply', apply.view);
+app.get('/my-listings', myListings.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
