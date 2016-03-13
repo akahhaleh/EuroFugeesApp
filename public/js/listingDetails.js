@@ -53,10 +53,26 @@ function addListingInfo(result){
 
 	//var projectID = $(this).closest('.details');
 	$('.listings-description').html(listingHTML);
+
+	if (result['owner']==="true"){
+		$('#applyButton').html('delete listing');
+	}
 }
 
 function contactHostButtonClicked(e){
+	var listingID = localStorage.getItem('selectedListingID');
+	
+	$.get("listing/"+listingID, reactToButton)
 	ga("send", "event", 'contactHostButtonClicked', 'click');
+}
+
+function reactToButton(result){
+	if (result['owner'] === "true"){
+			localStorage.setItem('skipNumber', result['id']);
+			location.href="/my-listings";
+	}else{
+		location.href="/apply";
+	}
 }
 
 

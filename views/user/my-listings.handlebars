@@ -2,6 +2,7 @@
 <html>
 <head>
   {{> globalHead}}
+  <script src="/js/myListings.js"></script>
 </head>
 <body id="search">
   <div id="layout">
@@ -66,6 +67,7 @@
               </div>
             </section>
           </article>
+          <script type="text/javascript">checkForDeletions({{id}})</script>
           {{/each}}
         </div>
       </div>
@@ -73,5 +75,4 @@
   </div>
   <!-- end main content -->
   {{> globalBottomScripts}}
-  <script src="/js/myListings.js"></script>
 </body></html>

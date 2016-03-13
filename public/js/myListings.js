@@ -25,6 +25,15 @@ function registerID(id){
 	localStorage.setItem('selectedListingID', id);
 }
 
+function checkForDeletions(listingId){
+  console.log('got passed the listingID ' + listingId);
+  var listingToSkip = parseInt(localStorage.getItem('skipNumber'));
+  console.log('got here 1 ' + listingToSkip );
+  if (listingToSkip === listingId){
+    console.log('got here 2' );
+    document.getElementById('listing-result').innerHTML = "<h3>You have no listings<h3>";
+  }
+}
 
 
 
